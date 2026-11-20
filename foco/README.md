@@ -1,6 +1,6 @@
 # Conjunto focado de decks — Cloud Engineer
 
-Conjunto enxuto para revisão: **289 cards em 5 decks**, todos filhos do único deck pai `Cloud Engineer`. O que é fácil de praticar (Linux, Git, Bash, Docker, Terraform, K8s, observabilidade, segurança) ficou de fora; a profundidade dos cards foi mantida, o que mudou foi o escopo.
+Conjunto enxuto para revisão: **376 cards em 6 decks**, todos filhos do único deck pai `Cloud Engineer`. O que é fácil de praticar (Linux, Git, Bash, Docker, Terraform, K8s) ficou de fora; a profundidade dos cards foi mantida, o que mudou foi o escopo.
 
 ## Arquivos
 
@@ -11,6 +11,7 @@ Conjunto enxuto para revisão: **289 cards em 5 decks**, todos filhos do único 
 | `03-Redes.apkg` | 28 | Redes |
 | `04-Entrevistas.apkg` | 96 | Entrevistas |
 | `05-Cloud-Neutro.apkg` | 20 | Fundamentos de cloud vendor-neutral |
+| `06-Lacunas.apkg` | 77 | Lacunas: AWS/Azure + padrões de nuvem |
 
 Hierarquia no Anki:
 
@@ -28,12 +29,13 @@ Cloud Engineer
 │   └── Custo
 ├── Redes
 ├── Entrevistas
-└── Cloud Neutro
+├── Cloud Neutro
+└── Lacunas
 ```
 
 ## Padronização
 
-Todos os 289 cards usam o **mesmo tipo de nota** (`Cloud Engineer`, ID `1830472615`) e o mesmo visual: pergunta centralizada em negrito, divisor horizontal, rótulos laranjas `O QUE É` e `EXEMPLO DE USO`, com modo noturno. Não há mais decks com modelos diferentes.
+Todos os 376 cards usam o **mesmo tipo de nota** (`Cloud Engineer`, ID `1830472615`) e o mesmo visual: pergunta centralizada em negrito, divisor horizontal, rótulos laranjas `O QUE É` e `EXEMPLO DE USO`, com modo noturno. Não há mais decks com modelos diferentes.
 
 Nomes curtos: `PAI::CERTIFICADO::DOMÍNIO` (ex.: `Cloud Engineer::SAA-C03::Seguro`).
 
@@ -57,8 +59,20 @@ Fontes: [AWS – Solutions Architect Associate](https://aws.amazon.com/certifica
 
 O deck `05-Cloud-Neutro` cobre os mesmos fundamentos do Practitioner de forma independente de vendor (IaaS/PaaS/SaaS, responsabilidade compartilhada, AZ/Região, escala, SLA, RTO/RPO, CDN, CapEx/OpEx, lock-in, IaC), para não depender só da AWS.
 
+## Deck `06-Lacunas`
+
+Reúne os 57 cards do antigo `18-Lacunas-Cloud.apkg` (que ficou de fora do primeiro conjunto) padronizados para o modelo único, mais 20 cards novos cobrindo o que nem ele tinha:
+
+- **Resiliência fina**: circuit breaker, backoff + jitter, idempotência, timeouts, bulkhead, degradação graciosa
+- **SLO / SLI / error budget**: métricas, meta interna e orçamento de erro
+- **Consistência e dados**: CAP, eventual vs forte, SQL vs NoSQL, replicação leader/follower
+- **Segurança em profundidade**: zero trust, STRIDE, envelope encryption, identity vs resource policy
+- **FinOps**: unit economics, showback/chargeback, detecção de anomalia de custo
+
+Os 57 cards antigos incluem ainda SNS/EventBridge/API Gateway/DLQ/Step Functions, DR, 6 Rs, Landing Zone, Transit Gateway, X-Ray, boto3, CDK e o mapa de equivalentes Azure.
+
 ## Importar no Anki
 
 **Arquivo → Importar…** e selecione os `.apkg`. Como você apagou o deck antigo para começar do zero, importe os cinco sem receio de duplicatas.
 
-> Os arquivos originais continuam intactos em `AWS/` e `cloud-eng/`; o que está em `foco/` são versões regeradas e padronizadas.
+> Os arquivos originais continuam intactos em `AWS/` e `cloud-eng/` (inclusive o `18-Lacunas-Cloud.apkg`); o que está em `foco/` são versões regeradas e padronizadas.
