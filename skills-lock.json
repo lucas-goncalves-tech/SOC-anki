@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "skills": {
+    "anki": {
+      "source": "terkelg/anki-markdown",
+      "commit": "f7bb34f16d6f7ee7c23f965c892fb1444df6cb1d",
+      "sourceType": "github",
+      "skillPath": "skills/anki/SKILL.md",
+      "computedHash": "3c9656526ebc6315be7f978d443fc7fcea5bcd7125f09a3aa3ca54699896890a"
+    },
+    "anki-card-generator": {
+      "source": "niracler/skill",
+      "commit": "edd1088d61624def838f127055a5af4af07547b2",
+      "sourceType": "github",
+      "skillPath": "plugins/personal-knowledge/skills/anki-card-generator/SKILL.md",
+      "computedHash": "743de4fab6c5e3fc805865a1e7e9286c03c97a1a6aa81a4cc16e35ab3b1b1985"
+    }
+  }
+}
