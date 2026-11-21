@@ -1,47 +1,31 @@
 # Conjunto focado de decks — Cloud Engineer
 
-Conjunto enxuto para revisão: **376 cards em 6 decks**, todos filhos do único deck pai `Cloud Engineer`. O que é fácil de praticar (Linux, Git, Bash, Docker, Terraform, K8s) ficou de fora; a profundidade dos cards foi mantida, o que mudou foi o escopo.
+`foco/` contém **um único arquivo**, `07-Notebooks.apkg`, com 94 decks e 688 cards. Ele reúne o plano de estudos, os extras que o plano não cobria, as habilidades pedidas em vagas e os dois decks de certificação.
 
-## Arquivos
+## Arquivo único
 
-| Arquivo | Cards | Conteúdo |
-|---------|-------|----------|
-| `01-CLF-C02.apkg` | 105 | AWS Cloud Practitioner (4 subdecks) |
-| `02-SAA-C03.apkg` | 50 | AWS Solutions Architect – Associate (4 subdecks) |
-| `03-Redes.apkg` | 28 | Redes |
-| `04-Entrevistas.apkg` | 96 | Entrevistas |
-| `05-Cloud-Neutro.apkg` | 20 | Fundamentos de cloud vendor-neutral |
-| `06-Lacunas.apkg` | 77 | Lacunas: AWS/Azure + padrões de nuvem |
+| Grupo | Decks | Cards |
+|-------|-------|-------|
+| Notebooks 01–70 | 70 | 349 |
+| Extras 71–80 | 10 | 71 |
+| Vagas 81–86 | 6 | 40 |
+| CLF-C02 + SAA-C03 | 8 | 228 |
+| **Total** | **94** | **688** |
 
-Hierarquia no Anki:
+No Anki, a ordem dos decks é: `01-...` até `86-...`, depois `CLF-C02::{Conceitos, Custos, Seguranca, Servicos}` e `SAA-C03::{Custo, Performance, Resiliente, Seguro}`.
 
-```
-Cloud Engineer
-├── CLF-C02
-│   ├── Conceitos
-│   ├── Seguranca
-│   ├── Servicos
-│   └── Custos
-├── SAA-C03
-│   ├── Seguro
-│   ├── Resiliente
-│   ├── Performance
-│   └── Custo
-├── Redes
-├── Entrevistas
-├── Cloud Neutro
-└── Lacunas
-```
+- **01–70** — um deck por notebook de `gemini-notebook.md`, na numeração exata. Estude o Notebook `XX` e revise o deck `Cloud Engineer::XX-...` no mesmo dia.
+- **71–80** — extras dos decks antigos: Azure, resiliência, SLO, consistência de dados, segurança avançada, FinOps, serviços AWS, cenários de entrevista, redes e fundamentos. Os decks 71 e 77–80 levam a tag `fora-da-prova` (são para entrevista/multicloud, não para prova).
+- **81–86** — Kubernetes operacional, Python/Bash, CI/CD com Jenkins/GitLab/GitOps, stack de observabilidade, segurança shift-left e GCP básico.
+- **CLF-C02 e SAA-C03** — decks de prova com os cards originais mais acréscimos de alto impacto apontados pela auditoria (Security Hub, Firewall Manager, SCT, D3.8 do CLF, ingestão e custo de rede no SAA, DR nomeado etc.).
+
+O mapa completo está em `MAPEAMENTO.md`, na raiz.
 
 ## Padronização
 
-Todos os 376 cards usam o **mesmo tipo de nota** (`Cloud Engineer`, ID `1830472615`) e o mesmo visual: pergunta centralizada em negrito, divisor horizontal, rótulos laranjas `O QUE É` e `EXEMPLO DE USO`, com modo noturno. Não há mais decks com modelos diferentes.
+Todos os 688 cards usam o **mesmo tipo de nota** (`Cloud Engineer`, ID `1830472615`): pergunta centralizada em negrito, divisor horizontal, rótulos laranjas `O QUE É` e `EXEMPLO DE USO`, com modo noturno. O modelo foi copiado do deck original de Cloud Practitioner — não foi criado tipo novo.
 
-Nomes curtos: `PAI::CERTIFICADO::DOMÍNIO` (ex.: `Cloud Engineer::SAA-C03::Seguro`).
-
-## Comandos
-
-Identificadores curtos (ARNs, `s3:GetObject`, `0.0.0.0/0`) ficam inline. Quando o card **exige um comando**, ele aparece em um bloco cercado com fundo próprio — equivalente visual ao `` ``` `` do Markdown (os campos do Anki são HTML, então o bloco é renderizado como `<pre class="codeblock"><code>`):
+Identificadores curtos (ARNs, `s3:GetObject`, `0.0.0.0/0`) ficam inline. Comandos aparecem em bloco com fundo próprio, renderizado como `<pre class="codeblock"><code>`:
 
 ```text
 docker ps -a
@@ -49,30 +33,26 @@ docker logs --tail 100
 docker inspect
 ```
 
-Cards de diagnóstico e entrevista (processos, portas, disco, systemd, SSH, Docker, Terraform, AWS CLI) foram reescritos com esse padrão.
+## Onde ficaram os arquivos antigos
 
-## Próximo nível da certificação AWS
+Os seis decks originais de `foco/` foram movidos para `cloud-eng/` com prefixo `foco-`, preservando conteúdo e tipo de nota:
 
-Após o Cloud Practitioner (CLF-C02), o próximo passo para cloud engineer é **AWS Certified Solutions Architect – Associate (SAA-C03)** — o Associate mais reconhecido, com prova de 65 questões/130 min, US$ 150 e validade de 3 anos. Seus domínios (30% seguro, 26% resiliente, 24% performance, 20% custo) definem os quatro subdecks do arquivo 02.
+- `cloud-eng/foco-01-CLF-C02.apkg`
+- `cloud-eng/foco-02-SAA-C03.apkg`
+- `cloud-eng/foco-03-Redes.apkg`
+- `cloud-eng/foco-04-Entrevistas.apkg`
+- `cloud-eng/foco-05-Cloud-Neutro.apkg`
+- `cloud-eng/foco-06-Lacunas.apkg`
 
-Fontes: [AWS – Solutions Architect Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/) e [guias de prova](https://docs.aws.amazon.com/aws-certification/latest/examguides/aws-certification-exam-guides.html).
-
-O deck `05-Cloud-Neutro` cobre os mesmos fundamentos do Practitioner de forma independente de vendor (IaaS/PaaS/SaaS, responsabilidade compartilhada, AZ/Região, escala, SLA, RTO/RPO, CDN, CapEx/OpEx, lock-in, IaC), para não depender só da AWS.
-
-## Deck `06-Lacunas`
-
-Reúne os 57 cards do antigo `18-Lacunas-Cloud.apkg` (que ficou de fora do primeiro conjunto) padronizados para o modelo único, mais 20 cards novos cobrindo o que nem ele tinha:
-
-- **Resiliência fina**: circuit breaker, backoff + jitter, idempotência, timeouts, bulkhead, degradação graciosa
-- **SLO / SLI / error budget**: métricas, meta interna e orçamento de erro
-- **Consistência e dados**: CAP, eventual vs forte, SQL vs NoSQL, replicação leader/follower
-- **Segurança em profundidade**: zero trust, STRIDE, envelope encryption, identity vs resource policy
-- **FinOps**: unit economics, showback/chargeback, detecção de anomalia de custo
-
-Os 57 cards antigos incluem ainda SNS/EventBridge/API Gateway/DLQ/Step Functions, DR, 6 Rs, Landing Zone, Transit Gateway, X-Ray, boto3, CDK e o mapa de equivalentes Azure.
+Eles não precisam ser importados: seu conteúdo está no `07-Notebooks.apkg` (os cards redundantes ficaram só nessas cópias de arquivo).
 
 ## Importar no Anki
 
-**Arquivo → Importar…** e selecione os `.apkg`. Como você apagou o deck antigo para começar do zero, importe os cinco sem receio de duplicatas.
+**Arquivo → Importar…** e selecione `foco/07-Notebooks.apkg`. Como os decks antigos não são importados, não há duplicatas.
 
-> Os arquivos originais continuam intactos em `AWS/` e `cloud-eng/` (inclusive o `18-Lacunas-Cloud.apkg`); o que está em `foco/` são versões regeradas e padronizadas.
+Para regenerar o pacote a partir das fontes:
+
+```text
+cd scripts
+python gerar_notebooks.py
+```
