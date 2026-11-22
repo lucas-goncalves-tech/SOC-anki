@@ -1,58 +1,48 @@
-# Conjunto focado de decks — Cloud Engineer
+# Conjunto focado de decks — AppSec Engineer
 
-`foco/` contém **um único arquivo**, `07-Notebooks.apkg`, com 94 decks e 688 cards. Ele reúne o plano de estudos, os extras que o plano não cobria, as habilidades pedidas em vagas e os dois decks de certificação.
+`foco/` contém **um único arquivo**, `foco/AppSec.apkg`, com **38 decks** e **190 cards**. Cada deck corresponde a um Notebook de `gemini-notebook.md`, na numeração exata, distribuído em 5 fases.
 
 ## Arquivo único
 
-| Grupo | Decks | Cards |
-|-------|-------|-------|
-| Notebooks 01–70 | 70 | 349 |
-| Extras 71–80 | 10 | 71 |
-| Vagas 81–86 | 6 | 40 |
-| CLF-C02 + SAA-C03 | 8 | 228 |
-| **Total** | **94** | **688** |
+| Fase | Decks |
+|------|-------|
+| Fase 0 — Fundamentos | 6 |
+| Fase 1 — Vulnerabilidades | 12 |
+| Fase 2 — Validação ofensiva leve | 6 |
+| Fase 3 — Ferramentas | 8 |
+| Fase 4 — Processo | 6 |
+| **Total** | **38** |
 
-No Anki, a ordem dos decks é: `01-...` até `86-...`, depois `CLF-C02::{Conceitos, Custos, Seguranca, Servicos}` e `SAA-C03::{Custo, Performance, Resiliente, Seguro}`.
+No Anki, os decks aparecem como `AppSec::01-Web Application Security Fundamentals` até `AppSec::38-Application Incident Response and Developer Enablement`.
 
-- **01–70** — um deck por notebook de `gemini-notebook.md`, na numeração exata. Estude o Notebook `XX` e revise o deck `Cloud Engineer::XX-...` no mesmo dia.
-- **71–80** — extras dos decks antigos: Azure, resiliência, SLO, consistência de dados, segurança avançada, FinOps, serviços AWS, cenários de entrevista, redes e fundamentos. Os decks 71 e 77–80 levam a tag `fora-da-prova` (são para entrevista/multicloud, não para prova).
-- **81–86** — Kubernetes operacional, Python/Bash, CI/CD com Jenkins/GitLab/GitOps, stack de observabilidade, segurança shift-left e GCP básico.
-- **CLF-C02 e SAA-C03** — decks de prova com os cards originais mais acréscimos de alto impacto apontados pela auditoria (Security Hub, Firewall Manager, SCT, D3.8 do CLF, ingestão e custo de rede no SAA, DR nomeado etc.).
+## Como usar
 
-O mapa completo está em `MAPEAMENTO.md`, na raiz.
+Estude o Notebook `NN` e revise o deck `AppSec::NN-...` no mesmo dia. O pareamento completo está em `MAPEAMENTO.md`, na raiz.
 
-## Padronização
+## Tipo de nota
 
-Todos os 688 cards usam o **mesmo tipo de nota** (`Cloud Engineer`, ID `1830472615`): pergunta centralizada em negrito, divisor horizontal, rótulos laranjas `O QUE É` e `EXEMPLO DE USO`, com modo noturno. O modelo foi copiado do deck original de Cloud Practitioner — não foi criado tipo novo.
+Todos os 190 cards usam o tipo de nota **`AppSec`**, com os três campos:
 
-Identificadores curtos (ARNs, `s3:GetObject`, `0.0.0.0/0`) ficam inline. Comandos aparecem em bloco com fundo próprio, renderizado como `<pre class="codeblock"><code>`:
+- `Frente` — a pergunta;
+- `Verso1` — **O QUE É**;
+- `Verso2` — **EXEMPLO DE USO**.
 
-```text
-docker ps -a
-docker logs --tail 100
-docker inspect
-```
-
-## Onde ficaram os arquivos antigos
-
-Os seis decks originais de `foco/` foram movidos para `cloud-eng/` com prefixo `foco-`, preservando conteúdo e tipo de nota:
-
-- `cloud-eng/foco-01-CLF-C02.apkg`
-- `cloud-eng/foco-02-SAA-C03.apkg`
-- `cloud-eng/foco-03-Redes.apkg`
-- `cloud-eng/foco-04-Entrevistas.apkg`
-- `cloud-eng/foco-05-Cloud-Neutro.apkg`
-- `cloud-eng/foco-06-Lacunas.apkg`
-
-Eles não precisam ser importados: seu conteúdo está no `07-Notebooks.apkg` (os cards redundantes ficaram só nessas cópias de arquivo).
+O layout mantém a pergunta centralizada em negrito, o divisor horizontal, os rótulos laranjas e o modo noturno. Identificadores curtos (`s3:GetObject`, `0.0.0.0/0`) ficam inline; comandos aparecem em bloco com fundo próprio, renderizado como `<pre class="codeblock"><code>`.
 
 ## Importar no Anki
 
-**Arquivo → Importar…** e selecione `foco/07-Notebooks.apkg`. Como os decks antigos não são importados, não há duplicatas.
+**Arquivo → Importar…** e selecione `foco/AppSec.apkg`. Como é um arquivo único, não há duplicatas.
 
-Para regenerar o pacote a partir das fontes:
+## Regenerar o pacote
+
+A partir da raiz do repositório:
 
 ```text
-cd scripts
-python gerar_notebooks.py
+python scripts/gerar_notebooks.py
 ```
+
+O comando reconstrói `foco/AppSec.apkg` e `MAPEAMENTO.md` a partir de `gemini-notebook.md` e dos cards em `scripts/`.
+
+## Material antigo de Cloud
+
+Os pacotes de Cloud continuam arquivados em `cloud-eng/`, incluindo `cloud-eng/07-Notebooks-Cloud.apkg`. Eles não fazem parte do fluxo de estudo de AppSec e não precisam ser importados.
