@@ -28,7 +28,7 @@ Arquivo único: `foco/AppSec.apkg`. Tipo de nota `AppSec`, campos `Frente`, `Ver
 | 11 — Injection (A05) | `AppSec::11-Injection (A05)` | 5 |
 | 12 — Insecure Design (A06) | `AppSec::12-Insecure Design (A06)` | 5 |
 | 13 — Authentication Failures (A07) | `AppSec::13-Authentication Failures (A07)` | 5 |
-| 14 — Software and Data Integrity Failures (A08) | `AppSec::14-Software and Data Integrity Failures (A08)` | 5 |
+| 14 — Software or Data Integrity Failures (A08) | `AppSec::14-Software or Data Integrity Failures (A08)` | 5 |
 | 15 — Security Logging and Alerting Failures (A09) | `AppSec::15-Security Logging and Alerting Failures (A09)` | 5 |
 | 16 — Mishandling of Exceptional Conditions (A10) | `AppSec::16-Mishandling of Exceptional Conditions (A10)` | 5 |
 | 17 — API Security (OWASP API Top 10) | `AppSec::17-API Security (OWASP API Top 10)` | 5 |

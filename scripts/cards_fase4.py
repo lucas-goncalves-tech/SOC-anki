@@ -34,7 +34,7 @@ CARDS = {
   "Comentar: 'Este ID vem da URL sem checagem de owner; sugiro validar contra current_user antes de atualizar.'"),
  ("Por que revisar mudanças em configuração e permissões?",
   "Alterações pequenas em IAM, CORS ou security headers podem ampliar a superfície de ataque sem tocar na lógica da aplicação.",
-  "Atentar para diff que troca `Access-Control-Allow-Origin` de domínio fixo para `*`."),
+  "Atentar para diff que troca <code>Access-Control-Allow-Origin</code> de domínio fixo para <code>*</code>."),
 ],
 35: [
  ("O que é Secure SDLC?",
@@ -100,8 +100,8 @@ CARDS = {
  ("Como criar um programa de developer enablement?",
   "Oferecer treinamento prático, guidelines curtos, exemplos de código seguro e feedback constante integrados ao fluxo de trabalho.",
   "Publicar cheat sheet de autorização no wiki e incluir exercício de IDOR no onboarding de novos devs."),
- ("Como comunicar risco de segurança a liderança?",
-  "Traduzir achados técnicos em impacto de negócio, com probabilidade, consequência e opções de ação com prazo e custo.",
-  "Dizer que falha em API de pagamentos pode expor dados de clientes e propor correção prioritária com esforço estimado de 3 dias."),
+ ("Como comunicar risco de segurança a liderança durante um incidente?",
+  "Informar impacto, escopo e ações de contenção em linguagem simples, com dono e próxima atualização, separando fatos confirmados de hipóteses.",
+  "Comunicar que a API de pagamentos está sob investigação, qual é o impacto ao cliente, que o WAF bloqueou o padrão e que a próxima atualização sai em 30 minutos."),
 ],
 }

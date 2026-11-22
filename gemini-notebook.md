@@ -121,7 +121,7 @@
   4. Session fixation, expiração e revogação de sessão.
   5. Prevenção: MFA, proteção contra automação e monitoramento de falhas.
 
-### Notebook 14 — Software and Data Integrity Failures (A08)
+### Notebook 14 — Software or Data Integrity Failures (A08)
 - **Objetivo:** Entender riscos de integridade em código, pipelines e dados serializados.
 - **Estrutura do Conteúdo:**
   1. Integridade de artefatos e atualizações não assinadas.

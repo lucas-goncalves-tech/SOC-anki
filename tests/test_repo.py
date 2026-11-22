@@ -1,6 +1,7 @@
 import unittest
 from base import ROOT
 
+
 class RepoContract(unittest.TestCase):
     def test_arquivos_antigos_removidos(self):
         self.assertFalse((ROOT / "scripts" / "cards_cert.py").exists())
@@ -16,6 +17,9 @@ class RepoContract(unittest.TestCase):
 
     def test_readme_appsec(self):
         texto = (ROOT / "foco" / "README.md").read_text(encoding="utf-8")
-        self.assertIn("AppSec", texto)
-        self.assertIn("foco/AppSec.apkg", texto)
-        self.assertIn("38", texto)
+        for trecho in (
+            "AppSec", "foco/AppSec.apkg", "38 decks", "190 cards",
+            "AppSec::38-", "MAPEAMENTO.md", "python scripts/gerar_notebooks.py",
+            "<pre class=\"codeblock\"><code>",
+        ):
+            self.assertIn(trecho, texto, trecho)

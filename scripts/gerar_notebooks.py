@@ -41,6 +41,8 @@ def validar(titulos, cards):
         if not 4 <= len(cartoes) <= 6:
             raise SystemExit("Notebook %02d deve ter de 4 a 6 cards" % numero)
         for cartao in cartoes:
+            if not isinstance(cartao, tuple):
+                raise SystemExit("Card inválido no notebook %02d: %r" % (numero, cartao))
             if len(cartao) != 3 or not all(
                 isinstance(campo, str) and campo.strip() for campo in cartao
             ):
@@ -70,6 +72,7 @@ def montar_decks(titulos, cards):
 
 def gerar(decks, total, *, modelo=TEMPLATE, saida=OUTPUT):
     """Reescreve o `.apkg` base com os decks e cards AppSec."""
+    assert total == sum(len(c) for *_, c in decks)
     with zipfile.ZipFile(modelo) as arquivo:
         colecao = arquivo.read("collection.anki2")
         outros = {
@@ -160,6 +163,8 @@ def fases_do_notebook():
         if match.group(1):
             fases.append((int(match.group(1)), match.group(2), []))
         else:
+            if not fases:
+                raise SystemExit("Notebook sem fase: NN")
             fases[-1][2].append(int(match.group(3)))
     return fases
 

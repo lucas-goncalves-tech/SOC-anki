@@ -27,7 +27,7 @@ Todos os 190 cards usam o tipo de nota **`AppSec`**, com os três campos:
 - `Verso1` — **O QUE É**;
 - `Verso2` — **EXEMPLO DE USO**.
 
-O layout mantém a pergunta centralizada em negrito, o divisor horizontal, os rótulos laranjas e o modo noturno. Identificadores curtos (`s3:GetObject`, `0.0.0.0/0`) ficam inline; comandos aparecem em bloco com fundo próprio, renderizado como `<pre class="codeblock"><code>`.
+O layout mantém a pergunta centralizada em negrito, o divisor horizontal, os rótulos laranjas e o modo noturno. Identificadores curtos e comandos de uma linha (`s3:GetObject`, `0.0.0.0/0`) ficam inline em `<code>`; trechos de várias linhas usam `<pre class="codeblock"><code>` com fundo próprio.
 
 ## Importar no Anki
 

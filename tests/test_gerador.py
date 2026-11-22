@@ -7,10 +7,13 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from unittest.mock import patch
 
 from base import ROOT
 from cards import CARDS
-from gerar_notebooks import gerar, escrever_mapa, montar_decks, validar
+from gerar_notebooks import (
+    fases_do_notebook, gerar, escrever_mapa, montar_decks, validar,
+)
 from notebook import titulos_notebooks
 
 TITULOS = {i: "T%d" % i for i in range(1, 39)}
@@ -50,6 +53,25 @@ class GeradorContract(unittest.TestCase):
         titulos = titulos_notebooks(ROOT / "gemini-notebook.md")
         self.assertEqual(validar(titulos, CARDS), sum(len(c) for c in CARDS.values()))
 
+    def test_validar_rejeita_card_que_nao_e_tupla(self):
+        primeiro = list(CARTOS[1][0])
+        cartoes = {**CARTOS, 1: [primeiro, *CARTOS[1][1:]]}
+        with self.assertRaises(SystemExit):
+            validar(TITULOS, cartoes)
+
+    def test_fases_do_notebook(self):
+        fases = fases_do_notebook()
+        self.assertEqual([fase[0] for fase in fases], [0, 1, 2, 3, 4])
+        self.assertEqual([len(fase[2]) for fase in fases], [6, 12, 6, 8, 6])
+
+    def test_fases_do_notebook_sem_cabecalho_de_fase(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            caminho = Path(tmp) / "sem-fase.md"
+            caminho.write_text("### Notebook 99 — Sem fase", encoding="utf-8")
+            with patch("gerar_notebooks.NOTEBOOK", caminho):
+                with self.assertRaisesRegex(SystemExit, "Notebook sem fase"):
+                    fases_do_notebook()
+
     def test_modelo_e_campos(self):
         with self._abrir_apkg() as con:
             modelos = json.loads(con.execute("select models from col").fetchone()[0])
@@ -81,6 +103,12 @@ class GeradorContract(unittest.TestCase):
                 self.assertTrue(tags.strip().startswith("appsec nb"))
                 self.assertNotIn("fora-da-prova", tags)
             self.assertEqual(notas[0][2], "pergunta 1-1\x1fresposta\x1fexemplo")
+
+    def test_gerar_exige_total_compatível(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(AssertionError):
+                gerar(montar_decks(TITULOS, CARTOS), TOTAL - 1,
+                      saida=Path(tmp) / "AppSec.apkg")
 
     def test_gerar_idempotente(self):
         with tempfile.TemporaryDirectory() as tmp:
