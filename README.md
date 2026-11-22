@@ -1,6 +1,6 @@
 # Conjunto focado de decks — AppSec Engineer
 
-`foco/` contém **um único arquivo**, `foco/AppSec.apkg`, com **38 decks** e **190 cards**. Cada deck corresponde a um Notebook de `gemini-notebook.md`, na numeração exata, distribuído em 5 fases.
+A raiz do repositório contém **um único arquivo de estudo**, `AppSec.apkg`, com **38 decks** e **190 cards**. Cada deck corresponde a um Notebook de `gemini-notebook.md`, na numeração exata, distribuído em 5 fases.
 
 ## Arquivo único
 
@@ -31,7 +31,7 @@ O layout mantém a pergunta centralizada em negrito, o divisor horizontal, os r�
 
 ## Importar no Anki
 
-**Arquivo → Importar…** e selecione `foco/AppSec.apkg`. Como é um arquivo único, não há duplicatas.
+**Arquivo → Importar…** e selecione `AppSec.apkg`. Como é um arquivo único, não há duplicatas.
 
 ## Regenerar o pacote
 
@@ -41,8 +41,8 @@ A partir da raiz do repositório:
 python scripts/gerar_notebooks.py
 ```
 
-O comando reconstrói `foco/AppSec.apkg` e `MAPEAMENTO.md` a partir de `gemini-notebook.md` e dos cards em `scripts/`.
+O comando reconstrói `AppSec.apkg` e `MAPEAMENTO.md` a partir de `gemini-notebook.md` e dos cards em `scripts/`. O gerador usa `assets/note-type.apkg` como molde do tipo de nota.
 
 ## Material antigo de Cloud
 
-Os pacotes de Cloud continuam arquivados em `cloud-eng/`, incluindo `cloud-eng/07-Notebooks-Cloud.apkg`. Eles não fazem parte do fluxo de estudo de AppSec e não precisam ser importados.
+Os pacotes de Cloud continuam arquivados em `.archive/`. Eles não fazem parte do fluxo de estudo de AppSec e não precisam ser importados.
