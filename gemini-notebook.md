@@ -1,713 +1,356 @@
-# Fase 0 — Fundamentos e planejamento
-
-## Issue #001 — Definir arquitetura e requisitos do sistema
-
-### Notebook 01 — Cloud Computing Fundamentals
-- **Objetivo:** Compreender o conceito de computação em nuvem e como ela transforma o provisionamento de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. O que é Cloud Computing e como surgiu.
-  2. Diferenças entre infraestrutura tradicional (On-Premises) e Cloud.
-  3. Características fundamentais da computação em nuvem: on-demand, resource pooling, elasticity e measured service.
-
-### Notebook 02 — Cloud Service Models (IaaS, PaaS and SaaS)
-- **Objetivo:** Entender os diferentes níveis de abstração oferecidos pelos provedores de nuvem.
-- **Estrutura do Conteúdo:**
-  1. IaaS: infraestrutura como serviço e controle do ambiente.
-  2. PaaS: plataformas gerenciadas e abstração de infraestrutura.
-  3. SaaS: aplicações prontas como serviço.
-  4. Comparação das responsabilidades do provedor e do cliente em cada modelo.
-
-### Notebook 03 — Cloud Deployment Models
-- **Objetivo:** Diferenciar os modelos de implantação de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Public Cloud: características e funcionamento.
-  2. Private Cloud: infraestrutura dedicada.
-  3. Hybrid Cloud: integração entre ambientes.
-  4. Multicloud: utilização de múltiplos provedores.
-
-### Notebook 04 — Cloud Economics and Scalability
-- **Objetivo:** Compreender os benefícios econômicos e operacionais da nuvem.
-- **Estrutura do Conteúdo:**
-  1. CapEx versus OpEx.
-  2. Pay-as-you-go e cobrança por consumo.
-  3. Elasticidade versus escalabilidade.
-  4. Vertical Scaling versus Horizontal Scaling.
-  5. Custos de infraestrutura ociosa.
-
-### Notebook 05 — Virtualization and Hypervisors
-- **Objetivo:** Entender como a virtualização permite compartilhar recursos físicos entre máquinas virtuais.
-- **Estrutura do Conteúdo:**
-  1. O que é virtualização.
-  2. Hypervisors Type 1 e Type 2.
-  3. Virtual Machines e isolamento de recursos.
-  4. vCPU, RAM e alocação de recursos.
-  5. Diferenças fundamentais entre VMs e containers.
-
-## Issue #002 — Preparar ambiente Linux para operações
-
-### Notebook 06 — Git Fundamentals
-- **Objetivo:** Aprender o controle de versão utilizado no desenvolvimento e na administração de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Git, GitHub e repositórios.
-  2. Working Directory, Staging Area e Repository.
-  3. Commits, branches e merges.
-  4. Git Pull, Fetch, Rebase e conflitos.
-  5. Pull Requests e colaboração.
-
-### Notebook 07 — Linux Fundamentals and Filesystem
-- **Objetivo:** Compreender a estrutura básica de um sistema operacional Linux.
-- **Estrutura do Conteúdo:**
-  1. Kernel, Shell e distribuição Linux.
-  2. Estrutura hierárquica de diretórios.
-  3. Diretórios fundamentais: /etc, /var, /home, /tmp, /usr e /root.
-  4. Paths absolutos e relativos.
-  5. Comandos básicos de navegação e manipulação de arquivos.
-
-### Notebook 08 — Linux Users, Groups and Permissions
-- **Objetivo:** Entender como o Linux controla o acesso a arquivos e recursos.
-- **Estrutura do Conteúdo:**
-  1. Usuários, grupos, UID e GID.
-  2. Permissões Read, Write e Execute.
-  3. chmod, chown e umask.
-  4. sudo e gerenciamento de privilégios.
-  5. SUID, SGID e Sticky Bit.
-
-### Notebook 09 — Linux Processes and Resource Management
-- **Objetivo:** Compreender como o Linux executa e gerencia processos.
-- **Estrutura do Conteúdo:**
-  1. Processos, threads e PID.
-  2. Process States e sinais de processos.
-  3. Comandos ps, top, htop e kill.
-  4. CPU Load, consumo de memória e swap.
-  5. Identificação de processos problemáticos.
-
-### Notebook 10 — Linux Services and Systemd
-- **Objetivo:** Aprender como serviços são iniciados, gerenciados e monitorados no Linux.
-- **Estrutura do Conteúdo:**
-  1. O que são serviços e daemons.
-  2. Funcionamento do systemd.
-  3. systemctl: start, stop, restart, status e enable.
-  4. Units e arquivos de configuração de serviços.
-  5. Inicialização do sistema e dependências entre serviços.
-
-### Notebook 11 — Linux Package Management
-- **Objetivo:** Aprender a instalar, atualizar e remover softwares em servidores Linux.
-- **Estrutura do Conteúdo:**
-  1. Pacotes e repositórios.
-  2. APT e gerenciamento de pacotes em Debian/Ubuntu.
-  3. DNF e gerenciamento de pacotes em distribuições RHEL.
-  4. Atualizações e dependências.
-  5. Instalação e remoção de softwares.
-
-### Notebook 12 — Linux Storage and Filesystem Management
-- **Objetivo:** Compreender como o Linux organiza e administra armazenamento.
-- **Estrutura do Conteúdo:**
-  1. Partições e sistemas de arquivos.
-  2. Mount e umount.
-  3. Comandos df, du, lsblk e fdisk.
-  4. /etc/fstab e montagem persistente.
-  5. Inodes e gerenciamento de espaço em disco.
-
-### Notebook 13 — Linux Remote Administration with SSH
-- **Objetivo:** Aprender a administrar servidores Linux remotamente.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento do SSH.
-  2. Autenticação por senha versus chave pública/privada.
-  3. Geração e gerenciamento de SSH Keys.
-  4. Configuração do SSH Server.
-  5. SCP, SFTP e transferência de arquivos.
-
-### Notebook 14 — Linux Shell Scripting Fundamentals
-- **Objetivo:** Automatizar tarefas administrativas utilizando Bash.
-- **Estrutura do Conteúdo:**
-  1. Shell e Bash Scripting.
-  2. Variáveis, argumentos e variáveis de ambiente.
-  3. Condicionais e estruturas de repetição.
-  4. Funções e exit codes.
-  5. Pipes, redirections e execução de scripts.
-
-### Notebook 15 — Linux Logs and Troubleshooting
-- **Objetivo:** Diagnosticar problemas em sistemas Linux utilizando logs e ferramentas nativas.
-- **Estrutura do Conteúdo:**
-  1. Estrutura de logs em /var/log.
-  2. journalctl e dmesg.
-  3. grep, tail, less e análise de logs.
-  4. Diagnóstico de falhas em serviços.
-  5. Investigação de problemas de CPU, memória e disco.
-
-## Issue #003 — Implementar laboratório de troubleshooting de redes
-
-### Notebook 16 — Networking Fundamentals and TCP/IP
-- **Objetivo:** Compreender os fundamentos da comunicação entre dispositivos.
-- **Estrutura do Conteúdo:**
-  1. Modelo OSI e modelo TCP/IP.
-  2. Camadas de comunicação e encapsulamento.
-  3. Endereços MAC e IP.
-  4. TCP versus UDP.
-  5. Portas e sockets.
-
-### Notebook 17 — IPv4, IPv6 and CIDR Addressing
-- **Objetivo:** Compreender endereçamento IP e representação de redes.
-- **Estrutura do Conteúdo:**
-  1. Estrutura dos endereços IPv4.
-  2. Endereços públicos, privados e especiais.
-  3. Introdução ao IPv6.
-  4. Notação CIDR e máscaras de rede.
-  5. Network Address, Broadcast e endereços utilizáveis.
-
-### Notebook 18 — Subnetting and Network Segmentation
-- **Objetivo:** Aprender a dividir redes em sub-redes e dimensionar espaços de endereçamento.
-- **Estrutura do Conteúdo:**
-  1. Conceito de subnetting.
-  2. Cálculo de subnets e quantidade de hosts.
-  3. Divisão de redes utilizando CIDR.
-  4. VLSM e aproveitamento de endereços.
-  5. Exercícios de planejamento de endereçamento.
-
-### Notebook 19 — Routing, Gateways and NAT
-- **Objetivo:** Entender como pacotes encontram caminhos entre redes diferentes.
-- **Estrutura do Conteúdo:**
-  1. Default Gateway.
-  2. Routing Tables e rotas estáticas.
-  3. Funcionamento do roteamento entre redes.
-  4. NAT e PAT.
-  5. Diferença entre comunicação local e comunicação externa.
-
-### Notebook 20 — DNS and Name Resolution
-- **Objetivo:** Compreender como nomes de domínio são convertidos em endereços IP.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento do DNS.
-  2. Resolvers, Root Servers e Authoritative Servers.
-  3. Registros A, AAAA, CNAME, MX, NS e TXT.
-  4. DNS caching e TTL.
-  5. Ferramentas dig, nslookup e host.
-
-### Notebook 21 — HTTP, HTTPS and TLS
-- **Objetivo:** Entender como aplicações web se comunicam e protegem suas conexões.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento do protocolo HTTP.
-  2. Métodos HTTP e códigos de status.
-  3. Diferenças entre HTTP e HTTPS.
-  4. TLS handshake e certificados digitais.
-  5. Certificados, autoridades certificadoras e criptografia em trânsito.
-
-### Notebook 22 — Firewalls and Network Security Fundamentals
-- **Objetivo:** Compreender como o tráfego de rede é filtrado e controlado.
-- **Estrutura do Conteúdo:**
-  1. Conceito e funcionamento de firewalls.
-  2. Stateful versus Stateless Firewall.
-  3. Regras de entrada e saída.
-  4. Portas, protocolos e filtros de tráfego.
-  5. Introdução a ACLs e segmentação de rede.
-
-### Notebook 23 — Network Troubleshooting Tools
-- **Objetivo:** Aprender a investigar falhas de comunicação utilizando ferramentas de diagnóstico.
-- **Estrutura do Conteúdo:**
-  1. ping e traceroute/tracert.
-  2. curl e wget.
-  3. ss e netstat.
-  4. tcpdump e introdução ao Wireshark.
-  5. Metodologia de diagnóstico de conectividade.
-
----
-
-# Fase 1 — Cloud Engineering
-
-## Issue #004 — Configurar conta AWS e controles iniciais
-
-### Notebook 24 — AWS Global Infrastructure
-- **Objetivo:** Entender como a infraestrutura global da AWS é organizada.
-- **Estrutura do Conteúdo:**
-  1. AWS Regions.
-  2. Availability Zones.
-  3. Edge Locations.
-  4. Regional Services versus Global Services.
-  5. Critérios para escolher uma região.
-
-### Notebook 25 — AWS Account Management and Billing
-- **Objetivo:** Compreender o gerenciamento de contas e os mecanismos básicos de cobrança da AWS.
-- **Estrutura do Conteúdo:**
-  1. AWS Accounts e Root User.
-  2. AWS Organizations: conceitos fundamentais.
-  3. Billing Dashboard.
-  4. AWS Budgets e alertas de custos.
-  5. Modelos de cobrança e Free Tier.
-
-### Notebook 26 — AWS IAM Fundamentals
-- **Objetivo:** Entender o gerenciamento de identidades e permissões na AWS.
-- **Estrutura do Conteúdo:**
-  1. IAM Users, Groups e Roles.
-  2. IAM Policies e estrutura JSON.
-  3. Identity-based e Resource-based Policies.
-  4. Allow, Deny e Explicit Deny.
-  5. Least Privilege e MFA.
-
-### Notebook 27 — AWS IAM Roles and Temporary Credentials
-- **Objetivo:** Compreender como serviços e aplicações recebem permissões sem utilizar credenciais permanentes.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento das IAM Roles.
-  2. Trust Policies e Permission Policies.
-  3. AWS Security Token Service (STS).
-  4. Temporary Security Credentials.
-  5. IAM Instance Profiles e acesso de aplicações aos serviços AWS.
-
-## Issue #005 — Criar VPC e segmentação de rede com Terraform
-
-### Notebook 28 — Amazon VPC Fundamentals
-- **Objetivo:** Entender como redes virtuais são criadas e organizadas na AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é uma VPC.
-  2. CIDR Blocks e planejamento de endereçamento.
-  3. Public e Private Subnets.
-  4. Subnets distribuídas entre Availability Zones.
-  5. Comunicação entre subnets.
-
-### Notebook 29 — AWS VPC Routing and Internet Connectivity
-- **Objetivo:** Compreender como recursos dentro de uma VPC se comunicam com outras redes e com a internet.
-- **Estrutura do Conteúdo:**
-  1. Route Tables e rotas locais.
-  2. Internet Gateway.
-  3. NAT Gateway e NAT Instance.
-  4. Rotas para recursos públicos e privados.
-  5. Fluxo de tráfego de entrada e saída.
-
-### Notebook 31 — AWS VPC Connectivity Services
-- **Objetivo:** Conhecer os mecanismos de conectividade entre redes e serviços AWS.
-- **Estrutura do Conteúdo:**
-  1. VPC Peering.
-  2. VPC Endpoints: Gateway e Interface.
-  3. AWS Site-to-Site VPN.
-  4. Introdução ao AWS Transit Gateway.
-  5. Casos de uso e diferenças entre as soluções.
-
-### Notebook 46 — Infrastructure as Code Fundamentals
-- **Objetivo:** Compreender o conceito de infraestrutura declarativa e automatizada.
-- **Estrutura do Conteúdo:**
-  1. O que é Infrastructure as Code.
-  2. Infraestrutura manual versus automatizada.
-  3. Declarative versus Imperative.
-  4. Idempotency.
-  5. Benefícios, limitações e gerenciamento de mudanças.
-
-### Notebook 47 — Terraform Fundamentals and HCL
-- **Objetivo:** Aprender a estrutura e a sintaxe da linguagem utilizada pelo Terraform.
-- **Estrutura do Conteúdo:**
-  1. O que é Terraform e como funciona.
-  2. Providers e arquivos de configuração.
-  3. HCL: sintaxe e blocos.
-  4. Variables, Outputs e Locals.
-  5. Resources e Data Sources.
-
-### Notebook 48 — Terraform Workflow and Resource Lifecycle
-- **Objetivo:** Compreender o ciclo de vida de uma infraestrutura gerenciada pelo Terraform.
-- **Estrutura do Conteúdo:**
-  1. terraform init.
-  2. terraform fmt e validate.
-  3. terraform plan.
-  4. terraform apply e destroy.
-  5. Dependency Graph e Resource Lifecycle.
-
-## Issue #006 — Definir Security Groups com privilégio mínimo
-
-### Notebook 30 — AWS VPC Security and Traffic Filtering
-- **Objetivo:** Aprender a controlar o tráfego de rede dentro da infraestrutura AWS.
-- **Estrutura do Conteúdo:**
-  1. Security Groups.
-  2. Network ACLs.
-  3. Diferenças entre Security Groups e NACLs.
-  4. Inbound e Outbound Rules.
-  5. VPC Flow Logs e diagnóstico de tráfego.
-
-## Issue #007 — Containerizar aplicação Spring Boot
-
-### Notebook 52 — Docker Fundamentals
-- **Objetivo:** Compreender o funcionamento de containers e imagens Docker.
-- **Estrutura do Conteúdo:**
-  1. O que são containers.
-  2. Docker Engine e arquitetura cliente-servidor.
-  3. Images versus Containers.
-  4. Image Layers e registries.
-  5. Comandos essenciais do Docker.
-
-### Notebook 53 — Dockerfile and Image Building
-- **Objetivo:** Aprender a construir imagens personalizadas para aplicações.
-- **Estrutura do Conteúdo:**
-  1. Estrutura de um Dockerfile.
-  2. FROM, RUN, COPY, ADD e CMD.
-  3. ENTRYPOINT e diferença para CMD.
-  4. Build Context e .dockerignore.
-  5. Image Tagging e otimização de imagens.
-
-### Notebook 54 — Docker Networking
-- **Objetivo:** Entender como containers se comunicam entre si e com redes externas.
-- **Estrutura do Conteúdo:**
-  1. Docker Bridge Network.
-  2. Host e None Network.
-  3. Container-to-Container Communication.
-  4. Port Mapping.
-  5. DNS e resolução de nomes entre containers.
-
-### Notebook 55 — Docker Volumes and Persistence
-- **Objetivo:** Compreender como os dados são persistidos fora do ciclo de vida dos containers.
-- **Estrutura do Conteúdo:**
-  1. Container Filesystem e seu ciclo de vida.
-  2. Docker Volumes.
-  3. Bind Mounts.
-  4. Persistência de dados.
-  5. Diferenças entre volumes e bind mounts.
-
-### Notebook 56 — Docker Compose
-- **Objetivo:** Aprender a administrar aplicações compostas por múltiplos containers.
-- **Estrutura do Conteúdo:**
-  1. O que é Docker Compose.
-  2. Estrutura do compose.yaml.
-  3. Services, Networks e Volumes.
-  4. Environment Variables.
-  5. Inicialização, atualização e encerramento de aplicações.
-
-## Issue #008 — Criar repositório ECR e publicar imagem
-
-### Notebook 57 — AWS ECR and ECS Fundamentals
-- **Objetivo:** Compreender como a AWS armazena e executa aplicações containerizadas.
-- **Estrutura do Conteúdo:**
-  1. Amazon ECR e armazenamento de imagens.
-  2. Amazon ECS e gerenciamento de containers.
-  3. Clusters, Tasks e Services.
-  4. Task Definitions.
-  5. ECS EC2 Launch Type versus Fargate.
-
-## Issue #009 — Provisionar PostgreSQL no RDS
-
-### Notebook 36 — Amazon RDS Fundamentals
-- **Objetivo:** Compreender como bancos de dados relacionais gerenciados funcionam na AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é Amazon RDS.
-  2. Engines suportadas: PostgreSQL, MySQL e outras.
-  3. DB Instances e DB Subnet Groups.
-  4. Conectividade e Security Groups.
-  5. Diferenças entre banco gerenciado e banco instalado manualmente em EC2.
-
-### Notebook 37 — Amazon RDS Backup and High Availability
-- **Objetivo:** Entender como a AWS oferece disponibilidade e recuperação para bancos de dados.
-- **Estrutura do Conteúdo:**
-  1. Automated Backups e Snapshots.
-  2. Point-in-Time Recovery.
-  3. Multi-AZ Deployments.
-  4. Read Replicas.
-  5. Diferenças entre alta disponibilidade e escalabilidade de leitura.
-
-## Issue #010 — Provisionar bucket S3 privado
-
-### Notebook 34 — Amazon S3 Fundamentals
-- **Objetivo:** Compreender o funcionamento do armazenamento de objetos na AWS.
-- **Estrutura do Conteúdo:**
-  1. Buckets e Objects.
-  2. Object Keys e estrutura de armazenamento.
-  3. Upload, Download e operações básicas.
-  4. Storage Classes.
-  5. Casos de uso de Object Storage.
-
-### Notebook 35 — Amazon S3 Security and Lifecycle Management
-- **Objetivo:** Aprender a proteger e administrar o ciclo de vida dos objetos armazenados.
-- **Estrutura do Conteúdo:**
-  1. Bucket Policies e IAM Policies.
-  2. Block Public Access.
-  3. Versioning.
-  4. Lifecycle Policies.
-  5. Encryption at Rest e controle de acesso.
-
-## Issue #011 — Implantar aplicação no ECS Fargate
-
-### Notebook 38 — AWS Load Balancing
-- **Objetivo:** Compreender como o tráfego é distribuído entre múltiplos servidores.
-- **Estrutura do Conteúdo:**
-  1. Conceito de Load Balancing.
-  2. Application Load Balancer.
-  3. Network Load Balancer.
-  4. Target Groups e Health Checks.
-  5. Distribuição de tráfego e disponibilidade.
-
-### Notebook 39 — AWS Auto Scaling
-- **Objetivo:** Entender como a infraestrutura ajusta automaticamente sua capacidade de processamento.
-- **Estrutura do Conteúdo:**
-  1. Auto Scaling Groups.
-  2. Launch Templates.
-  3. Scaling Policies.
-  4. Dynamic Scaling e Scheduled Scaling.
-  5. Integração entre Auto Scaling e Load Balancers.
-
-## Issue #012 — Configurar HTTPS com ACM e Load Balancer
-
-### Notebook 40 — Amazon Route 53
-- **Objetivo:** Aprender como o serviço DNS da AWS administra domínios e direciona tráfego.
-- **Estrutura do Conteúdo:**
-  1. Hosted Zones.
-  2. DNS Records.
-  3. Public e Private Hosted Zones.
-  4. Routing Policies.
-  5. Health Checks e DNS Failover.
-
-### Notebook 42 — AWS Certificate Manager
-- **Objetivo:** Entender como certificados digitais são provisionados e utilizados na AWS.
-- **Estrutura do Conteúdo:**
-  1. Conceitos de certificados SSL/TLS.
-  2. Provisionamento de certificados com ACM.
-  3. Validação por DNS e e-mail.
-  4. Integração com Load Balancers e CloudFront.
-  5. Renovação e gerenciamento de certificados.
-
----
-
-# Fase 2 — Operações e automação
-
-## Issue #013 — Configurar Terraform State remoto e locking
-
-### Notebook 49 — Terraform State Management
-- **Objetivo:** Entender como o Terraform acompanha e controla os recursos provisionados.
-- **Estrutura do Conteúdo:**
-  1. O que é Terraform State.
-  2. Local State versus Remote State.
-  3. State Locking.
-  4. Infrastructure Drift.
-  5. Importação e gerenciamento de recursos existentes.
-
-### Notebook 50 — Terraform Modules and Reusable Infrastructure
-- **Objetivo:** Aprender a organizar configurações reutilizáveis e escaláveis.
-- **Estrutura do Conteúdo:**
-  1. O que são Modules.
-  2. Root Modules e Child Modules.
-  3. Inputs e Outputs.
-  4. Module Composition.
-  5. Versionamento e reutilização de módulos.
-
-## Issue #014 — Implementar pipeline CI/CD com GitHub Actions
-
-### Notebook 58 — CI/CD Fundamentals
-- **Objetivo:** Compreender os conceitos e etapas de integração e entrega contínua.
-- **Estrutura do Conteúdo:**
-  1. Continuous Integration.
-  2. Continuous Delivery versus Continuous Deployment.
-  3. Build, Test e Deployment Stages.
-  4. Pipeline Automation.
-  5. Rollback e estratégias básicas de implantação.
-
-### Notebook 59 — GitHub Actions
-- **Objetivo:** Aprender a automatizar tarefas de desenvolvimento e infraestrutura utilizando GitHub Actions.
-- **Estrutura do Conteúdo:**
-  1. Workflows e arquivos YAML.
-  2. Events, Jobs e Steps.
-  3. Runners e Actions.
-  4. Secrets e Environment Variables.
-  5. Integração com testes, Docker e deploy.
-
-## Issue #015 — Autenticar GitHub Actions na AWS com OIDC
-
-## Issue #016 — Implementar observabilidade com CloudWatch
-
-### Notebook 60 — Amazon CloudWatch Fundamentals
-- **Objetivo:** Compreender como a AWS monitora recursos e aplicações.
-- **Estrutura do Conteúdo:**
-  1. O que é Amazon CloudWatch.
-  2. Metrics e Dimensions.
-  3. Logs, Log Groups e Log Streams.
-  4. Dashboards.
-  5. CloudWatch Agent.
-
-### Notebook 61 — CloudWatch Alarms and Monitoring
-- **Objetivo:** Aprender a identificar condições anormais e automatizar alertas.
-- **Estrutura do Conteúdo:**
-  1. CloudWatch Alarms.
-  2. Thresholds e Evaluation Periods.
-  3. Alarm States.
-  4. Integração com SNS.
-  5. Monitoramento de CPU, memória, disco e aplicações.
-
-## Issue #017 — Executar exercícios de troubleshooting e incidentes
-
-### Notebook 63 — Cloud Troubleshooting Methodology
-- **Objetivo:** Desenvolver um método estruturado para diagnosticar problemas em ambientes cloud.
-- **Estrutura do Conteúdo:**
-  1. Identificação e classificação de incidentes.
-  2. Coleta de evidências e análise de sintomas.
-  3. Investigação de problemas de conectividade.
-  4. Investigação de falhas em serviços e infraestrutura.
-  5. Isolamento de causas e validação de soluções.
-
-### Notebook 64 — Incident Response and Root Cause Analysis
-- **Objetivo:** Compreender como equipes de infraestrutura respondem a incidentes e evitam recorrências.
-- **Estrutura do Conteúdo:**
-  1. Incident Lifecycle.
-  2. Triage e priorização.
-  3. Mitigação e recuperação de serviços.
-  4. Root Cause Analysis.
-  5. Postmortems e ações preventivas.
-
-## Issue #018 — Implementar backup, restauração e recuperação
-
-### Notebook 33 — Amazon EBS and Instance Storage
-- **Objetivo:** Compreender como o armazenamento em bloco funciona nas instâncias EC2.
-- **Estrutura do Conteúdo:**
-  1. Elastic Block Store.
-  2. EBS Volumes e tipos de volume.
-  3. Snapshots e backups.
-  4. Attach, Detach e expansão de volumes.
-  5. EBS versus Instance Store.
-
-### Notebook 66 — Backup and Disaster Recovery
-- **Objetivo:** Aprender estratégias de proteção de dados e recuperação de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Backup Strategies.
-  2. RTO e RPO.
-  3. Snapshots e recuperação de dados.
-  4. Disaster Recovery Strategies.
-  5. Restore Testing e validação de backups.
-
----
-
-# Fase 3 — Cloud Security
-
-## Issue #019 — Aplicar IAM Least Privilege aos workloads
-
-## Issue #020 — Centralizar segredos no Secrets Manager
-
-### Notebook 51 — Terraform Environments and Best Practices
-- **Objetivo:** Aprender a organizar ambientes e gerenciar mudanças de infraestrutura com segurança.
-- **Estrutura do Conteúdo:**
-  1. Separação entre Development, Staging e Production.
-  2. Terraform Workspaces e suas limitações.
-  3. Estrutura de projetos Terraform.
-  4. Gerenciamento seguro de Secrets.
-  5. Code Review e validação de mudanças.
-
-## Issue #021 — Implementar criptografia e governança de chaves KMS
-
-## Issue #022 — Implementar trilha de auditoria com CloudTrail
-
-### Notebook 62 — AWS CloudTrail and Auditing
-- **Objetivo:** Entender como as atividades realizadas na conta AWS são registradas.
-- **Estrutura do Conteúdo:**
-  1. O que é CloudTrail.
-  2. Management Events e Data Events.
-  3. Event History.
-  4. Identificação de alterações na infraestrutura.
-  5. Auditoria e investigação de atividades suspeitas.
-
-## Issue #023 — Habilitar GuardDuty e criar fluxo de triagem
-
-## Issue #024 — Configurar AWS Config e Security Hub
-
-## Issue #025 — Executar threat modeling e avaliação de arquitetura
-
-## Issue #026 — Criar playbook de resposta a incidente de credencial comprometida
-
----
-
-# Fase 4 — Segurança avançada e portfólio
-
-## Issue #027 — Adicionar verificações de segurança ao CI/CD
-
-## Issue #028 — Proteger aplicação com AWS WAF
-
-## Issue #029 — Desenhar segregação de ambientes e arquitetura multi-account
-
-### Notebook 68 — AWS Well-Architected Framework
-- **Objetivo:** Conhecer os princípios utilizados para avaliar e melhorar arquiteturas AWS.
-- **Estrutura do Conteúdo:**
-  1. Operational Excellence.
-  2. Security.
-  3. Reliability.
-  4. Performance Efficiency e Cost Optimization.
-  5. Sustainability e princípios de revisão arquitetural.
-
-## Issue #030 — Publicar relatório final de arquitetura, operações e segurança
-
-### Notebook 65 — High Availability and Fault Tolerance
-- **Objetivo:** Compreender como projetar ambientes capazes de continuar funcionando diante de falhas.
-- **Estrutura do Conteúdo:**
-  1. High Availability.
-  2. Fault Tolerance.
-  3. Redundância e eliminação de Single Points of Failure.
-  4. Multi-AZ e Multi-Region.
-  5. Health Checks e recuperação automática.
-
-### Notebook 67 — AWS Cost Optimization
-- **Objetivo:** Aprender a identificar desperdícios e otimizar custos de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. AWS Pricing Models.
-  2. On-Demand, Reserved Instances e Savings Plans.
-  3. Rightsizing de instâncias.
-  4. Identificação de recursos ociosos.
-  5. Cost Explorer, Budgets e tagging.
-
-### Notebook 69 — Production Readiness and Operational Practices
-- **Objetivo:** Compreender o que é necessário para manter uma aplicação e sua infraestrutura prontas para produção.
-- **Estrutura do Conteúdo:**
-  1. Production Readiness Checklist.
-  2. Runbooks e documentação operacional.
-  3. Change Management.
-  4. Deployment Safety e Rollback.
-  5. Health Checks e procedimentos operacionais.
-
-### Notebook 70 — Cloud Engineering Capstone: Production Infrastructure
-- **Objetivo:** Consolidar os conhecimentos adquiridos construindo uma infraestrutura AWS automatizada e preparada para executar uma aplicação real.
-- **Estrutura do Conteúdo:**
-  1. Levantamento de requisitos e desenho da arquitetura.
-  2. Provisionamento de VPC, subnets, rotas e Security Groups.
-  3. Provisionamento de EC2, Load Balancer e Auto Scaling.
-  4. Implantação de banco RDS e armazenamento S3.
-  5. Automação com Terraform.
-  6. Containerização e pipeline CI/CD.
-  7. Monitoramento, logs e alertas.
-  8. Testes de falha, recuperação e otimização de custos.
-
----
-
-# Tópicos sem Issue correspondente
-
-### Notebook 32 — Amazon EC2 Fundamentals
-- **Objetivo:** Aprender como máquinas virtuais são provisionadas e administradas na AWS.
-- **Estrutura do Conteúdo:**
-  1. EC2 e tipos de instância.
-  2. AMIs e inicialização de instâncias.
-  3. Key Pairs e acesso SSH.
-  4. Instance Lifecycle.
-  5. User Data e Instance Metadata.
-
-### Notebook 41 — Amazon CloudFront and Content Delivery
-- **Objetivo:** Compreender como o conteúdo é distribuído globalmente através de uma CDN.
-- **Estrutura do Conteúdo:**
-  1. O que é uma Content Delivery Network.
-  2. Edge Locations e Caching.
-  3. Origins e Origin Access Control.
-  4. Cache Behaviors e TTL.
-  5. Integração entre CloudFront e S3.
-
-### Notebook 43 — AWS Lambda Fundamentals
-- **Objetivo:** Compreender o modelo de execução Serverless da AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é AWS Lambda.
-  2. Functions, Handlers e Runtimes.
-  3. Triggers e Execution Roles.
-  4. Memory, Timeout e concorrência.
-  5. Diferenças entre Lambda e EC2.
-
-### Notebook 44 — AWS Messaging Services: SQS and SNS
-- **Objetivo:** Entender como aplicações se comunicam de forma assíncrona e desacoplada.
-- **Estrutura do Conteúdo:**
-  1. Comunicação síncrona versus assíncrona.
-  2. Amazon SQS e filas de mensagens.
-  3. Amazon SNS e publicação de mensagens.
-  4. Dead Letter Queues.
-  5. Diferenças e casos de uso de SQS e SNS.
-
-### Notebook 45 — Amazon EventBridge and Event-Driven Architecture
-- **Objetivo:** Compreender arquiteturas orientadas a eventos utilizando serviços AWS.
-- **Estrutura do Conteúdo:**
-  1. Conceito de Event-Driven Architecture.
-  2. Events, Event Buses e Rules.
-  3. EventBridge Targets.
-  4. Integração com Lambda e outros serviços.
-  5. Casos de uso de automação orientada a eventos.
+# Plano de Estudos — AppSec Engineer
+
+# Fase 0 — Fundamentos
+
+### Notebook 01 — Web Application Security Fundamentals
+- **Objetivo:** Compreender o que é segurança de aplicações e por que ela depende de pessoas, processo e tecnologia.
+- **Estrutura do Conteúdo:**
+  1. O que é Application Security e o papel do AppSec Engineer.
+  2. Threat actors, motivações e modelos de ameaça mais comuns contra aplicações web.
+  3. Confidentiality, Integrity e Availability (CIA) aplicados a software.
+  4. Diferença entre vulnerabilidade, ameaça, risco e exposição.
+  5. Defesa em profundidade e o princípio de least privilege no ciclo de desenvolvimento.
+
+### Notebook 02 — HTTP for AppSec
+- **Objetivo:** Ler e interpretar tráfego HTTP para identificar onde controles de segurança são aplicados ou ignorados.
+- **Estrutura do Conteúdo:**
+  1. Estrutura de uma mensagem HTTP: request line, headers e body.
+  2. Métodos HTTP e implicações de segurança de GET, POST, PUT, PATCH e DELETE.
+  3. Status codes relevantes para segurança e o que eles revelam.
+  4. Cookies, Set-Cookie e atributos Secure, HttpOnly e SameSite.
+  5. HTTP/1.1, HTTP/2 e HTTP/3: diferenças que afetam testes e defesas.
+
+### Notebook 03 — Authentication, Sessions and Authorization
+- **Objetivo:** Distinguir autenticação de autorização e entender como sessões e tokens mantêm a identidade do usuário.
+- **Estrutura do Conteúdo:**
+  1. Authentication factors: something you know, have e are.
+  2. Password storage, hashing e políticas de credencial.
+  3. Session management, session fixation e session hijacking.
+  4. Authorization models: RBAC, ABAC e ReBAC.
+  5. Tokens, JWT e OAuth 2.0/OpenID Connect em alto nível.
+
+### Notebook 04 — Applied Cryptography for Applications
+- **Objetivo:** Aplicar criptografia de forma correta no armazenamento e no transporte de dados da aplicação.
+- **Estrutura do Conteúdo:**
+  1. Symmetric versus asymmetric encryption e quando usar cada uma.
+  2. Hashing, salted hashing e password hashing algorithms (bcrypt, Argon2).
+  3. TLS, certificados e o handshake em alto nível.
+  4. Key management, rotação de chaves e secrets.
+  5. Erros comuns: ECB mode, IV reutilizado e criptografia caseira.
+
+### Notebook 05 — OWASP Top 10 2025 Overview
+- **Objetivo:** Conhecer a taxonomia OWASP Top 10 2025 e usá-la como vocabulário comum de risco.
+- **Estrutura do Conteúdo:**
+  1. O que é o OWASP Top 10 e como ele é construído.
+  2. As dez categorias de 2025 e o que mudou em relação a 2021.
+  3. A01 Broken Access Control, incluindo SSRF, e A02 Security Misconfiguration.
+  4. A03 Software Supply Chain Failures e A10 Mishandling of Exceptional Conditions.
+  5. Como mapear um achado real para uma categoria do Top 10.
+
+### Notebook 06 — OWASP ASVS 5.0 and Security Requirements
+- **Objetivo:** Traduzir requisitos de segurança em critérios verificáveis usando o OWASP ASVS 5.0.
+- **Estrutura do Conteúdo:**
+  1. O que é o ASVS e para que servem os níveis de verificação.
+  2. Estrutura do ASVS 5.0: capítulos, requisitos e níveis.
+  3. Como derivar security requirements de um requisito de negócio.
+  4. Uso do ASVS em revisão de arquitetura e em testes.
+  5. Limites do ASVS e relação com o Top 10 e o API Top 10.
+
+# Fase 1 — Vulnerabilidades
+
+### Notebook 07 — Broken Access Control (A01, inclui SSRF)
+- **Objetivo:** Reconhecer falhas de controle de acesso, incluindo SSRF, e entender como preveni-las.
+- **Estrutura do Conteúdo:**
+  1. Access control horizontal, vertical e context-dependent.
+  2. IDOR e manipulação de identificadores em APIs.
+  3. Missing function-level access control e bypass de autorização.
+  4. SSRF: server-side request forgery e acesso a metadata de cloud.
+  5. Prevenção: deny by default, checagem server-side e allowlists de destino.
+
+### Notebook 08 — Security Misconfiguration (A02)
+- **Objetivo:** Identificar configurações inseguras em aplicações, servidores e serviços gerenciados.
+- **Estrutura do Conteúdo:**
+  1. Default credentials, contas de exemplo e recursos desnecessários.
+  2. Mensagens de erro verbosas e exposição de stack traces.
+  3. Security headers e configuração de CORS.
+  4. Configuração insegura em cloud storage e serviços gerenciados.
+  5. Hardening, baseline de configuração e Infrastructure as Code.
+
+### Notebook 09 — Software Supply Chain Failures (A03)
+- **Objetivo:** Entender como dependências e artefatos comprometidos introduzem risco na aplicação.
+- **Estrutura do Conteúdo:**
+  1. O que é software supply chain e por que ela falha.
+  2. Dependências diretas e transitivas, versões e lockfiles.
+  3. Typosquatting, dependency confusion e pacotes maliciosos.
+  4. Componentes desatualizados e vulnerabilidades conhecidas (CVEs).
+  5. Controles: inventário de dependências, verificação de integridade e atualização contínua.
+
+### Notebook 10 — Cryptographic Failures (A04)
+- **Objetivo:** Detectar dados sensíveis expostos por criptografia ausente, fraca ou mal aplicada.
+- **Estrutura do Conteúdo:**
+  1. Dados sensíveis em repouso e em trânsito.
+  2. Algoritmos obsoletos e modos de operação inseguros.
+  3. Erros de geração e gestão de chaves e IVs.
+  4. Hashing inadequado de senhas e dados derivados.
+  5. Verificação: TLS, armazenamento de segredos e classificação de dados.
+
+### Notebook 11 — Injection (A05)
+- **Objetivo:** Compreender injeção como falha de separação entre dados e comandos.
+- **Estrutura do Conteúdo:**
+  1. SQL injection e prepared statements.
+  2. Command injection e execução de processos pelo servidor.
+  3. LDAP, NoSQL e template injection.
+  4. Cross-site scripting como forma de injeção no navegador.
+  5. Prevenção: parameterização, validação e encoding contextual.
+
+### Notebook 12 — Insecure Design (A06)
+- **Objetivo:** Reconhecer riscos que nascem de decisões de design, não de erros de implementação.
+- **Estrutura do Conteúdo:**
+  1. Diferença entre insecure design e implementation flaw.
+  2. Ausência de limites de negócio: fluxos de recuperação de senha e checkout.
+  3. Abuse cases e modelagem de ameaças no design.
+  4. Segregação de responsabilidades e trust boundaries.
+  5. Padrões de design seguro e revisão de arquitetura.
+
+### Notebook 13 — Authentication Failures (A07)
+- **Objetivo:** Identificar fragilidades em autenticação e gestão de sessão.
+- **Estrutura do Conteúdo:**
+  1. Credential stuffing, brute force e password spraying.
+  2. Políticas fracas de senha e ausência de rate limiting.
+  3. MFA, recuperação de conta e fluxos de reset.
+  4. Session fixation, expiração e revogação de sessão.
+  5. Prevenção: MFA, proteção contra automação e monitoramento de falhas.
+
+### Notebook 14 — Software and Data Integrity Failures (A08)
+- **Objetivo:** Entender riscos de integridade em código, pipelines e dados serializados.
+- **Estrutura do Conteúdo:**
+  1. Integridade de artefatos e atualizações não assinadas.
+  2. CI/CD como vetor de ataque e permissões de pipeline.
+  3. Insecure deserialization e objetos não confiáveis.
+  4. Assinatura de artefatos e verificação de origem.
+  5. Prevenção: checksums, assinatura e revisão de dependências.
+
+### Notebook 15 — Security Logging and Alerting Failures (A09)
+- **Objetivo:** Garantir que eventos de segurança sejam registrados, protegidos e monitorados.
+- **Estrutura do Conteúdo:**
+  1. Eventos que precisam ser logados: autenticação, autorização e mudanças críticas.
+  2. Log injection e proteção dos próprios logs.
+  3. Retenção, integridade e acesso aos logs.
+  4. Alertas eficazes versus ruído operacional.
+  5. Detecção de ataques e resposta a incidentes baseada em logs.
+
+### Notebook 16 — Mishandling of Exceptional Conditions (A10)
+- **Objetivo:** Tratar erros e condições excepcionais sem expor dados nem permitir estados inseguros.
+- **Estrutura do Conteúdo:**
+  1. Fail open versus fail closed.
+  2. Tratamento de exceções e mensagens de erro seguras.
+  3. Estados inconsistentes após falhas parciais.
+  4. Timeouts, retries e limites de recursos.
+  5. Prevenção: tratamento centralizado de erros e testes de condições anormais.
+
+### Notebook 17 — API Security (OWASP API Top 10)
+- **Objetivo:** Aplicar o OWASP API Security Top 10 a APIs REST e GraphQL.
+- **Estrutura do Conteúdo:**
+  1. Especificidades de segurança em APIs e exposição de objetos.
+  2. Broken object level authorization (BOLA) e broken function level authorization.
+  3. Excessive data exposure e mass assignment.
+  4. Rate limiting, resource consumption e falta de inventário de APIs.
+  5. Autenticação de APIs, tokens e boas práticas de gateway.
+
+### Notebook 18 — Client-Side Security (XSS, CSRF, CORS, clickjacking)
+- **Objetivo:** Compreender ataques e defesas que ocorrem no navegador do usuário.
+- **Estrutura do Conteúdo:**
+  1. XSS: stored, reflected e DOM-based.
+  2. Content Security Policy e Trusted Types.
+  3. CSRF e tokens anti-CSRF, SameSite cookies.
+  4. CORS: origens permitidas e erros comuns de configuração.
+  5. Clickjacking, frame-ancestors e headers de proteção.
+
+# Fase 2 — Validação ofensiva leve
+
+### Notebook 19 — Burp Suite and Interception Proxies
+- **Objetivo:** Operar um interception proxy para observar e alterar tráfego de aplicações próprias ou autorizadas.
+- **Estrutura do Conteúdo:**
+  1. Como funciona um interception proxy e o papel do CA de teste.
+  2. Configuração de escopo, proxy e certificados no Burp Suite.
+  3. Repeater, Intruder e Comparer no fluxo de análise.
+  4. Captura de tráfego HTTPS e tráfego de APIs.
+  5. Limites éticos e legais: escopo autorizado e registro de evidências.
+
+### Notebook 20 — Request Manipulation and Parameter Testing
+- **Objetivo:** Testar entradas e parâmetros de forma sistemática sem recorrer a automação cega.
+- **Estrutura do Conteúdo:**
+  1. Enumeração de parâmetros de query, body, headers e cookies.
+  2. Valores limítrofes, tipos inesperados e campos ocultos.
+  3. Bypass de validação client-side e de controles de UI.
+  4. HTTP parameter pollution e mass assignment.
+  5. Registro de hipóteses, testes e resultados por requisição.
+
+### Notebook 21 — Testing Authentication and Authorization
+- **Objetivo:** Verificar se autenticação e autorização resistem a manipulação de identidade e privilégio.
+- **Estrutura do Conteúdo:**
+  1. Testes de força bruta controlada e política de senhas.
+  2. Testes de fluxo de login, MFA e recuperação de conta.
+  3. Verificação de IDOR e escalonamento horizontal de privilégios.
+  4. Testes de função administrativa e escalonamento vertical.
+  5. Testes de expiração, revogação e reutilização de sessão.
+
+### Notebook 22 — Testing Injection and SSRF
+- **Objetivo:** Validar injeção e SSRF em ambiente de laboratório com métodos reproduzíveis.
+- **Estrutura do Conteúdo:**
+  1. Testes de SQL injection com payloads mínimos e observação de respostas.
+  2. Testes de command injection e template injection.
+  3. Testes de XSS refletido e armazenado.
+  4. Testes de SSRF contra destinos internos e metadata endpoints.
+  5. Confirmação de impacto, falso positivo e evidência mínima.
+
+### Notebook 23 — Testing Client-Side and APIs
+- **Objetivo:** Testar aplicações SPA e APIs além da interface visível.
+- **Estrutura do Conteúdo:**
+  1. Análise de JavaScript, endpoints e segredos expostos no cliente.
+  2. Testes de CORS, CSP e postMessage.
+  3. Enumeração de endpoints e métodos de API.
+  4. Testes de BOLA e mass assignment em APIs.
+  5. Ferramentas de apoio: DevTools, proxies e clientes HTTP.
+
+### Notebook 24 — Evidence, Lab Practice and Reporting
+- **Objetivo:** Documentar achados de forma reproduzível, com impacto e recomendação claros.
+- **Estrutura do Conteúdo:**
+  1. Estrutura de um relatório: resumo, escopo, método e achados.
+  2. Escrita de passos de reprodução e evidências.
+  3. Classificação de severidade e uso de CVSS.
+  4. Recomendações acionáveis para o time de desenvolvimento.
+  5. Prática em laboratórios: OWASP Juice Shop, DVWA e WebGoat.
+
+# Fase 3 — Ferramentas
+
+### Notebook 25 — SAST
+- **Objetivo:** Entender como análise estática encontra problemas no código-fonte e como interpretar seus resultados.
+- **Estrutura do Conteúdo:**
+  1. Como funciona SAST: parsing, data flow e taint analysis.
+  2. Cobertura, linguagens suportadas e limites da análise.
+  3. Integração do SAST no repositório e no pull request.
+  4. Triagem de achados e priorização por exploração real.
+  5. Métricas de adoção e qualidade dos achados.
+
+### Notebook 26 — DAST
+- **Objetivo:** Usar análise dinâmica para testar aplicações em execução.
+- **Estrutura do Conteúdo:**
+  1. Como funciona DAST e o que ele consegue observar.
+  2. Requisitos de ambiente: aplicação acessível, autenticação e dados de teste.
+  3. Escopo, crawling e autenticação em scanners DAST.
+  4. Limites: cegueira de lógica de negócio e dependência de superfície.
+  5. Integração em staging e leitura dos resultados.
+
+### Notebook 27 — SCA and Dependency Scanning
+- **Objetivo:** Identificar dependências vulneráveis e gerenciar risco de terceiros.
+- **Estrutura do Conteúdo:**
+  1. Software Composition Analysis e inventário de dependências.
+  2. Fontes de vulnerabilidade: CVE, NVD, GHSA e advisories.
+  3. Reachability e priorização de dependências realmente usadas.
+  4. Atualização, pinning e política de dependências.
+  5. Automação de SCA no pipeline e tratamento de ruído.
+
+### Notebook 28 — Secrets Detection and Management
+- **Objetivo:** Evitar que credenciais vazem no código e garantir gestão segura de segredos.
+- **Estrutura do Conteúdo:**
+  1. Como segredos vazam: commits, logs, imagens e variáveis.
+  2. Detecção em repositório, histórico e pipeline.
+  3. Rotação e revogação de credenciais expostas.
+  4. Secret managers e injeção de segredos em runtime.
+  5. Prevenção: pre-commit hooks, scanning contínuo e educação do time.
+
+### Notebook 29 — Container and IaC Scanning
+- **Objetivo:** Detectar configurações e componentes inseguros em containers e infraestrutura como código.
+- **Estrutura do Conteúdo:**
+  1. Camadas de imagem, Dockerfile e boas práticas de build.
+  2. Scanning de imagens e vulnerabilidades de pacotes do sistema.
+  3. IaC scanning para Terraform e Kubernetes.
+  4. Misconfigurations comuns: privilégios, rede e storage público.
+  5. Integração no build e políticas de bloqueio.
+
+### Notebook 30 — Scanner Tuning and False Positive Reduction
+- **Objetivo:** Calibrar ferramentas para que os achados sejam confiáveis e acionáveis.
+- **Estrutura do Conteúdo:**
+  1. Falso positivo, falso negativo e custo de cada erro.
+  2. Regras, severidade e supressões justificadas.
+  3. Baseline, tuning por aplicação e revisão periódica.
+  4. Comunicação de resultados ao time de desenvolvimento.
+  5. Métricas de precisão e confiança nas ferramentas.
+
+### Notebook 31 — Security Gates in CI/CD
+- **Objetivo:** Inserir controles de segurança no pipeline sem travar a entrega.
+- **Estrutura do Conteúdo:**
+  1. Shift-left e o papel dos gates de segurança.
+  2. Gates bloqueantes versus informativos e critérios de falha.
+  3. Integração de SAST, SCA, secrets e IaC scanning no pipeline.
+  4. Permissões de CI/CD, OIDC e proteção de credenciais.
+  5. Exceções, aprovação de risco e evolução dos gates.
+
+### Notebook 32 — AppSec Metrics and Reporting
+- **Objetivo:** Medir o programa de AppSec com métricas que orientem decisões.
+- **Estrutura do Conteúdo:**
+  1. Métricas de processo: cobertura de scanning e adoção de gates.
+  2. Métricas de resultado: MTTR, densidade de vulnerabilidades e reincidência.
+  3. SLA de correção por severidade.
+  4. Dashboards e comunicação para liderança técnica.
+  5. Cuidados com métricas que incentivam comportamento errado.
+
+# Fase 4 — Processo
+
+### Notebook 33 — Threat Modeling with STRIDE
+- **Objetivo:** Identificar ameaças antes da implementação usando um método estruturado.
+- **Estrutura do Conteúdo:**
+  1. O que é threat modeling e quando fazer.
+  2. Decomposição do sistema: fluxos, ativos e trust boundaries.
+  3. STRIDE: spoofing, tampering, repudiation, information disclosure, denial of service e elevation of privilege.
+  4. Priorização de ameaças e definição de mitigações.
+  5. Documentação e revisão do modelo ao longo do ciclo.
+
+### Notebook 34 — Secure Code Review
+- **Objetivo:** Revisar código com foco em segurança de forma eficiente e colaborativa.
+- **Estrutura do Conteúdo:**
+  1. O que procurar em uma revisão de segurança.
+  2. Pontos críticos: entrada, autenticação, autorização, criptografia e logs.
+  3. Uso de checklists e padrões seguros por linguagem.
+  4. Comunicação de achados em pull requests.
+  5. Limites da revisão manual e complemento com ferramentas.
+
+### Notebook 35 — Secure SDLC and NIST SSDF
+- **Objetivo:** Integrar segurança em todas as etapas do ciclo de desenvolvimento.
+- **Estrutura do Conteúdo:**
+  1. Secure SDLC e DevSecOps: princípios e diferenças.
+  2. NIST SP 800-218 (SSDF): práticas e grupos de práticas.
+  3. Requisitos, design, implementação, verificação e resposta.
+  4. Papéis e responsabilidades entre AppSec e desenvolvimento.
+  5. Adoção gradual e medição de maturidade.
+
+### Notebook 36 — Vulnerability Management and Remediation SLAs
+- **Objetivo:** Gerir vulnerabilidades do achado à correção com prioridade baseada em risco.
+- **Estrutura do Conteúdo:**
+  1. Ciclo de vida de uma vulnerabilidade: descoberta, triagem, correção e verificação.
+  2. Priorização por exploração, exposição e impacto no negócio.
+  3. SLAs por severidade e exceções formais.
+  4. Comunicação com owners e acompanhamento de prazos.
+  5. Métricas de remediação e redução de risco acumulado.
+
+### Notebook 37 — Software Supply Chain Controls (SBOM, SLSA, signing)
+- **Objetivo:** Aplicar controles de integridade e rastreabilidade na cadeia de suprimentos de software.
+- **Estrutura do Conteúdo:**
+  1. SBOM: CycloneDX, SPDX e uso na resposta a incidentes.
+  2. Assinatura de artefatos e imagens de container.
+  3. SLSA: níveis de garantia e proveniência de build.
+  4. Verificação de origem e políticas de admissão.
+  5. Rastreabilidade de dependências e resposta a comprometimentos.
+
+### Notebook 38 — Application Incident Response and Developer Enablement
+- **Objetivo:** Apoiar a resposta a incidentes de aplicação e capacitar desenvolvedores em segurança.
+- **Estrutura do Conteúdo:**
+  1. Incident response aplicado a vulnerabilidades exploradas.
+  2. Triagem, contenção, erradicação e recuperação.
+  3. Coordenação com times de produto, infraestrutura e jurídico.
+  4. Post-mortem, causa raiz e ações preventivas.
+  5. Developer enablement: treinamento, champions e documentação segura.
 
 ---
 
@@ -715,15 +358,14 @@
 
 **Padrão de produção dos materiais:**
 
-1. Utilizar documentação oficial como fonte principal.
+1. Utilizar a documentação oficial da OWASP (Top 10 2025, ASVS 5.0, API Top 10 e cheat sheets) como fonte principal.
 2. Manter cada material restrito ao assunto do notebook.
 3. Explicar os fundamentos antes dos conceitos avançados.
-4. Utilizar diagramas de arquitetura quando ajudarem a explicar o funcionamento.
-5. Apresentar exemplos práticos de infraestrutura.
-6. Incluir cenários reais de troubleshooting quando pertinentes.
-7. Utilizar terminologia técnica em inglês, explicando em português.
-8. Não introduzir assuntos de notebooks futuros sem necessidade para compreender o assunto atual.
+4. Apresentar exemplos práticos de código, requisições HTTP e configuração.
+5. Incluir cenários reais de vulnerabilidade e de revisão de código quando pertinentes.
+6. Utilizar terminologia técnica em inglês, explicando em português.
+7. Não introduzir assuntos de fases futuras sem necessidade para compreender o assunto atual.
 
-**Público-alvo:** estudante em preparação para uma vaga de Junior Cloud Engineer, com aprofundamento adicional em arquitetura, automação, confiabilidade e operações para desenvolver diferencial técnico.
+**Público-alvo:** estudante em preparação para uma vaga de AppSec Engineer, com foco em fundamentos de segurança de aplicações, vulnerabilidades web/API, ferramentas de análise e processo de desenvolvimento seguro.
 
-**Critério de qualidade:** cada notebook deve permitir que o estudante compreenda o assunto central sem precisar assistir a um vídeo que tente ensinar vários serviços ou disciplinas simultaneamente.
+**Critério de qualidade:** cada notebook deve permitir que o estudante compreenda o assunto central e saiba reconhecê-lo em código, requisições ou configurações reais, sem precisar de um material que tente ensinar várias disciplinas ao mesmo tempo.
