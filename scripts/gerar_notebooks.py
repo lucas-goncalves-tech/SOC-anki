@@ -1,8 +1,8 @@
-"""Gera foco/AppSec.apkg e MAPEAMENTO.md a partir do plano e dos cards.
+"""Gera AppSec.apkg e MAPEAMENTO.md a partir do plano e dos cards.
 
-O tipo de nota é copiado de cloud-eng/foco-01-CLF-C02.apkg (campos, CSS e
-templates), mas renomeado para `AppSec` e com outro ID para não colidir com o
-material de Cloud. Cada Notebook do plano vira um deck `AppSec::NN-Título`.
+O tipo de nota é copiado de assets/note-type.apkg (campos, CSS e templates),
+mas renomeado para `AppSec` e com outro ID para não colidir com o material de
+Cloud. Cada Notebook do plano vira um deck `AppSec::NN-Título`.
 """
 
 import hashlib
@@ -18,8 +18,8 @@ from notebook import titulos_notebooks
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "gemini-notebook.md"
-TEMPLATE = ROOT / "cloud-eng" / "foco-01-CLF-C02.apkg"
-OUTPUT = ROOT / "foco" / "AppSec.apkg"
+TEMPLATE = ROOT / "assets" / "note-type.apkg"
+OUTPUT = ROOT / "AppSec.apkg"
 MAPA = ROOT / "MAPEAMENTO.md"
 
 DECK_ID_BASE = 2300000000
@@ -176,7 +176,7 @@ def escrever_mapa(titulos, decks, *, caminho=MAPA):
     linhas = [
         "# MAPEAMENTO — decks AppSec",
         "",
-        "Arquivo único: `foco/AppSec.apkg`. Tipo de nota `AppSec`, campos `Frente`, "
+        "Arquivo único: `AppSec.apkg`. Tipo de nota `AppSec`, campos `Frente`, "
         "`Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO.",
         "",
         "**Como usar:** estude o Notebook NN e revise o deck AppSec::NN no mesmo dia.",

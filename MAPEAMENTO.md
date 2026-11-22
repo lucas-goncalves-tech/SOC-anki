@@ -1,6 +1,6 @@
 # MAPEAMENTO — decks AppSec
 
-Arquivo único: `foco/AppSec.apkg`. Tipo de nota `AppSec`, campos `Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO.
+Arquivo único: `AppSec.apkg`. Tipo de nota `AppSec`, campos `Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO.
 
 **Como usar:** estude o Notebook NN e revise o deck AppSec::NN no mesmo dia.
 
