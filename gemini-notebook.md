@@ -1,7 +1,3 @@
-# Fase 0 — Fundamentos e planejamento
-
-## Issue #001 — Definir arquitetura e requisitos do sistema
-
 ### Notebook 01 — Cloud Computing Fundamentals
 - **Objetivo:** Compreender o conceito de computação em nuvem e como ela transforma o provisionamento de infraestrutura.
 - **Estrutura do Conteúdo:**
@@ -42,17 +38,6 @@
   3. Virtual Machines e isolamento de recursos.
   4. vCPU, RAM e alocação de recursos.
   5. Diferenças fundamentais entre VMs e containers.
-
-## Issue #002 — Preparar ambiente Linux para operações
-
-### Notebook 06 — Git Fundamentals
-- **Objetivo:** Aprender o controle de versão utilizado no desenvolvimento e na administração de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Git, GitHub e repositórios.
-  2. Working Directory, Staging Area e Repository.
-  3. Commits, branches e merges.
-  4. Git Pull, Fetch, Rebase e conflitos.
-  5. Pull Requests e colaboração.
 
 ### Notebook 07 — Linux Fundamentals and Filesystem
 - **Objetivo:** Compreender a estrutura básica de um sistema operacional Linux.
@@ -135,7 +120,14 @@
   4. Diagnóstico de falhas em serviços.
   5. Investigação de problemas de CPU, memória e disco.
 
-## Issue #003 — Implementar laboratório de troubleshooting de redes
+### Notebook 06 — Git Fundamentals
+- **Objetivo:** Aprender o controle de versão utilizado no desenvolvimento e na administração de infraestrutura.
+- **Estrutura do Conteúdo:**
+  1. Git, GitHub e repositórios.
+  2. Working Directory, Staging Area e Repository.
+  3. Commits, branches e merges.
+  4. Git Pull, Fetch, Rebase e conflitos.
+  5. Pull Requests e colaboração.
 
 ### Notebook 16 — Networking Fundamentals and TCP/IP
 - **Objetivo:** Compreender os fundamentos da comunicação entre dispositivos.
@@ -209,12 +201,6 @@
   4. tcpdump e introdução ao Wireshark.
   5. Metodologia de diagnóstico de conectividade.
 
----
-
-# Fase 1 — Cloud Engineering
-
-## Issue #004 — Configurar conta AWS e controles iniciais
-
 ### Notebook 24 — AWS Global Infrastructure
 - **Objetivo:** Entender como a infraestrutura global da AWS é organizada.
 - **Estrutura do Conteúdo:**
@@ -251,8 +237,6 @@
   4. Temporary Security Credentials.
   5. IAM Instance Profiles e acesso de aplicações aos serviços AWS.
 
-## Issue #005 — Criar VPC e segmentação de rede com Terraform
-
 ### Notebook 28 — Amazon VPC Fundamentals
 - **Objetivo:** Entender como redes virtuais são criadas e organizadas na AWS.
 - **Estrutura do Conteúdo:**
@@ -271,6 +255,15 @@
   4. Rotas para recursos públicos e privados.
   5. Fluxo de tráfego de entrada e saída.
 
+### Notebook 30 — AWS VPC Security and Traffic Filtering
+- **Objetivo:** Aprender a controlar o tráfego de rede dentro da infraestrutura AWS.
+- **Estrutura do Conteúdo:**
+  1. Security Groups.
+  2. Network ACLs.
+  3. Diferenças entre Security Groups e NACLs.
+  4. Inbound e Outbound Rules.
+  5. VPC Flow Logs e diagnóstico de tráfego.
+
 ### Notebook 31 — AWS VPC Connectivity Services
 - **Objetivo:** Conhecer os mecanismos de conectividade entre redes e serviços AWS.
 - **Estrutura do Conteúdo:**
@@ -279,6 +272,132 @@
   3. AWS Site-to-Site VPN.
   4. Introdução ao AWS Transit Gateway.
   5. Casos de uso e diferenças entre as soluções.
+
+### Notebook 32 — Amazon EC2 Fundamentals
+- **Objetivo:** Aprender como máquinas virtuais são provisionadas e administradas na AWS.
+- **Estrutura do Conteúdo:**
+  1. EC2 e tipos de instância.
+  2. AMIs e inicialização de instâncias.
+  3. Key Pairs e acesso SSH.
+  4. Instance Lifecycle.
+  5. User Data e Instance Metadata.
+
+### Notebook 33 — Amazon EBS and Instance Storage
+- **Objetivo:** Compreender como o armazenamento em bloco funciona nas instâncias EC2.
+- **Estrutura do Conteúdo:**
+  1. Elastic Block Store.
+  2. EBS Volumes e tipos de volume.
+  3. Snapshots e backups.
+  4. Attach, Detach e expansão de volumes.
+  5. EBS versus Instance Store.
+
+### Notebook 34 — Amazon S3 Fundamentals
+- **Objetivo:** Compreender o funcionamento do armazenamento de objetos na AWS.
+- **Estrutura do Conteúdo:**
+  1. Buckets e Objects.
+  2. Object Keys e estrutura de armazenamento.
+  3. Upload, Download e operações básicas.
+  4. Storage Classes.
+  5. Casos de uso de Object Storage.
+
+### Notebook 35 — Amazon S3 Security and Lifecycle Management
+- **Objetivo:** Aprender a proteger e administrar o ciclo de vida dos objetos armazenados.
+- **Estrutura do Conteúdo:**
+  1. Bucket Policies e IAM Policies.
+  2. Block Public Access.
+  3. Versioning.
+  4. Lifecycle Policies.
+  5. Encryption at Rest e controle de acesso.
+
+### Notebook 36 — Amazon RDS Fundamentals
+- **Objetivo:** Compreender como bancos de dados relacionais gerenciados funcionam na AWS.
+- **Estrutura do Conteúdo:**
+  1. O que é Amazon RDS.
+  2. Engines suportadas: PostgreSQL, MySQL e outras.
+  3. DB Instances e DB Subnet Groups.
+  4. Conectividade e Security Groups.
+  5. Diferenças entre banco gerenciado e banco instalado manualmente em EC2.
+
+### Notebook 37 — Amazon RDS Backup and High Availability
+- **Objetivo:** Entender como a AWS oferece disponibilidade e recuperação para bancos de dados.
+- **Estrutura do Conteúdo:**
+  1. Automated Backups e Snapshots.
+  2. Point-in-Time Recovery.
+  3. Multi-AZ Deployments.
+  4. Read Replicas.
+  5. Diferenças entre alta disponibilidade e escalabilidade de leitura.
+
+### Notebook 38 — AWS Load Balancing
+- **Objetivo:** Compreender como o tráfego é distribuído entre múltiplos servidores.
+- **Estrutura do Conteúdo:**
+  1. Conceito de Load Balancing.
+  2. Application Load Balancer.
+  3. Network Load Balancer.
+  4. Target Groups e Health Checks.
+  5. Distribuição de tráfego e disponibilidade.
+
+### Notebook 39 — AWS Auto Scaling
+- **Objetivo:** Entender como a infraestrutura ajusta automaticamente sua capacidade de processamento.
+- **Estrutura do Conteúdo:**
+  1. Auto Scaling Groups.
+  2. Launch Templates.
+  3. Scaling Policies.
+  4. Dynamic Scaling e Scheduled Scaling.
+  5. Integração entre Auto Scaling e Load Balancers.
+
+### Notebook 40 — Amazon Route 53
+- **Objetivo:** Aprender como o serviço DNS da AWS administra domínios e direciona tráfego.
+- **Estrutura do Conteúdo:**
+  1. Hosted Zones.
+  2. DNS Records.
+  3. Public e Private Hosted Zones.
+  4. Routing Policies.
+  5. Health Checks e DNS Failover.
+
+### Notebook 41 — Amazon CloudFront and Content Delivery
+- **Objetivo:** Compreender como o conteúdo é distribuído globalmente através de uma CDN.
+- **Estrutura do Conteúdo:**
+  1. O que é uma Content Delivery Network.
+  2. Edge Locations e Caching.
+  3. Origins e Origin Access Control.
+  4. Cache Behaviors e TTL.
+  5. Integração entre CloudFront e S3.
+
+### Notebook 42 — AWS Certificate Manager
+- **Objetivo:** Entender como certificados digitais são provisionados e utilizados na AWS.
+- **Estrutura do Conteúdo:**
+  1. Conceitos de certificados SSL/TLS.
+  2. Provisionamento de certificados com ACM.
+  3. Validação por DNS e e-mail.
+  4. Integração com Load Balancers e CloudFront.
+  5. Renovação e gerenciamento de certificados.
+
+### Notebook 43 — AWS Lambda Fundamentals
+- **Objetivo:** Compreender o modelo de execução Serverless da AWS.
+- **Estrutura do Conteúdo:**
+  1. O que é AWS Lambda.
+  2. Functions, Handlers e Runtimes.
+  3. Triggers e Execution Roles.
+  4. Memory, Timeout e concorrência.
+  5. Diferenças entre Lambda e EC2.
+
+### Notebook 44 — AWS Messaging Services: SQS and SNS
+- **Objetivo:** Entender como aplicações se comunicam de forma assíncrona e desacoplada.
+- **Estrutura do Conteúdo:**
+  1. Comunicação síncrona versus assíncrona.
+  2. Amazon SQS e filas de mensagens.
+  3. Amazon SNS e publicação de mensagens.
+  4. Dead Letter Queues.
+  5. Diferenças e casos de uso de SQS e SNS.
+
+### Notebook 45 — Amazon EventBridge and Event-Driven Architecture
+- **Objetivo:** Compreender arquiteturas orientadas a eventos utilizando serviços AWS.
+- **Estrutura do Conteúdo:**
+  1. Conceito de Event-Driven Architecture.
+  2. Events, Event Buses e Rules.
+  3. EventBridge Targets.
+  4. Integração com Lambda e outros serviços.
+  5. Casos de uso de automação orientada a eventos.
 
 ### Notebook 46 — Infrastructure as Code Fundamentals
 - **Objetivo:** Compreender o conceito de infraestrutura declarativa e automatizada.
@@ -307,18 +426,32 @@
   4. terraform apply e destroy.
   5. Dependency Graph e Resource Lifecycle.
 
-## Issue #006 — Definir Security Groups com privilégio mínimo
-
-### Notebook 30 — AWS VPC Security and Traffic Filtering
-- **Objetivo:** Aprender a controlar o tráfego de rede dentro da infraestrutura AWS.
+### Notebook 49 — Terraform State Management
+- **Objetivo:** Entender como o Terraform acompanha e controla os recursos provisionados.
 - **Estrutura do Conteúdo:**
-  1. Security Groups.
-  2. Network ACLs.
-  3. Diferenças entre Security Groups e NACLs.
-  4. Inbound e Outbound Rules.
-  5. VPC Flow Logs e diagnóstico de tráfego.
+  1. O que é Terraform State.
+  2. Local State versus Remote State.
+  3. State Locking.
+  4. Infrastructure Drift.
+  5. Importação e gerenciamento de recursos existentes.
 
-## Issue #007 — Containerizar aplicação Spring Boot
+### Notebook 50 — Terraform Modules and Reusable Infrastructure
+- **Objetivo:** Aprender a organizar configurações reutilizáveis e escaláveis.
+- **Estrutura do Conteúdo:**
+  1. O que são Modules.
+  2. Root Modules e Child Modules.
+  3. Inputs e Outputs.
+  4. Module Composition.
+  5. Versionamento e reutilização de módulos.
+
+### Notebook 51 — Terraform Environments and Best Practices
+- **Objetivo:** Aprender a organizar ambientes e gerenciar mudanças de infraestrutura com segurança.
+- **Estrutura do Conteúdo:**
+  1. Separação entre Development, Staging e Production.
+  2. Terraform Workspaces e suas limitações.
+  3. Estrutura de projetos Terraform.
+  4. Gerenciamento seguro de Secrets.
+  5. Code Review e validação de mudanças.
 
 ### Notebook 52 — Docker Fundamentals
 - **Objetivo:** Compreender o funcionamento de containers e imagens Docker.
@@ -365,8 +498,6 @@
   4. Environment Variables.
   5. Inicialização, atualização e encerramento de aplicações.
 
-## Issue #008 — Criar repositório ECR e publicar imagem
-
 ### Notebook 57 — AWS ECR and ECS Fundamentals
 - **Objetivo:** Compreender como a AWS armazena e executa aplicações containerizadas.
 - **Estrutura do Conteúdo:**
@@ -375,112 +506,6 @@
   3. Clusters, Tasks e Services.
   4. Task Definitions.
   5. ECS EC2 Launch Type versus Fargate.
-
-## Issue #009 — Provisionar PostgreSQL no RDS
-
-### Notebook 36 — Amazon RDS Fundamentals
-- **Objetivo:** Compreender como bancos de dados relacionais gerenciados funcionam na AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é Amazon RDS.
-  2. Engines suportadas: PostgreSQL, MySQL e outras.
-  3. DB Instances e DB Subnet Groups.
-  4. Conectividade e Security Groups.
-  5. Diferenças entre banco gerenciado e banco instalado manualmente em EC2.
-
-### Notebook 37 — Amazon RDS Backup and High Availability
-- **Objetivo:** Entender como a AWS oferece disponibilidade e recuperação para bancos de dados.
-- **Estrutura do Conteúdo:**
-  1. Automated Backups e Snapshots.
-  2. Point-in-Time Recovery.
-  3. Multi-AZ Deployments.
-  4. Read Replicas.
-  5. Diferenças entre alta disponibilidade e escalabilidade de leitura.
-
-## Issue #010 — Provisionar bucket S3 privado
-
-### Notebook 34 — Amazon S3 Fundamentals
-- **Objetivo:** Compreender o funcionamento do armazenamento de objetos na AWS.
-- **Estrutura do Conteúdo:**
-  1. Buckets e Objects.
-  2. Object Keys e estrutura de armazenamento.
-  3. Upload, Download e operações básicas.
-  4. Storage Classes.
-  5. Casos de uso de Object Storage.
-
-### Notebook 35 — Amazon S3 Security and Lifecycle Management
-- **Objetivo:** Aprender a proteger e administrar o ciclo de vida dos objetos armazenados.
-- **Estrutura do Conteúdo:**
-  1. Bucket Policies e IAM Policies.
-  2. Block Public Access.
-  3. Versioning.
-  4. Lifecycle Policies.
-  5. Encryption at Rest e controle de acesso.
-
-## Issue #011 — Implantar aplicação no ECS Fargate
-
-### Notebook 38 — AWS Load Balancing
-- **Objetivo:** Compreender como o tráfego é distribuído entre múltiplos servidores.
-- **Estrutura do Conteúdo:**
-  1. Conceito de Load Balancing.
-  2. Application Load Balancer.
-  3. Network Load Balancer.
-  4. Target Groups e Health Checks.
-  5. Distribuição de tráfego e disponibilidade.
-
-### Notebook 39 — AWS Auto Scaling
-- **Objetivo:** Entender como a infraestrutura ajusta automaticamente sua capacidade de processamento.
-- **Estrutura do Conteúdo:**
-  1. Auto Scaling Groups.
-  2. Launch Templates.
-  3. Scaling Policies.
-  4. Dynamic Scaling e Scheduled Scaling.
-  5. Integração entre Auto Scaling e Load Balancers.
-
-## Issue #012 — Configurar HTTPS com ACM e Load Balancer
-
-### Notebook 40 — Amazon Route 53
-- **Objetivo:** Aprender como o serviço DNS da AWS administra domínios e direciona tráfego.
-- **Estrutura do Conteúdo:**
-  1. Hosted Zones.
-  2. DNS Records.
-  3. Public e Private Hosted Zones.
-  4. Routing Policies.
-  5. Health Checks e DNS Failover.
-
-### Notebook 42 — AWS Certificate Manager
-- **Objetivo:** Entender como certificados digitais são provisionados e utilizados na AWS.
-- **Estrutura do Conteúdo:**
-  1. Conceitos de certificados SSL/TLS.
-  2. Provisionamento de certificados com ACM.
-  3. Validação por DNS e e-mail.
-  4. Integração com Load Balancers e CloudFront.
-  5. Renovação e gerenciamento de certificados.
-
----
-
-# Fase 2 — Operações e automação
-
-## Issue #013 — Configurar Terraform State remoto e locking
-
-### Notebook 49 — Terraform State Management
-- **Objetivo:** Entender como o Terraform acompanha e controla os recursos provisionados.
-- **Estrutura do Conteúdo:**
-  1. O que é Terraform State.
-  2. Local State versus Remote State.
-  3. State Locking.
-  4. Infrastructure Drift.
-  5. Importação e gerenciamento de recursos existentes.
-
-### Notebook 50 — Terraform Modules and Reusable Infrastructure
-- **Objetivo:** Aprender a organizar configurações reutilizáveis e escaláveis.
-- **Estrutura do Conteúdo:**
-  1. O que são Modules.
-  2. Root Modules e Child Modules.
-  3. Inputs e Outputs.
-  4. Module Composition.
-  5. Versionamento e reutilização de módulos.
-
-## Issue #014 — Implementar pipeline CI/CD com GitHub Actions
 
 ### Notebook 58 — CI/CD Fundamentals
 - **Objetivo:** Compreender os conceitos e etapas de integração e entrega contínua.
@@ -500,10 +525,6 @@
   4. Secrets e Environment Variables.
   5. Integração com testes, Docker e deploy.
 
-## Issue #015 — Autenticar GitHub Actions na AWS com OIDC
-
-## Issue #016 — Implementar observabilidade com CloudWatch
-
 ### Notebook 60 — Amazon CloudWatch Fundamentals
 - **Objetivo:** Compreender como a AWS monitora recursos e aplicações.
 - **Estrutura do Conteúdo:**
@@ -522,7 +543,14 @@
   4. Integração com SNS.
   5. Monitoramento de CPU, memória, disco e aplicações.
 
-## Issue #017 — Executar exercícios de troubleshooting e incidentes
+### Notebook 62 — AWS CloudTrail and Auditing
+- **Objetivo:** Entender como as atividades realizadas na conta AWS são registradas.
+- **Estrutura do Conteúdo:**
+  1. O que é CloudTrail.
+  2. Management Events e Data Events.
+  3. Event History.
+  4. Identificação de alterações na infraestrutura.
+  5. Auditoria e investigação de atividades suspeitas.
 
 ### Notebook 63 — Cloud Troubleshooting Methodology
 - **Objetivo:** Desenvolver um método estruturado para diagnosticar problemas em ambientes cloud.
@@ -542,16 +570,14 @@
   4. Root Cause Analysis.
   5. Postmortems e ações preventivas.
 
-## Issue #018 — Implementar backup, restauração e recuperação
-
-### Notebook 33 — Amazon EBS and Instance Storage
-- **Objetivo:** Compreender como o armazenamento em bloco funciona nas instâncias EC2.
+### Notebook 65 — High Availability and Fault Tolerance
+- **Objetivo:** Compreender como projetar ambientes capazes de continuar funcionando diante de falhas.
 - **Estrutura do Conteúdo:**
-  1. Elastic Block Store.
-  2. EBS Volumes e tipos de volume.
-  3. Snapshots e backups.
-  4. Attach, Detach e expansão de volumes.
-  5. EBS versus Instance Store.
+  1. High Availability.
+  2. Fault Tolerance.
+  3. Redundância e eliminação de Single Points of Failure.
+  4. Multi-AZ e Multi-Region.
+  5. Health Checks e recuperação automática.
 
 ### Notebook 66 — Backup and Disaster Recovery
 - **Objetivo:** Aprender estratégias de proteção de dados e recuperação de infraestrutura.
@@ -562,53 +588,14 @@
   4. Disaster Recovery Strategies.
   5. Restore Testing e validação de backups.
 
----
-
-# Fase 3 — Cloud Security
-
-## Issue #019 — Aplicar IAM Least Privilege aos workloads
-
-## Issue #020 — Centralizar segredos no Secrets Manager
-
-### Notebook 51 — Terraform Environments and Best Practices
-- **Objetivo:** Aprender a organizar ambientes e gerenciar mudanças de infraestrutura com segurança.
+### Notebook 67 — AWS Cost Optimization
+- **Objetivo:** Aprender a identificar desperdícios e otimizar custos de infraestrutura.
 - **Estrutura do Conteúdo:**
-  1. Separação entre Development, Staging e Production.
-  2. Terraform Workspaces e suas limitações.
-  3. Estrutura de projetos Terraform.
-  4. Gerenciamento seguro de Secrets.
-  5. Code Review e validação de mudanças.
-
-## Issue #021 — Implementar criptografia e governança de chaves KMS
-
-## Issue #022 — Implementar trilha de auditoria com CloudTrail
-
-### Notebook 62 — AWS CloudTrail and Auditing
-- **Objetivo:** Entender como as atividades realizadas na conta AWS são registradas.
-- **Estrutura do Conteúdo:**
-  1. O que é CloudTrail.
-  2. Management Events e Data Events.
-  3. Event History.
-  4. Identificação de alterações na infraestrutura.
-  5. Auditoria e investigação de atividades suspeitas.
-
-## Issue #023 — Habilitar GuardDuty e criar fluxo de triagem
-
-## Issue #024 — Configurar AWS Config e Security Hub
-
-## Issue #025 — Executar threat modeling e avaliação de arquitetura
-
-## Issue #026 — Criar playbook de resposta a incidente de credencial comprometida
-
----
-
-# Fase 4 — Segurança avançada e portfólio
-
-## Issue #027 — Adicionar verificações de segurança ao CI/CD
-
-## Issue #028 — Proteger aplicação com AWS WAF
-
-## Issue #029 — Desenhar segregação de ambientes e arquitetura multi-account
+  1. AWS Pricing Models.
+  2. On-Demand, Reserved Instances e Savings Plans.
+  3. Rightsizing de instâncias.
+  4. Identificação de recursos ociosos.
+  5. Cost Explorer, Budgets e tagging.
 
 ### Notebook 68 — AWS Well-Architected Framework
 - **Objetivo:** Conhecer os princípios utilizados para avaliar e melhorar arquiteturas AWS.
@@ -618,26 +605,6 @@
   3. Reliability.
   4. Performance Efficiency e Cost Optimization.
   5. Sustainability e princípios de revisão arquitetural.
-
-## Issue #030 — Publicar relatório final de arquitetura, operações e segurança
-
-### Notebook 65 — High Availability and Fault Tolerance
-- **Objetivo:** Compreender como projetar ambientes capazes de continuar funcionando diante de falhas.
-- **Estrutura do Conteúdo:**
-  1. High Availability.
-  2. Fault Tolerance.
-  3. Redundância e eliminação de Single Points of Failure.
-  4. Multi-AZ e Multi-Region.
-  5. Health Checks e recuperação automática.
-
-### Notebook 67 — AWS Cost Optimization
-- **Objetivo:** Aprender a identificar desperdícios e otimizar custos de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. AWS Pricing Models.
-  2. On-Demand, Reserved Instances e Savings Plans.
-  3. Rightsizing de instâncias.
-  4. Identificação de recursos ociosos.
-  5. Cost Explorer, Budgets e tagging.
 
 ### Notebook 69 — Production Readiness and Operational Practices
 - **Objetivo:** Compreender o que é necessário para manter uma aplicação e sua infraestrutura prontas para produção.
@@ -659,71 +626,3 @@
   6. Containerização e pipeline CI/CD.
   7. Monitoramento, logs e alertas.
   8. Testes de falha, recuperação e otimização de custos.
-
----
-
-# Tópicos sem Issue correspondente
-
-### Notebook 32 — Amazon EC2 Fundamentals
-- **Objetivo:** Aprender como máquinas virtuais são provisionadas e administradas na AWS.
-- **Estrutura do Conteúdo:**
-  1. EC2 e tipos de instância.
-  2. AMIs e inicialização de instâncias.
-  3. Key Pairs e acesso SSH.
-  4. Instance Lifecycle.
-  5. User Data e Instance Metadata.
-
-### Notebook 41 — Amazon CloudFront and Content Delivery
-- **Objetivo:** Compreender como o conteúdo é distribuído globalmente através de uma CDN.
-- **Estrutura do Conteúdo:**
-  1. O que é uma Content Delivery Network.
-  2. Edge Locations e Caching.
-  3. Origins e Origin Access Control.
-  4. Cache Behaviors e TTL.
-  5. Integração entre CloudFront e S3.
-
-### Notebook 43 — AWS Lambda Fundamentals
-- **Objetivo:** Compreender o modelo de execução Serverless da AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é AWS Lambda.
-  2. Functions, Handlers e Runtimes.
-  3. Triggers e Execution Roles.
-  4. Memory, Timeout e concorrência.
-  5. Diferenças entre Lambda e EC2.
-
-### Notebook 44 — AWS Messaging Services: SQS and SNS
-- **Objetivo:** Entender como aplicações se comunicam de forma assíncrona e desacoplada.
-- **Estrutura do Conteúdo:**
-  1. Comunicação síncrona versus assíncrona.
-  2. Amazon SQS e filas de mensagens.
-  3. Amazon SNS e publicação de mensagens.
-  4. Dead Letter Queues.
-  5. Diferenças e casos de uso de SQS e SNS.
-
-### Notebook 45 — Amazon EventBridge and Event-Driven Architecture
-- **Objetivo:** Compreender arquiteturas orientadas a eventos utilizando serviços AWS.
-- **Estrutura do Conteúdo:**
-  1. Conceito de Event-Driven Architecture.
-  2. Events, Event Buses e Rules.
-  3. EventBridge Targets.
-  4. Integração com Lambda e outros serviços.
-  5. Casos de uso de automação orientada a eventos.
-
----
-
-# Orientações gerais para utilização dos notebooks
-
-**Padrão de produção dos materiais:**
-
-1. Utilizar documentação oficial como fonte principal.
-2. Manter cada material restrito ao assunto do notebook.
-3. Explicar os fundamentos antes dos conceitos avançados.
-4. Utilizar diagramas de arquitetura quando ajudarem a explicar o funcionamento.
-5. Apresentar exemplos práticos de infraestrutura.
-6. Incluir cenários reais de troubleshooting quando pertinentes.
-7. Utilizar terminologia técnica em inglês, explicando em português.
-8. Não introduzir assuntos de notebooks futuros sem necessidade para compreender o assunto atual.
-
-**Público-alvo:** estudante em preparação para uma vaga de Junior Cloud Engineer, com aprofundamento adicional em arquitetura, automação, confiabilidade e operações para desenvolver diferencial técnico.
-
-**Critério de qualidade:** cada notebook deve permitir que o estudante compreenda o assunto central sem precisar assistir a um vídeo que tente ensinar vários serviços ou disciplinas simultaneamente.
