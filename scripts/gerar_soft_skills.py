@@ -1,4 +1,4 @@
-"""Gera foco/08-Soft-Skills.apkg — deck separado, sem tocar em 07-Notebooks.apkg.
+"""Gera 08-Soft-Skills.apkg na raiz — deck separado, sem tocar no pacote principal.
 
 Reaproveita o tipo de nota "Cloud Engineer" (campos Frente, Verso1, Verso2) do
 mesmo arquivo-base usado por gerar_notebooks.py. IDs de nota começam em
@@ -16,7 +16,7 @@ import zipfile
 from gerar_notebooks import ROOT, ler_modelo, slug
 from cards_soft_skills import DECKS
 
-OUTPUT = ROOT / "foco" / "08-Soft-Skills.apkg"
+OUTPUT = ROOT / "08-Soft-Skills.apkg"
 BASE_ID = 1750000000000
 
 

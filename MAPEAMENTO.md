@@ -1,9 +1,9 @@
 # MAPEAMENTO — trilha revisada
 
-Arquivo final: `foco/07-Cloud-Engineer-Final.apkg`.
+Arquivo final: `07-Cloud-Engineer-Final.apkg`, na raiz.
 Modelo `Cloud Engineer` (campos `Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO).
 
-As versões original (688 cards) e revisada (700 cards) foram arquivadas em `.archive/`.
+Material mais antigo ficou em `.archive/`.
 
 **Como usar:** siga as etapas de 01 a 09 na ordem. As certificações ficam por último
 e não fazem parte da trilha principal. O apêndice multicloud (Azure e GCP) é opcional.
@@ -233,7 +233,7 @@ Seguro → Resiliente → Performance → Custo (30%, 26%, 24% e 20% do exame).
 
 ## Pacote 08 — soft skills
 
-Arquivo separado: `foco/08-Soft-Skills.apkg`. Usa o mesmo tipo de nota, mas o deck é
+Arquivo separado: `08-Soft-Skills.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
 independente (não fica debaixo de `Cloud Engineer`).
 
 | Deck | Cards |
@@ -247,7 +247,7 @@ independente (não fica debaixo de `Cloud Engineer`).
 
 ## Pacote 09 - prompt engineering
 
-Arquivo separado: `foco/09-Prompt-Engineering.apkg`. Usa o mesmo tipo de nota, mas o deck é
+Arquivo separado: `09-Prompt-Engineering.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
 independente (não fica debaixo de `Cloud Engineer`).
 
 | Deck | Cards | Conteúdo |

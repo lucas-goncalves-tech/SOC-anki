@@ -16,18 +16,9 @@ from pathlib import Path
 from revisao import ETAPAS, validar_ordem
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIGINAL = ROOT / "foco" / "07-Cloud-Engineer.apkg"
-REVISADO = ROOT / "foco" / "07-Cloud-Engineer-Revisado.apkg"
+ORIGINAL = ROOT / ".archive" / "07-Cloud-Engineer.apkg"
+REVISADO = ROOT / ".archive" / "07-Cloud-Engineer-Revisado.apkg"
 MAPA = ROOT / "MAPEAMENTO.md"
-
-
-def resolver(caminho):
-    arquivado = ROOT / ".archive" / caminho.name
-    return arquivado if arquivado.exists() else caminho
-
-
-ORIGINAL = resolver(ORIGINAL)
-REVISADO = resolver(REVISADO)
 
 CORRECOES = (
     "habilitador importante",

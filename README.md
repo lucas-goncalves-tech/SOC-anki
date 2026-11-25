@@ -1,11 +1,12 @@
 # Conjunto focado de decks — Cloud Engineer
 
-`foco/` contém **quatro arquivos independentes**:
+A raiz contém **três arquivos independentes**:
 
 - `07-Cloud-Engineer-Final.apkg` — 94 decks folha e 700 cards: 688 originais + 12 lacunas pontuais, com correções adicionais e sem frentes duplicadas. É o deck principal.
-- As versões original (`07-Cloud-Engineer.apkg`, 688 cards) e revisada (`07-Cloud-Engineer-Revisado.apkg`, 700 cards) foram movidas para `.archive/` e não devem ser importadas.
 - `08-Soft-Skills.apkg` — 4 decks e 49 cards de soft skills aplicáveis (LinkedIn e marca pessoal, comunicação e relacionamento, comportamento e desenvolvimento, entrevista e carreira). É um pacote separado: não altera nem duplica o arquivo principal.
 - `09-Prompt-Engineering.apkg` — 4 decks e 94 cards de prompt engineering (fundamentos, técnicas de prompting, estrutura e controle da resposta, aplicação prática). Também é separado.
+
+Tem umas coisas antigas em `.archive/`. Pode ignorar.
 
 ## Trilha revisada
 
@@ -88,18 +89,9 @@ docker logs --tail 100
 docker inspect
 ```
 
-## Onde ficaram os arquivos antigos
+## Arquivos antigos
 
-Os seis decks originais de `foco/` foram movidos para `cloud-eng/` com prefixo `foco-`, preservando conteúdo e tipo de nota:
-
-- `cloud-eng/foco-01-CLF-C02.apkg`
-- `cloud-eng/foco-02-SAA-C03.apkg`
-- `cloud-eng/foco-03-Redes.apkg`
-- `cloud-eng/foco-04-Entrevistas.apkg`
-- `cloud-eng/foco-05-Cloud-Neutro.apkg`
-- `cloud-eng/foco-06-Lacunas.apkg`
-
-Eles não precisam ser importados: seu conteúdo está no `07-Cloud-Engineer-Revisado.apkg` (os cards redundantes ficaram só nessas cópias de arquivo).
+O que sobrou das versões anteriores está em `.archive/`. Não é preciso importar nada daí.
 
 ## Soft skills (arquivo separado)
 
@@ -152,15 +144,14 @@ python gerar_prompt_engineering.py
 
 ## Importar no Anki
 
-**Arquivo → Importar…** e selecione `foco/07-Cloud-Engineer-Final.apkg`,
-`foco/08-Soft-Skills.apkg` e/ou `foco/09-Prompt-Engineering.apkg`. São
+**Arquivo → Importar…** e selecione `07-Cloud-Engineer-Final.apkg`,
+`08-Soft-Skills.apkg` e/ou `09-Prompt-Engineering.apkg`, todos na raiz. São
 independentes: importar um não afeta os outros.
 
 Os GUIDs dos 688 cartões originais foram preservados. Ainda assim, como os decks
 mudaram de nome e de hierarquia, o Anki pode manter os cartões nos decks antigos.
 Para ver a nova ordem, faça backup, remova os decks antigos `Cloud Engineer` (ou
-use um perfil limpo) e importe o arquivo final. Os arquivos em `.archive/` não
-devem ser importados.
+use um perfil limpo) e importe o arquivo final. O que ficou em `.archive/` pode ser ignorado.
 
 Para regenerar o pacote principal:
 

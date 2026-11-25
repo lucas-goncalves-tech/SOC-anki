@@ -19,7 +19,7 @@ ASPAS_RETAS = [
 ]
 
 SUBSTITUICOES = {
-    "foco/07-Cloud-Engineer-Final.apkg": [
+    "07-Cloud-Engineer-Final.apkg": [
         ("o provedor possui a infraestrutura", "o provedor é dono da infraestrutura"),
         ("Cada VM possui kernel", "Cada VM tem kernel"),
         ("OSI possui 7 camadas", "OSI tem 7 camadas"),
@@ -42,11 +42,11 @@ SUBSTITUICOES = {
         ("Move dados entre armazenamento on-premises e AWS de forma acelerada e agendada.",
          "Move dados entre armazenamento on-premises e AWS com transferência acelerada e agendada."),
     ],
-    "foco/08-Soft-Skills.apkg": ASPAS_RETAS + [
+    "08-Soft-Skills.apkg": ASPAS_RETAS + [
         ("um ponto real que não seja essencial para a vaga",
          "um ponto real que não atrapalhe a vaga"),
     ],
-    "foco/09-Prompt-Engineering.apkg": [],
+    "09-Prompt-Engineering.apkg": [],
 }
 
 

@@ -1,4 +1,4 @@
-"""Gera foco/09-Prompt-Engineering.apkg — deck separado, sem tocar nos outros pacotes.
+"""Gera 09-Prompt-Engineering.apkg na raiz — deck separado, sem tocar nos outros pacotes.
 
 Reaproveita o tipo de nota "Cloud Engineer" (campos Frente, Verso1, Verso2) do
 mesmo arquivo-base usado por gerar_notebooks.py. IDs de nota começam em
@@ -16,7 +16,7 @@ import zipfile
 from gerar_notebooks import ROOT, ler_modelo, slug
 from cards_prompt_engineering import DECKS
 
-OUTPUT = ROOT / "foco" / "09-Prompt-Engineering.apkg"
+OUTPUT = ROOT / "09-Prompt-Engineering.apkg"
 BASE_ID = 1760000000000
 
 

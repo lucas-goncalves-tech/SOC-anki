@@ -1,6 +1,6 @@
-"""Gera foco/07-Cloud-Engineer-Final.apkg e MAPEAMENTO.md.
+"""Gera 07-Cloud-Engineer-Final.apkg e MAPEAMENTO.md na raiz.
 
-O tipo de nota é copiado de cloud-eng/foco-01-CLF-C02.apkg: mesmo ID
+O tipo de nota é copiado de .archive/cloud-eng/foco-01-CLF-C02.apkg: mesmo ID
 (1830472615), mesmos campos (Frente, Verso1, Verso2), mesmo CSS e mesmos
 templates. O arquivo revisado contém:
 
@@ -33,12 +33,12 @@ from revisao import ADICOES, CERT_DECKS, ETAPAS, OVERRIDES_CERT, validar_ordem
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "gemini-notebook.md"
-TEMPLATE = ROOT / "cloud-eng" / "foco-01-CLF-C02.apkg"
+TEMPLATE = ROOT / ".archive" / "cloud-eng" / "foco-01-CLF-C02.apkg"
 CERT_SOURCES = (
-    ROOT / "cloud-eng" / "foco-01-CLF-C02.apkg",
-    ROOT / "cloud-eng" / "foco-02-SAA-C03.apkg",
+    ROOT / ".archive" / "cloud-eng" / "foco-01-CLF-C02.apkg",
+    ROOT / ".archive" / "cloud-eng" / "foco-02-SAA-C03.apkg",
 )
-OUTPUT = ROOT / "foco" / "07-Cloud-Engineer-Final.apkg"
+OUTPUT = ROOT / "07-Cloud-Engineer-Final.apkg"
 MAPA = ROOT / "MAPEAMENTO.md"
 
 CARDS = {**FASE0, **FASE1, **FASE2}
@@ -57,10 +57,10 @@ EXTRAS_TITULOS = {
 }
 
 FONTES_EXTRA = (
-    "cloud-eng/foco-03-Redes.apkg",
-    "cloud-eng/foco-04-Entrevistas.apkg",
-    "cloud-eng/foco-05-Cloud-Neutro.apkg",
-    "cloud-eng/foco-06-Lacunas.apkg",
+    ".archive/cloud-eng/foco-03-Redes.apkg",
+    ".archive/cloud-eng/foco-04-Entrevistas.apkg",
+    ".archive/cloud-eng/foco-05-Cloud-Neutro.apkg",
+    ".archive/cloud-eng/foco-06-Lacunas.apkg",
 )
 
 # Correção encontrada na auditoria: o deck antigo dizia "6 Rs".
@@ -310,7 +310,7 @@ def gerar(decks):
 
 SECAO_SOFT_SKILLS = """## Pacote 08 — soft skills
 
-Arquivo separado: `foco/08-Soft-Skills.apkg`. Usa o mesmo tipo de nota, mas o deck é
+Arquivo separado: `08-Soft-Skills.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
 independente (não fica debaixo de `Cloud Engineer`).
 
 | Deck | Cards |
@@ -324,7 +324,7 @@ independente (não fica debaixo de `Cloud Engineer`).
 
 SECAO_PROMPT = """## Pacote 09 - prompt engineering
 
-Arquivo separado: `foco/09-Prompt-Engineering.apkg`. Usa o mesmo tipo de nota, mas o deck é
+Arquivo separado: `09-Prompt-Engineering.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
 independente (não fica debaixo de `Cloud Engineer`).
 
 | Deck | Cards | Conteúdo |
@@ -346,10 +346,10 @@ def escrever_mapa(titulos, decks):
     linhas = [
         "# MAPEAMENTO — trilha revisada",
         "",
-        "Arquivo final: `foco/07-Cloud-Engineer-Final.apkg`.",
+        "Arquivo final: `07-Cloud-Engineer-Final.apkg`, na raiz.",
         "Modelo `Cloud Engineer` (campos `Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO).",
         "",
-        "As versões original (688 cards) e revisada (700 cards) foram arquivadas em `.archive/`.",
+        "Material mais antigo ficou em `.archive/`.",
         "",
         "**Como usar:** siga as etapas de 01 a 09 na ordem. As certificações ficam por último",
         "e não fazem parte da trilha principal. O apêndice multicloud (Azure e GCP) é opcional.",
