@@ -25,8 +25,8 @@ DECKS = {
   "Divisão lógica de recursos e permissões dentro do mesmo cluster.",
   "Namespaces dev, staging e producao com limites de recurso distintos."),
  ("ConfigMaps e Secrets",
-  "ConfigMaps guardam configuração não sensível; Secrets guardam dados sensíveis codificados, ambos injetados nos pods.",
-  "Secret com a senha do banco referenciada por secretKeyRef no Deployment."),
+  "ConfigMaps guardam configuração não sensível; Secrets são base64, que não é criptografia. RBAC controla o recurso, não chaves individuais; encryption at rest protege o etcd, mas o valor fica visível dentro do pod. Para maior rigor, use cofre externo ou CSI driver.",
+  "Secret referenciado por secretKeyRef no Deployment, com encryption at rest e acesso restrito por RBAC a quem precisa do Deployment."),
 ]),
 82: ("Python e Bash para Automação", [
  ("Python para automação cloud",

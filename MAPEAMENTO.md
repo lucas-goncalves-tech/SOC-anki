@@ -1,139 +1,266 @@
-# MAPEAMENTO — cards por notebook
+# MAPEAMENTO — trilha revisada
 
-Arquivo único: `foco/07-Notebooks.apkg`. Todos os cards usam o mesmo tipo de nota do `foco/`
-(modelo `Cloud Engineer`, campos `Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO).
+Arquivo final: `foco/07-Cloud-Engineer-Final.apkg`.
+Modelo `Cloud Engineer` (campos `Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO).
 
-**Como usar:** estude o Notebook `XX` e revise o deck `Cloud Engineer::XX-...` no mesmo dia.
+As versões original (688 cards) e revisada (700 cards) foram arquivadas em `.archive/`.
+
+**Como usar:** siga as etapas de 01 a 09 na ordem. As certificações ficam por último
+e não fazem parte da trilha principal. O apêndice multicloud (Azure e GCP) é opcional.
 
 | Grupo | Decks | Cards |
 |-------|-------|-------|
-|Notebooks 01–70 | 70 | 349 |
-|Extras 71–80 | 10 | 71 |
-|Vagas 81–86 | 6 | 40 |
-|CLF-C02 + SAA-C03 | 8 | 228 |
+| Etapas 01–09 | 84 | 448 |
+| Apêndice multicloud | 2 | 24 |
+| Certificações | 8 | 228 |
+| **Total** | **94** | **700** |
 
-**Total: 94 decks, 688 cards.**
+## Etapas da trilha principal
 
-## Decks 01–70 — notebooks
+### 01-Fundamentos de Infraestrutura
 
-| Notebook | Deck | Cards |
-|----------|------|-------|
-| 01 — Cloud Computing Fundamentals | `Cloud Engineer::01-Cloud Computing Fundamentals` | 3 |
-| 02 — Cloud Service Models (IaaS, PaaS and SaaS) | `Cloud Engineer::02-Cloud Service Models (IaaS, PaaS and SaaS)` | 4 |
-| 03 — Cloud Deployment Models | `Cloud Engineer::03-Cloud Deployment Models` | 4 |
-| 04 — Cloud Economics and Scalability | `Cloud Engineer::04-Cloud Economics and Scalability` | 5 |
-| 05 — Virtualization and Hypervisors | `Cloud Engineer::05-Virtualization and Hypervisors` | 5 |
-| 06 — Git Fundamentals | `Cloud Engineer::06-Git Fundamentals` | 5 |
-| 07 — Linux Fundamentals and Filesystem | `Cloud Engineer::07-Linux Fundamentals and Filesystem` | 5 |
-| 08 — Linux Users, Groups and Permissions | `Cloud Engineer::08-Linux Users, Groups and Permissions` | 5 |
-| 09 — Linux Processes and Resource Management | `Cloud Engineer::09-Linux Processes and Resource Management` | 5 |
-| 10 — Linux Services and Systemd | `Cloud Engineer::10-Linux Services and Systemd` | 5 |
-| 11 — Linux Package Management | `Cloud Engineer::11-Linux Package Management` | 5 |
-| 12 — Linux Storage and Filesystem Management | `Cloud Engineer::12-Linux Storage and Filesystem Management` | 5 |
-| 13 — Linux Remote Administration with SSH | `Cloud Engineer::13-Linux Remote Administration with SSH` | 5 |
-| 14 — Linux Shell Scripting Fundamentals | `Cloud Engineer::14-Linux Shell Scripting Fundamentals` | 5 |
-| 15 — Linux Logs and Troubleshooting | `Cloud Engineer::15-Linux Logs and Troubleshooting` | 5 |
-| 16 — Networking Fundamentals and TCP/IP | `Cloud Engineer::16-Networking Fundamentals and TCP/IP` | 5 |
-| 17 — IPv4, IPv6 and CIDR Addressing | `Cloud Engineer::17-IPv4, IPv6 and CIDR Addressing` | 5 |
-| 18 — Subnetting and Network Segmentation | `Cloud Engineer::18-Subnetting and Network Segmentation` | 5 |
-| 19 — Routing, Gateways and NAT | `Cloud Engineer::19-Routing, Gateways and NAT` | 5 |
-| 20 — DNS and Name Resolution | `Cloud Engineer::20-DNS and Name Resolution` | 5 |
-| 21 — HTTP, HTTPS and TLS | `Cloud Engineer::21-HTTP, HTTPS and TLS` | 5 |
-| 22 — Firewalls and Network Security Fundamentals | `Cloud Engineer::22-Firewalls and Network Security Fundamentals` | 5 |
-| 23 — Network Troubleshooting Tools | `Cloud Engineer::23-Network Troubleshooting Tools` | 5 |
-| 24 — AWS Global Infrastructure | `Cloud Engineer::24-AWS Global Infrastructure` | 5 |
-| 25 — AWS Account Management and Billing | `Cloud Engineer::25-AWS Account Management and Billing` | 5 |
-| 26 — AWS IAM Fundamentals | `Cloud Engineer::26-AWS IAM Fundamentals` | 5 |
-| 27 — AWS IAM Roles and Temporary Credentials | `Cloud Engineer::27-AWS IAM Roles and Temporary Credentials` | 5 |
-| 28 — Amazon VPC Fundamentals | `Cloud Engineer::28-Amazon VPC Fundamentals` | 5 |
-| 29 — AWS VPC Routing and Internet Connectivity | `Cloud Engineer::29-AWS VPC Routing and Internet Connectivity` | 5 |
-| 30 — AWS VPC Security and Traffic Filtering | `Cloud Engineer::30-AWS VPC Security and Traffic Filtering` | 5 |
-| 31 — AWS VPC Connectivity Services | `Cloud Engineer::31-AWS VPC Connectivity Services` | 5 |
-| 32 — Amazon EC2 Fundamentals | `Cloud Engineer::32-Amazon EC2 Fundamentals` | 5 |
-| 33 — Amazon EBS and Instance Storage | `Cloud Engineer::33-Amazon EBS and Instance Storage` | 5 |
-| 34 — Amazon S3 Fundamentals | `Cloud Engineer::34-Amazon S3 Fundamentals` | 5 |
-| 35 — Amazon S3 Security and Lifecycle Management | `Cloud Engineer::35-Amazon S3 Security and Lifecycle Management` | 5 |
-| 36 — Amazon RDS Fundamentals | `Cloud Engineer::36-Amazon RDS Fundamentals` | 5 |
-| 37 — Amazon RDS Backup and High Availability | `Cloud Engineer::37-Amazon RDS Backup and High Availability` | 5 |
-| 38 — AWS Load Balancing | `Cloud Engineer::38-AWS Load Balancing` | 5 |
-| 39 — AWS Auto Scaling | `Cloud Engineer::39-AWS Auto Scaling` | 5 |
-| 40 — Amazon Route 53 | `Cloud Engineer::40-Amazon Route 53` | 5 |
-| 41 — Amazon CloudFront and Content Delivery | `Cloud Engineer::41-Amazon CloudFront and Content Delivery` | 5 |
-| 42 — AWS Certificate Manager | `Cloud Engineer::42-AWS Certificate Manager` | 5 |
-| 43 — AWS Lambda Fundamentals | `Cloud Engineer::43-AWS Lambda Fundamentals` | 5 |
-| 44 — AWS Messaging Services: SQS and SNS | `Cloud Engineer::44-AWS Messaging Services: SQS and SNS` | 5 |
-| 45 — Amazon EventBridge and Event-Driven Architecture | `Cloud Engineer::45-Amazon EventBridge and Event-Driven Architecture` | 5 |
-| 46 — Infrastructure as Code Fundamentals | `Cloud Engineer::46-Infrastructure as Code Fundamentals` | 5 |
-| 47 — Terraform Fundamentals and HCL | `Cloud Engineer::47-Terraform Fundamentals and HCL` | 5 |
-| 48 — Terraform Workflow and Resource Lifecycle | `Cloud Engineer::48-Terraform Workflow and Resource Lifecycle` | 5 |
-| 49 — Terraform State Management | `Cloud Engineer::49-Terraform State Management` | 5 |
-| 50 — Terraform Modules and Reusable Infrastructure | `Cloud Engineer::50-Terraform Modules and Reusable Infrastructure` | 5 |
-| 51 — Terraform Environments and Best Practices | `Cloud Engineer::51-Terraform Environments and Best Practices` | 5 |
-| 52 — Docker Fundamentals | `Cloud Engineer::52-Docker Fundamentals` | 5 |
-| 53 — Dockerfile and Image Building | `Cloud Engineer::53-Dockerfile and Image Building` | 5 |
-| 54 — Docker Networking | `Cloud Engineer::54-Docker Networking` | 5 |
-| 55 — Docker Volumes and Persistence | `Cloud Engineer::55-Docker Volumes and Persistence` | 5 |
-| 56 — Docker Compose | `Cloud Engineer::56-Docker Compose` | 5 |
-| 57 — AWS ECR and ECS Fundamentals | `Cloud Engineer::57-AWS ECR and ECS Fundamentals` | 5 |
-| 58 — CI/CD Fundamentals | `Cloud Engineer::58-CI/CD Fundamentals` | 5 |
-| 59 — GitHub Actions | `Cloud Engineer::59-GitHub Actions` | 5 |
-| 60 — Amazon CloudWatch Fundamentals | `Cloud Engineer::60-Amazon CloudWatch Fundamentals` | 5 |
-| 61 — CloudWatch Alarms and Monitoring | `Cloud Engineer::61-CloudWatch Alarms and Monitoring` | 5 |
-| 62 — AWS CloudTrail and Auditing | `Cloud Engineer::62-AWS CloudTrail and Auditing` | 5 |
-| 63 — Cloud Troubleshooting Methodology | `Cloud Engineer::63-Cloud Troubleshooting Methodology` | 5 |
-| 64 — Incident Response and Root Cause Analysis | `Cloud Engineer::64-Incident Response and Root Cause Analysis` | 5 |
-| 65 — High Availability and Fault Tolerance | `Cloud Engineer::65-High Availability and Fault Tolerance` | 5 |
-| 66 — Backup and Disaster Recovery | `Cloud Engineer::66-Backup and Disaster Recovery` | 5 |
-| 67 — AWS Cost Optimization | `Cloud Engineer::67-AWS Cost Optimization` | 5 |
-| 68 — AWS Well-Architected Framework | `Cloud Engineer::68-AWS Well-Architected Framework` | 5 |
-| 69 — Production Readiness and Operational Practices | `Cloud Engineer::69-Production Readiness and Operational Practices` | 5 |
-| 70 — Cloud Engineering Capstone: Production Infrastructure | `Cloud Engineer::70-Cloud Engineering Capstone: Production Infrastructure` | 8 |
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::01-Fundamentos de Infraestrutura::01-Cloud Computing Fundamentals` | nb 01 | 3 |
+| 02 | `Cloud Engineer::01-Fundamentos de Infraestrutura::02-Cloud Service Models (IaaS, PaaS and SaaS)` | nb 02 | 4 |
+| 03 | `Cloud Engineer::01-Fundamentos de Infraestrutura::03-Cloud Deployment Models` | nb 03 | 4 |
+| 04 | `Cloud Engineer::01-Fundamentos de Infraestrutura::04-Cloud Economics and Scalability` | nb 04 | 5 |
+| 05 | `Cloud Engineer::01-Fundamentos de Infraestrutura::05-Virtualization and Hypervisors` | nb 05 | 5 |
+| 06 | `Cloud Engineer::01-Fundamentos de Infraestrutura::06-Linux Fundamentals and Filesystem` | nb 07 | 5 |
+| 07 | `Cloud Engineer::01-Fundamentos de Infraestrutura::07-Linux Users, Groups and Permissions` | nb 08 | 5 |
+| 08 | `Cloud Engineer::01-Fundamentos de Infraestrutura::08-Linux Processes and Resource Management` | nb 09 | 5 |
+| 09 | `Cloud Engineer::01-Fundamentos de Infraestrutura::09-Linux Services and Systemd` | nb 10 | 5 |
+| 10 | `Cloud Engineer::01-Fundamentos de Infraestrutura::10-Linux Package Management` | nb 11 | 5 |
+| 11 | `Cloud Engineer::01-Fundamentos de Infraestrutura::11-Linux Storage and Filesystem Management` | nb 12 | 5 |
+| 12 | `Cloud Engineer::01-Fundamentos de Infraestrutura::12-Linux Remote Administration with SSH` | nb 13 | 5 |
+| 13 | `Cloud Engineer::01-Fundamentos de Infraestrutura::13-Linux Shell Scripting Fundamentals` | nb 14 | 5 |
+| 14 | `Cloud Engineer::01-Fundamentos de Infraestrutura::14-Linux Logs and Troubleshooting` | nb 15 | 6 |
+| 15 | `Cloud Engineer::01-Fundamentos de Infraestrutura::15-Git Fundamentals` | nb 06 | 5 |
+| 16 | `Cloud Engineer::01-Fundamentos de Infraestrutura::16-Networking Fundamentals and TCP/IP` | nb 16 | 6 |
+| 17 | `Cloud Engineer::01-Fundamentos de Infraestrutura::17-IPv4, IPv6 and CIDR Addressing` | nb 17 | 6 |
+| 18 | `Cloud Engineer::01-Fundamentos de Infraestrutura::18-Subnetting and Network Segmentation` | nb 18 | 5 |
+| 19 | `Cloud Engineer::01-Fundamentos de Infraestrutura::19-Routing, Gateways and NAT` | nb 19 | 5 |
+| 20 | `Cloud Engineer::01-Fundamentos de Infraestrutura::20-DNS and Name Resolution` | nb 20 | 6 |
+| 21 | `Cloud Engineer::01-Fundamentos de Infraestrutura::21-HTTP, HTTPS and TLS` | nb 21 | 5 |
+| 22 | `Cloud Engineer::01-Fundamentos de Infraestrutura::22-Firewalls and Network Security Fundamentals` | nb 22 | 5 |
+| 23 | `Cloud Engineer::01-Fundamentos de Infraestrutura::23-Network Troubleshooting Tools` | nb 23 | 5 |
+| 24 | `Cloud Engineer::01-Fundamentos de Infraestrutura::24-Redes Complementar` | extra 79 | 4 |
 
-## Decks 71–80 — extras
+**Total da etapa: 24 decks, 119 cards.**
 
-Decks 71 e 77–80 são de entrevista/multicloud e estão fora do escopo das provas.
+### 02-Fundamentos AWS
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::02-Fundamentos AWS::01-AWS Global Infrastructure` | nb 24 | 5 |
+| 02 | `Cloud Engineer::02-Fundamentos AWS::02-AWS Account Management and Billing` | nb 25 | 5 |
+| 03 | `Cloud Engineer::02-Fundamentos AWS::03-AWS IAM Fundamentals` | nb 26 | 5 |
+| 04 | `Cloud Engineer::02-Fundamentos AWS::04-AWS IAM Roles and Temporary Credentials` | nb 27 | 6 |
+| 05 | `Cloud Engineer::02-Fundamentos AWS::05-Amazon VPC Fundamentals` | nb 28 | 5 |
+| 06 | `Cloud Engineer::02-Fundamentos AWS::06-AWS VPC Routing and Internet Connectivity` | nb 29 | 5 |
+| 07 | `Cloud Engineer::02-Fundamentos AWS::07-AWS VPC Security and Traffic Filtering` | nb 30 | 5 |
+| 08 | `Cloud Engineer::02-Fundamentos AWS::08-AWS VPC Connectivity Services` | nb 31 | 5 |
+
+**Total da etapa: 8 decks, 41 cards.**
+
+### 03-Serviços AWS
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::03-Serviços AWS::01-Amazon EC2 Fundamentals` | nb 32 | 5 |
+| 02 | `Cloud Engineer::03-Serviços AWS::02-Amazon EBS and Instance Storage` | nb 33 | 5 |
+| 03 | `Cloud Engineer::03-Serviços AWS::03-Amazon S3 Fundamentals` | nb 34 | 5 |
+| 04 | `Cloud Engineer::03-Serviços AWS::04-Amazon S3 Security and Lifecycle Management` | nb 35 | 5 |
+| 05 | `Cloud Engineer::03-Serviços AWS::05-Amazon RDS Fundamentals` | nb 36 | 5 |
+| 06 | `Cloud Engineer::03-Serviços AWS::06-Amazon RDS Backup and High Availability` | nb 37 | 5 |
+| 07 | `Cloud Engineer::03-Serviços AWS::07-AWS Load Balancing` | nb 38 | 5 |
+| 08 | `Cloud Engineer::03-Serviços AWS::08-AWS Auto Scaling` | nb 39 | 5 |
+| 09 | `Cloud Engineer::03-Serviços AWS::09-Amazon Route 53` | nb 40 | 5 |
+| 10 | `Cloud Engineer::03-Serviços AWS::10-Amazon CloudFront and Content Delivery` | nb 41 | 5 |
+| 11 | `Cloud Engineer::03-Serviços AWS::11-AWS Certificate Manager` | nb 42 | 5 |
+| 12 | `Cloud Engineer::03-Serviços AWS::12-AWS Lambda Fundamentals` | nb 43 | 5 |
+| 13 | `Cloud Engineer::03-Serviços AWS::13-AWS Messaging Services: SQS and SNS` | nb 44 | 5 |
+| 14 | `Cloud Engineer::03-Serviços AWS::14-Amazon EventBridge and Event-Driven Architecture` | nb 45 | 5 |
+| 15 | `Cloud Engineer::03-Serviços AWS::15-Serviços AWS Complementares` | extra 77 | 21 |
+
+**Total da etapa: 15 decks, 91 cards.**
+
+### 04-Infraestrutura como Código
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::04-Infraestrutura como Código::01-Infrastructure as Code Fundamentals` | nb 46 | 5 |
+| 02 | `Cloud Engineer::04-Infraestrutura como Código::02-Terraform Fundamentals and HCL` | nb 47 | 5 |
+| 03 | `Cloud Engineer::04-Infraestrutura como Código::03-Terraform Workflow and Resource Lifecycle` | nb 48 | 5 |
+| 04 | `Cloud Engineer::04-Infraestrutura como Código::04-Terraform State Management` | nb 49 | 5 |
+| 05 | `Cloud Engineer::04-Infraestrutura como Código::05-Terraform Modules and Reusable Infrastructure` | nb 50 | 5 |
+| 06 | `Cloud Engineer::04-Infraestrutura como Código::06-Terraform Environments and Best Practices` | nb 51 | 5 |
+| 07 | `Cloud Engineer::04-Infraestrutura como Código::07-Python e Bash para Automação` | vaga 82 | 7 |
+
+**Total da etapa: 7 decks, 37 cards.**
+
+### 05-Containers e Orquestração
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::05-Containers e Orquestração::01-Docker Fundamentals` | nb 52 | 5 |
+| 02 | `Cloud Engineer::05-Containers e Orquestração::02-Dockerfile and Image Building` | nb 53 | 5 |
+| 03 | `Cloud Engineer::05-Containers e Orquestração::03-Docker Networking` | nb 54 | 5 |
+| 04 | `Cloud Engineer::05-Containers e Orquestração::04-Docker Volumes and Persistence` | nb 55 | 5 |
+| 05 | `Cloud Engineer::05-Containers e Orquestração::05-Docker Compose` | nb 56 | 5 |
+| 06 | `Cloud Engineer::05-Containers e Orquestração::06-AWS ECR and ECS Fundamentals` | nb 57 | 5 |
+| 07 | `Cloud Engineer::05-Containers e Orquestração::07-Kubernetes Operacional` | vaga 81 | 9 |
+
+**Total da etapa: 7 decks, 39 cards.**
+
+### 06-CI-CD e Segurança de Desenvolvimento
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::06-CI-CD e Segurança de Desenvolvimento::01-CI/CD Fundamentals` | nb 58 | 5 |
+| 02 | `Cloud Engineer::06-CI-CD e Segurança de Desenvolvimento::02-GitHub Actions` | nb 59 | 5 |
+| 03 | `Cloud Engineer::06-CI-CD e Segurança de Desenvolvimento::03-CI/CD com Outras Ferramentas` | vaga 83 | 6 |
+| 04 | `Cloud Engineer::06-CI-CD e Segurança de Desenvolvimento::04-Segurança Shift-Left` | vaga 85 | 8 |
+
+**Total da etapa: 4 decks, 24 cards.**
+
+### 07-Operações e Observabilidade
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::07-Operações e Observabilidade::01-Amazon CloudWatch Fundamentals` | nb 60 | 5 |
+| 02 | `Cloud Engineer::07-Operações e Observabilidade::02-CloudWatch Alarms and Monitoring` | nb 61 | 5 |
+| 03 | `Cloud Engineer::07-Operações e Observabilidade::03-AWS CloudTrail and Auditing` | nb 62 | 5 |
+| 04 | `Cloud Engineer::07-Operações e Observabilidade::04-Observabilidade com Stack Moderna` | vaga 84 | 7 |
+| 05 | `Cloud Engineer::07-Operações e Observabilidade::05-Cloud Troubleshooting Methodology` | nb 63 | 5 |
+| 06 | `Cloud Engineer::07-Operações e Observabilidade::06-Incident Response and Root Cause Analysis` | nb 64 | 5 |
+| 07 | `Cloud Engineer::07-Operações e Observabilidade::07-Padrões de Resiliência` | extra 72 | 6 |
+| 08 | `Cloud Engineer::07-Operações e Observabilidade::08-SLO, SLI e Error Budget` | extra 73 | 3 |
+
+**Total da etapa: 8 decks, 41 cards.**
+
+### 08-Arquitetura e Produção
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::08-Arquitetura e Produção::01-High Availability and Fault Tolerance` | nb 65 | 5 |
+| 02 | `Cloud Engineer::08-Arquitetura e Produção::02-Backup and Disaster Recovery` | nb 66 | 5 |
+| 03 | `Cloud Engineer::08-Arquitetura e Produção::03-Consistência e Dados` | extra 74 | 4 |
+| 04 | `Cloud Engineer::08-Arquitetura e Produção::04-Segurança Avançada` | extra 75 | 6 |
+| 05 | `Cloud Engineer::08-Arquitetura e Produção::05-AWS Cost Optimization` | nb 67 | 5 |
+| 06 | `Cloud Engineer::08-Arquitetura e Produção::06-FinOps` | extra 76 | 3 |
+| 07 | `Cloud Engineer::08-Arquitetura e Produção::07-AWS Well-Architected Framework` | nb 68 | 5 |
+| 08 | `Cloud Engineer::08-Arquitetura e Produção::08-Production Readiness and Operational Practices` | nb 69 | 5 |
+| 09 | `Cloud Engineer::08-Arquitetura e Produção::09-Fundamentos Complementares` | extra 80 | 2 |
+
+**Total da etapa: 9 decks, 40 cards.**
+
+### 09-Consolidação
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::09-Consolidação::01-Cenários de Entrevista` | extra 78 | 8 |
+| 02 | `Cloud Engineer::09-Consolidação::02-Cloud Engineering Capstone: Production Infrastructure` | nb 70 | 8 |
+
+**Total da etapa: 2 decks, 16 cards.**
+
+### 10-Apêndice Multicloud
+
+| Ordem | Deck | Origem | Cards |
+|-------|------|--------|-------|
+| 01 | `Cloud Engineer::10-Apêndice Multicloud::01-Azure` | extra 71 | 20 |
+| 02 | `Cloud Engineer::10-Apêndice Multicloud::02-GCP Básico para Multicloud` | vaga 86 | 4 |
+
+**Total da etapa: 2 decks, 24 cards.**
+
+## Certificações
+
+Separadas da trilha principal. Estude depois de consolidar AWS, Linux, redes e IaC;
+use os decks para revisar e identificar lacunas, não como primeiro contato com o assunto.
+
+### CLF-C02 — ordem recomendada
+
+Conceitos → Segurança → Serviços → Custos.
+
+### SAA-C03 — ordem recomendada
+
+Seguro → Resiliente → Performance → Custo (30%, 26%, 24% e 20% do exame).
+
+| Certificação | Ordem | Deck | Cards |
+|--------------|-------|------|-------|
+| CLF-C02 | 01 | `Cloud Engineer::11-Certificações::CLF-C02::01-Conceitos` | 22 |
+| CLF-C02 | 02 | `Cloud Engineer::11-Certificações::CLF-C02::02-Segurança` | 35 |
+| CLF-C02 | 03 | `Cloud Engineer::11-Certificações::CLF-C02::03-Serviços` | 58 |
+| CLF-C02 | 04 | `Cloud Engineer::11-Certificações::CLF-C02::04-Custos` | 27 |
+| SAA-C03 | 01 | `Cloud Engineer::11-Certificações::SAA-C03::01-Seguro` | 21 |
+| SAA-C03 | 02 | `Cloud Engineer::11-Certificações::SAA-C03::02-Resiliente` | 21 |
+| SAA-C03 | 03 | `Cloud Engineer::11-Certificações::SAA-C03::03-Performance` | 23 |
+| SAA-C03 | 04 | `Cloud Engineer::11-Certificações::SAA-C03::04-Custo` | 21 |
+
+## Correções desta revisão
+
+- Cloud Computing: virtualização tratada como um habilitador, não como origem única.
+- Private Cloud: separação entre propriedade, hospedagem e controle operacional.
+- Multicloud: redução de lock-in como possibilidade, não como garantia.
+- CIDR: fórmula 2^h - 2 com exceções /31 e /32.
+- DNS: resolução recursiva x iterativa, caches por TTL e cache negativo.
+- Docker Networking: DNS por nome apenas em bridge definida pelo usuário.
+- Terraform State: valores sensíveis, backend protegido, locking, versionamento e recuperação.
+- NAT Gateway: separado de VPC Endpoints para acesso a serviços AWS.
+- ACM: certificados para CloudFront obrigatoriamente em us-east-1.
+- Lambda: timeout, memória, concorrência e modelo efêmero.
+- RDS Multi-AZ: distinção entre Multi-AZ DB instance e Multi-AZ DB cluster.
+- EC2 Instance Store: perda em stop, hibernate e terminate; reboot não apaga.
+- Kubernetes Secrets: base64 não é criptografia; RBAC por recurso e encryption at rest protegem camadas distintas.
+- IAM OIDC: trust policy valida aud e sub, não apenas a origem do token.
+- AWS WAF: AWS Managed Rules, rate-based rules e associação obrigatória ao recurso.
+- EKS: control plane gerenciado, data plane e add-ons separados.
+- AWS Systems Manager: SSM Agent, conectividade e IAM como requisitos operacionais.
+- GitHub Actions: deploy por OIDC no lugar de access key estática.
+- Frentes repetidas (EKS, Macie e Cognito) reescritas com ângulos distintos.
+
+## Lacunas acrescentadas
+
+- Troubleshooting avançado de Linux (15).
+- DHCP e ARP (16).
+- IPv6 operacional (17).
+- DNS na prática: diagnóstico e propagação (20).
+- IAM OIDC para pipelines (27).
+- AWS KMS, AWS Config e AWS WAF (75).
+- AWS Systems Manager e AWS Secrets Manager (77).
+- Nginx com TLS e virtual hosts (79).
+- Amazon EKS (81).
+
+## Pacote 08 — soft skills
+
+Arquivo separado: `foco/08-Soft-Skills.apkg`. Usa o mesmo tipo de nota, mas o deck é
+independente (não fica debaixo de `Cloud Engineer`).
 
 | Deck | Cards |
 |------|-------|
-| `Cloud Engineer::71-Azure` | 20 |
-| `Cloud Engineer::72-Padrões de Resiliência` | 6 |
-| `Cloud Engineer::73-SLO, SLI e Error Budget` | 3 |
-| `Cloud Engineer::74-Consistência e Dados` | 4 |
-| `Cloud Engineer::75-Segurança Avançada` | 3 |
-| `Cloud Engineer::76-FinOps` | 3 |
-| `Cloud Engineer::77-Serviços AWS Complementares` | 19 |
-| `Cloud Engineer::78-Cenários de Entrevista` | 8 |
-| `Cloud Engineer::79-Redes Complementar` | 3 |
-| `Cloud Engineer::80-Fundamentos Complementares` | 2 |
+| `Soft Skills::LinkedIn e Marca Pessoal` | 15 |
+| `Soft Skills::Comunicação e Relacionamento` | 12 |
+| `Soft Skills::Comportamento e Desenvolvimento` | 12 |
+| `Soft Skills::Entrevista e Carreira` | 10 |
 
-## Decks 81–86 — habilidades de vagas
+**Total: 4 decks, 49 cards.**
 
-| Deck | Cards |
-|------|-------|
-| `Cloud Engineer::81-Kubernetes Operacional` | 8 |
-| `Cloud Engineer::82-Python e Bash para Automação` | 7 |
-| `Cloud Engineer::83-CI/CD com Outras Ferramentas` | 6 |
-| `Cloud Engineer::84-Observabilidade com Stack Moderna` | 7 |
-| `Cloud Engineer::85-Segurança Shift-Left` | 8 |
-| `Cloud Engineer::86-GCP Básico para Multicloud` | 4 |
+## Pacote 09 - prompt engineering
 
-## Decks de certificação
+Arquivo separado: `foco/09-Prompt-Engineering.apkg`. Usa o mesmo tipo de nota, mas o deck é
+independente (não fica debaixo de `Cloud Engineer`).
 
-Vêm depois do 80 na árvore do Anki. Incluem os cards originais e os acréscimos de alto impacto.
+| Deck | Cards | Conteúdo |
+|------|-------|----------|
+| `Prompt Engineering::01-Fundamentos` | 19 | definição, estrutura, FECTAP como checklist, tokens, janela de contexto, custo e conversa por assunto |
+| `Prompt Engineering::02-Técnicas de Prompting` | 26 | zero/one/few-shot, CoT e modelos de raciocínio, direto x guiado, roles, chaining, tool calling, iteração, casos de escolha |
+| `Prompt Engineering::03-Estrutura e Controle da Resposta` | 28 | formato, JSON x Structured Outputs, validação, variáveis, tom, persona, alucinação, RAG, grounding, injection |
+| `Prompt Engineering::04-Aplicação Prática` | 21 | debug, revisão de código, produtividade, decisão, criatividade, biblioteca, evals e CI |
 
-| Deck | Cards |
-|------|-------|
-| `Cloud Engineer::CLF-C02::Conceitos` | 22 |
-| `Cloud Engineer::CLF-C02::Custos` | 27 |
-| `Cloud Engineer::CLF-C02::Seguranca` | 35 |
-| `Cloud Engineer::CLF-C02::Servicos` | 58 |
-| `Cloud Engineer::SAA-C03::Custo` | 21 |
-| `Cloud Engineer::SAA-C03::Performance` | 23 |
-| `Cloud Engineer::SAA-C03::Resiliente` | 21 |
-| `Cloud Engineer::SAA-C03::Seguro` | 21 |
+**Total: 4 decks, 94 cards.**
 
 ## Afinidade entre assuntos
 
 Git (06) com CI/CD (58–59); Dockerfile (53) com Compose (56); redes (16–23) com VPC (28–31);
 DNS (20) com Route 53 (40); IAM (26–27) com CloudTrail (62); Terraform (46–51) com Git (06);
-CloudWatch (60–61) com troubleshooting (63–64).
+CloudWatch (60–61) com troubleshooting (63–64); Kubernetes (81) com Docker (52–57).
