@@ -4,7 +4,7 @@
 CARDS = {
 24: [
  ("AWS Regions — definição",
-  "Área geográfica com múltiplas Availability Zones, isolada das demais regiões; cada região possui serviços, preços e requisitos de conformidade próprios.",
+  "Área geográfica com múltiplas Availability Zones, isolada das demais regiões; cada região tem serviços, preços e requisitos de conformidade próprios.",
   "us-east-1 (N. Virginia) e sa-east-1 (São Paulo): escolher uma região próxima reduz latência."),
  ("Availability Zones (AZ)",
   "Um ou mais datacenters dentro de uma região, com energia, rede e conectividade independentes e links de baixa latência entre si.",
@@ -81,7 +81,7 @@ CARDS = {
   "Bloco CIDR define o intervalo de IPs da VPC; não pode sobrepor redes conectadas e deve reservar espaço para crescimento.",
   "VPC 10.0.0.0/16 com sub-redes 10.0.1.0/24 e 10.0.2.0/24 em AZs diferentes."),
  ("Public e Private Subnets",
-  "Subnet pública possui rota para um Internet Gateway; subnet privada não tem rota direta para a internet e usa NAT Gateway apenas para saída.",
+  "Subnet pública tem rota para um Internet Gateway; subnet privada não tem rota direta para a internet e usa NAT Gateway apenas para saída.",
   "ALB na subnet pública; aplicação e RDS nas sub-redes privadas."),
  ("Subnets distribuídas entre Availability Zones",
   "Cada subnet pertence a uma única AZ; distribuir sub-redes equivalentes entre várias AZs é a base da alta disponibilidade.",
@@ -92,7 +92,7 @@ CARDS = {
 ],
 29: [
  ("Route Tables e rotas locais",
-  "Route Table contém regras de destino e target; toda VPC possui uma rota local para todo o seu bloco CIDR.",
+  "Route Table contém regras de destino e target; toda VPC tem uma rota local para todo o seu bloco CIDR.",
   "Rota 10.0.0.0/16 com target local permite a comunicação entre sub-redes."),
  ("Internet Gateway",
   "Componente que conecta a VPC à internet; precisa estar anexado à VPC e referenciado na route table da subnet pública.",

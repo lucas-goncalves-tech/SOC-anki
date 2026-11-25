@@ -65,6 +65,14 @@ FONTES_EXTRA = (
 
 # Correção encontrada na auditoria: o deck antigo dizia "6 Rs".
 OVERRIDES_EXTRA = {
+    "AZ-900 cobre o quê?": (
+        "AZ-900 cobre o quê?",
+        "Fundamentos de cloud no Azure: conceitos de nuvem, serviços principais, segurança, governança, custo e preço.",
+        "É a certificação de entrada da Microsoft, equivalente ao Cloud Practitioner da AWS. É o primeiro passo para quem quer trabalhar com Azure.<br>EN: Microsoft Azure Fundamentals"),
+    "O que é degradação graciosa?": (
+        "O que é degradação graciosa?",
+        "Manter a <b>funcionalidade crítica</b> disponível quando uma dependência falha, em vez de derrubar tudo.",
+        "E-commerce sem recomendação ainda finaliza a compra; o cache serve conteúdo enquanto o banco recupera."),
     "Quais são os 6 Rs de migração para cloud?": (
         "Quais são os 7 Rs de migração para cloud?",
         "As sete estratégias são Rehost, Replatform, Repurchase, Refactor, Retire, Retain e Relocate.",

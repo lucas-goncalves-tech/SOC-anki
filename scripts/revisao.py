@@ -112,6 +112,14 @@ OVERRIDES_CERT = {
         "Cognito na arquitetura: user pool x identity pool",
         "User pool cuida de cadastro e login de usuários; identity pool troca identidades autenticadas ou anônimas por credenciais AWS temporárias via role — sem chaves permanentes na aplicação.",
         "App web autentica no Cognito e usa o identity pool para assumir uma role com acesso limitado a um bucket S3."),
+    ("Cloud Engineer::CLF-C02::Servicos", "AWS CloudFormation"): (
+        "AWS CloudFormation",
+        "Infraestrutura como código: descreve recursos em templates (JSON/YAML) e cria os recursos automaticamente e permite repetir o processo.",
+        "Criar o mesmo ambiente (VPC, EC2, RDS) em duas contas a partir de um único template."),
+    ("Cloud Engineer::SAA-C03::Performance", "AWS DataSync"): (
+        "AWS DataSync",
+        "Move dados entre armazenamento on-premises e AWS com transferência acelerada e agendada.",
+        "Migrar 10 TB de um servidor NFS para o S3 com validação de integridade."),
 }
 
 # Ordem dos decks de certificação e IDs internos preservados do pacote original.
