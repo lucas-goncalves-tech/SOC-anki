@@ -236,14 +236,18 @@ Seguro → Resiliente → Performance → Custo (30%, 26%, 24% e 20% do exame).
 Arquivo separado: `08-Soft-Skills.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
 independente (não fica debaixo de `Cloud Engineer`).
 
-| Deck | Cards |
-|------|-------|
-| `Soft Skills::LinkedIn e Marca Pessoal` | 15 |
-| `Soft Skills::Comunicação e Relacionamento` | 12 |
-| `Soft Skills::Comportamento e Desenvolvimento` | 12 |
-| `Soft Skills::Entrevista e Carreira` | 10 |
+| Ordem | Deck | Cards |
+|-------|------|-------|
+| 01 | `Soft Skills::01-Comunicação` | 20 |
+| 02 | `Soft Skills::02-Comportamento` | 7 |
+| 03 | `Soft Skills::03-Entrevistas` | 17 |
+| 04 | `Soft Skills::04-LinkedIn e Marca Pessoal` | 15 |
 
-**Total: 4 decks, 49 cards.**
+**Total: 4 decks, 59 cards.** O prefixo numérico define a ordem de estudo; o
+conteúdo mescla os 43 cards do arquivo anterior, 4 cards do spec de 2026-11-24
+que não duplicavam os existentes e 12 cards de situações técnicas. Nove cards
+foram corrigidos (06, 08, 09, 22, 28, 33, 39, 41 e 43 do arquivo antigo). Os
+GUIDs mudaram com os nomes dos decks: remover o deck antigo antes de importar.
 
 ## Pacote 09 - prompt engineering
 

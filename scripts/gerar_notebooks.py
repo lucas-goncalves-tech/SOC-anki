@@ -308,35 +308,6 @@ def gerar(decks):
     return posicao
 
 
-SECAO_SOFT_SKILLS = """## Pacote 08 — soft skills
-
-Arquivo separado: `08-Soft-Skills.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
-independente (não fica debaixo de `Cloud Engineer`).
-
-| Deck | Cards |
-|------|-------|
-| `Soft Skills::LinkedIn e Marca Pessoal` | 15 |
-| `Soft Skills::Comunicação e Relacionamento` | 12 |
-| `Soft Skills::Comportamento e Desenvolvimento` | 12 |
-| `Soft Skills::Entrevista e Carreira` | 10 |
-
-**Total: 4 decks, 49 cards.**"""
-
-SECAO_PROMPT = """## Pacote 09 - prompt engineering
-
-Arquivo separado: `09-Prompt-Engineering.apkg`, na raiz. Usa o mesmo tipo de nota, mas o deck é
-independente (não fica debaixo de `Cloud Engineer`).
-
-| Deck | Cards | Conteúdo |
-|------|-------|----------|
-| `Prompt Engineering::01-Fundamentos` | 19 | definição, estrutura, FECTAP como checklist, tokens, janela de contexto, custo e conversa por assunto |
-| `Prompt Engineering::02-Técnicas de Prompting` | 26 | zero/one/few-shot, CoT e modelos de raciocínio, direto x guiado, roles, chaining, tool calling, iteração, casos de escolha |
-| `Prompt Engineering::03-Estrutura e Controle da Resposta` | 28 | formato, JSON x Structured Outputs, validação, variáveis, tom, persona, alucinação, RAG, grounding, injection |
-| `Prompt Engineering::04-Aplicação Prática` | 21 | debug, revisão de código, produtividade, decisão, criatividade, biblioteca, evals e CI |
-
-**Total: 4 decks, 94 cards.**"""
-
-
 def escrever_mapa(titulos, decks):
     principais = [d for d in decks if d["numero"] is not None and d["numero"] not in (71, 86)]
     apendice = [d for d in decks if d["numero"] in (71, 86)]
@@ -443,18 +414,17 @@ def escrever_mapa(titulos, decks):
         "- Nginx com TLS e virtual hosts (79).",
         "- Amazon EKS (81).",
         "",
-        SECAO_SOFT_SKILLS,
-        "",
-        SECAO_PROMPT,
-        "",
-        "## Afinidade entre assuntos",
-        "",
-        "Git (06) com CI/CD (58–59); Dockerfile (53) com Compose (56); redes (16–23) com VPC (28–31);",
-        "DNS (20) com Route 53 (40); IAM (26–27) com CloudTrail (62); Terraform (46–51) com Git (06);",
-        "CloudWatch (60–61) com troubleshooting (63–64); Kubernetes (81) com Docker (52–57).",
-        "",
     ]
-    MAPA.write_text("\n".join(linhas), encoding="utf-8")
+    # O gerador é dono apenas da parte do pacote 07. As seções dos pacotes 08
+    # e 09 e a afinidade entre assuntos ficam no próprio MAPEAMENTO.md, sem
+    # cópia embutida aqui: editar a documentação é suficiente.
+    atual = MAPA.read_text(encoding="utf-8")
+    marcador = "## Pacote 08 — soft skills"
+    indice = atual.find(marcador)
+    if indice == -1:
+        raise SystemExit("MAPEAMENTO.md sem a seção '%s'" % marcador)
+    linhas.append(atual[indice:].rstrip())
+    MAPA.write_text("\n".join(linhas) + "\n", encoding="utf-8")
 
 
 def montar_deck(numero, etapa, posicao, titulo, cartoes, origem):

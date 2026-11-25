@@ -42,10 +42,9 @@ SUBSTITUICOES = {
         ("Move dados entre armazenamento on-premises e AWS de forma acelerada e agendada.",
          "Move dados entre armazenamento on-premises e AWS com transferência acelerada e agendada."),
     ],
-    "08-Soft-Skills.apkg": ASPAS_RETAS + [
-        ("um ponto real que não seja essencial para a vaga",
-         "um ponto real que não atrapalhe a vaga"),
-    ],
+    # Os cards do 08 já são gerados com aspas retas e com o texto final das
+    # correções pedagógicas (cartão 39 incluído), então só as aspas se aplicam.
+    "08-Soft-Skills.apkg": ASPAS_RETAS,
     "09-Prompt-Engineering.apkg": [],
 }
 

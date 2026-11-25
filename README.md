@@ -3,7 +3,7 @@
 A raiz contém **três arquivos independentes**:
 
 - `07-Cloud-Engineer-Final.apkg` — 94 decks folha e 700 cards: 688 originais + 12 lacunas pontuais, com correções adicionais e sem frentes duplicadas. É o deck principal.
-- `08-Soft-Skills.apkg` — 4 decks e 49 cards de soft skills aplicáveis (LinkedIn e marca pessoal, comunicação e relacionamento, comportamento e desenvolvimento, entrevista e carreira). É um pacote separado: não altera nem duplica o arquivo principal.
+- `08-Soft-Skills.apkg` — 4 decks e 59 cards de soft skills aplicáveis (comunicação, comportamento, entrevistas e LinkedIn), com cartões de situações técnicas. É um pacote separado: não altera nem duplica o arquivo principal.
 - `09-Prompt-Engineering.apkg` — 4 decks e 94 cards de prompt engineering (fundamentos, técnicas de prompting, estrutura e controle da resposta, aplicação prática). Também é separado.
 
 Tem umas coisas antigas em `.archive/`. Pode ignorar.
@@ -101,10 +101,15 @@ O que sobrou das versões anteriores está em `.archive/`. Não é preciso impor
 
 | Deck | Cards | Conteúdo |
 |------|-------|----------|
-| `Soft Skills::LinkedIn e Marca Pessoal` | 15 | resumo, busca de vagas, indicação, postar, perfil, palavras-chave, planilha de candidaturas, laços da rede |
-| `Soft Skills::Comunicação e Relacionamento` | 12 | daily, update de incidente, feedback, pedir ajuda, postmortem, risco, escuta ativa, CNV, assertividade |
-| `Soft Skills::Comportamento e Desenvolvimento` | 12 | erro em produção, impostor, pedir feedback, aplicar teoria, prazo, ADR, Pareto, foco, perfis, pontos fortes |
-| `Soft Skills::Entrevista e Carreira` | 10 | "conte sobre você", STAR, falha, pergunta técnica, preparação, follow-up |
+| `Soft Skills::01-Comunicação` | 20 | daily, incidente, feedback, CNV, assertividade, dizer não, code review, comunicação de incidente técnico |
+| `Soft Skills::02-Comportamento` | 7 | erro em produção, impostor, priorização, atenção, pontos fracos, diário das emoções |
+| `Soft Skills::03-Entrevistas` | 17 | apresentação, STAR, falha, conflito, ponto fraco, perguntas técnicas, projeto e decisão técnica, negociação |
+| `Soft Skills::04-LinkedIn e Marca Pessoal` | 15 | resumo, evidências, networking, indicação, follow-up, portfólio, resultados técnicos |
+
+**Total: 4 decks, 59 cards.** O prefixo numérico nos nomes dos decks impõe a
+ordem de estudo no Anki: comunicação → comportamento → entrevistas → LinkedIn.
+Sem ele, a árvore ordenaria alfabeticamente (Comportamento, Comunicação,
+Entrevista, LinkedIn). Dentro de cada deck, o campo `due` segue a ordem da lista.
 
 O deck é **independente**: não é filho de `Cloud Engineer`. As chaves internas
 dos quatro decks são 91–94 (IDs `2300000091`–`2300000094`).
@@ -112,12 +117,35 @@ dos quatro decks são 91–94 (IDs `2300000091`–`2300000094`).
 Critério dos cards: **ação prática**, não estatística de pesquisa. Cada frente é
 um tema curto; `Verso1` dá a regra e `Verso2` dá uma frase ou exemplo pronto.
 
-Para regenerar:
+**Migração:** os GUIDs são derivados do nome do deck + índice. Como os nomes
+mudaram, os GUIDs também mudaram — antes de importar, remova o deck antigo
+`08 - Soft Skills (revisado)` do Anki (faça backup do perfil antes, se houver
+revisões nele). Com os nomes agora fixos, regenerações futuras sobrescrevem os
+cards em vez de duplicá-los.
+
+Para regenerar (o gerador já grava o texto final, sem necessidade de rodar a
+humanização depois):
 
 ```text
 cd scripts
 python gerar_soft_skills.py
 ```
+
+### Prática oral (fora do Anki)
+
+O deck fixa estruturas e frases, mas não desenvolve comunicação oral, controle
+emocional ou segurança em entrevista. Depois de estudar o bloco de entrevistas,
+responda em voz alta a perguntas como "conte uma situação em que você cometeu um
+erro técnico e assumiu a responsabilidade" e cheque a resposta com cinco pontos:
+
+1. O contexto ficou claro?
+2. Você explicou sua responsabilidade?
+3. Descreveu suas ações?
+4. Apresentou um resultado verdadeiro?
+5. Demonstrou aprendizado?
+
+Faça isso em ciclos curtos e periódicos; o Anki é a referência, a simulação é o
+treino.
 
 ## Prompt engineering (arquivo separado)
 
