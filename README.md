@@ -1,10 +1,11 @@
 # Conjunto focado de decks — Cloud Engineer
 
-A raiz contém **três arquivos independentes**:
+A raiz contém **quatro arquivos independentes**:
 
 - `07-Cloud-Engineer-Final.apkg` — 94 decks folha e 700 cards: 688 originais + 12 lacunas pontuais, com correções adicionais e sem frentes duplicadas. É o deck principal.
 - `08-Soft-Skills.apkg` — 4 decks e 59 cards de soft skills aplicáveis (comunicação, comportamento, entrevistas e LinkedIn), com cartões de situações técnicas. É um pacote separado: não altera nem duplica o arquivo principal.
 - `09-Prompt-Engineering.apkg` — 4 decks e 94 cards de prompt engineering (fundamentos, técnicas de prompting, estrutura e controle da resposta, aplicação prática). Também é separado.
+- `SOC-N1-N2.apkg` — 9 decks e 171 cards de SOC nas profundidades N1 e N2 (146 + 25). É separado e não duplica o arquivo principal.
 
 Tem umas coisas antigas em `.archive/`. Pode ignorar.
 
@@ -170,11 +171,47 @@ cd scripts
 python gerar_prompt_engineering.py
 ```
 
+## SOC N1/N2 (arquivo separado)
+
+`SOC-N1-N2.apkg` usa o **mesmo tipo de nota** (`Cloud Engineer`, campos
+`Frente`, `Verso1` = O QUE É e `Verso2` = EXEMPLO DE USO), com o CSS laranja e o
+modo noturno do arquivo-base. A árvore começa em `SOC`, fora de `Cloud Engineer`,
+e segue o mesmo padrão de prefixo numérico do pacote 07.
+
+| Deck | Cards | Conteúdo |
+|------|-------|----------|
+| `SOC::00-Rotina e Triagem N1` | 12 | turno real: abertura da fila, priorização, triagem em cinco passos, enriquecimento, escalonamento, documentação e handoff |
+| `SOC::01-Fundamentos SOC` | 21 | SOC, redes, DNS/HTTP/TLS e noções de Windows/Linux |
+| `SOC::02-Logs e SIEM` | 25 | fontes e formatos de log, eventos Windows, Sysmon, EDR, Wazuh e consultas |
+| `SOC::03-Frameworks e Detecção` | 20 | MITRE ATT&CK, Kill Chain, Diamond Model, Pyramid of Pain, Sigma/YARA/Suricata e tuning |
+| `SOC::04-Triagem e Investigação (N1)` | 35 | fluxo de triagem, phishing, malware, credenciais, rede/web, threat intel e documentação |
+| `SOC::05-Resposta a Incidentes` | 15 | ciclos NIST/SANS, contenção, erradicação, recuperação, evidências e playbooks |
+| `SOC::06-N2 Investigação Aprofundada` | 25 | artefatos Windows, memória/rede, movimentação lateral, AD e engenharia de detecção |
+| `SOC::07-Cloud para SOC` | 5 | CloudTrail, eventos AWS, GuardDuty e Entra ID no nível básico |
+| `SOC::08-Automação e Consolidação` | 13 | shell/PowerShell/Python para logs e IOCs, mais cenários de entrevista N1 e N2 |
+
+**Total: 9 decks, 171 cards** (146 de N1 e 25 de N2). Dentro de cada deck o
+campo `due` segue a ordem da lista; decks com prefixo numérico garantem a ordem
+de estudo na árvore.
+
+As notas começam em `1770000000000` (passo 10) e os decks usam IDs
+`2400000001`–`2400000009`, faixas separadas de 07, 08 e 09. O GUID é derivado
+de `nome_antigo` + índice no deck, como no pacote 07: se o nome visível mudar,
+a reimportação atualiza os cards em vez de duplicá-los; se a ordem dos cards
+dentro de um deck mudar, os GUIDs mudam e a importação deve ser limpa.
+
+Para regenerar:
+
+```text
+cd scripts
+python gerar_soc.py
+```
+
 ## Importar no Anki
 
 **Arquivo → Importar…** e selecione `07-Cloud-Engineer-Final.apkg`,
-`08-Soft-Skills.apkg` e/ou `09-Prompt-Engineering.apkg`, todos na raiz. São
-independentes: importar um não afeta os outros.
+`08-Soft-Skills.apkg`, `09-Prompt-Engineering.apkg` e/ou `SOC-N1-N2.apkg`, todos
+na raiz. São independentes: importar um não afeta os outros.
 
 Os GUIDs dos 688 cartões originais foram preservados. Ainda assim, como os decks
 mudaram de nome e de hierarquia, o Anki pode manter os cartões nos decks antigos.
