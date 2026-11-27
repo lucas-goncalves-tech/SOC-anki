@@ -3,7 +3,7 @@
 Reaproveita o tipo de nota "Cloud Engineer" (campos Frente, Verso1, Verso2) do
 arquivo-base usado por gerar_notebooks.py, mantendo o CSS laranja e o modo
 noturno. Deck raiz ``SOC``, com um deck por etapa no mesmo padrão do pacote 07:
-``SOC::00-Visão Geral N1 e N2``, ``SOC::01-Fundamentos SOC``, ...
+``SOC::00-Rotina e Triagem N1``, ``SOC::01-Fundamentos SOC``, ...
 
 Faixas reservadas deste pacote (documentadas para não colidir com 07/08/09):
 
@@ -12,9 +12,9 @@ Faixas reservadas deste pacote (documentadas para não colidir com 07/08/09):
 * decks: 2400000001 em diante (07 usa 2100000000+número, 08 e 09 usam
   2300000091–98).
 
-O GUID é calculado com ``nome_antigo`` + índice, como no pacote 07: mudar o
-nome visível do deck depois não quebra a reimportação. Renomear ``nome_antigo``
-ou reordenar cards dentro do deck gera GUIDs novos — exija import limpo nesse caso.
+O GUID é calculado com ``nome_antigo`` + índice, como no pacote 07. O gerador
+grava o nome visível em ``nome_antigo``, então renomear o deck ou reordenar
+cards dentro dele gera GUIDs novos — exija import limpo nesse caso.
 """
 
 import hashlib

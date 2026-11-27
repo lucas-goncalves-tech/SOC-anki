@@ -5,7 +5,7 @@ A raiz contém **quatro arquivos independentes**:
 - `07-Cloud-Engineer-Final.apkg` — 94 decks folha e 700 cards: 688 originais + 12 lacunas pontuais, com correções adicionais e sem frentes duplicadas. É o deck principal.
 - `08-Soft-Skills.apkg` — 4 decks e 59 cards de soft skills aplicáveis (comunicação, comportamento, entrevistas e LinkedIn), com cartões de situações técnicas. É um pacote separado: não altera nem duplica o arquivo principal.
 - `09-Prompt-Engineering.apkg` — 4 decks e 94 cards de prompt engineering (fundamentos, técnicas de prompting, estrutura e controle da resposta, aplicação prática). Também é separado.
-- `SOC-N1-N2.apkg` — 9 decks e 171 cards de SOC nas profundidades N1 e N2 (146 + 25). É separado e não duplica o arquivo principal.
+- `SOC-N1-N2.apkg` — 10 decks e 236 cards de SOC nas profundidades N1 e N2 (208 + 28). É separado e não duplica o arquivo principal.
 
 Tem umas coisas antigas em `.archive/`. Pode ignorar.
 
@@ -182,23 +182,45 @@ e segue o mesmo padrão de prefixo numérico do pacote 07.
 |------|-------|----------|
 | `SOC::00-Rotina e Triagem N1` | 12 | turno real: abertura da fila, priorização, triagem em cinco passos, enriquecimento, escalonamento, documentação e handoff |
 | `SOC::01-Fundamentos SOC` | 21 | SOC, redes, DNS/HTTP/TLS e noções de Windows/Linux |
-| `SOC::02-Logs e SIEM` | 25 | fontes e formatos de log, eventos Windows, Sysmon, EDR, Wazuh e consultas |
-| `SOC::03-Frameworks e Detecção` | 20 | MITRE ATT&CK, Kill Chain, Diamond Model, Pyramid of Pain, Sigma/YARA/Suricata e tuning |
-| `SOC::04-Triagem e Investigação (N1)` | 35 | fluxo de triagem, phishing, malware, credenciais, rede/web, threat intel e documentação |
+| `SOC::02-Logs e SIEM` | 27 | fontes e formatos de log, eventos Windows, Sysmon, EDR, PowerShell/ExecutionPolicy, iptables/pfSense, Wazuh e consultas |
+| `SOC::03-Frameworks e Detecção` | 22 | MITRE ATT&CK (inclui a mudança da v18), Kill Chain, Diamond Model, STRIDE/DREAD, Pyramid of Pain, Sigma/YARA/Suricata e tuning |
+| `SOC::04-Triagem e Investigação (N1)` | 59 | fluxo de triagem, phishing, malware, credenciais, rede/web, OWASP Web Top 10:2025, OWASP API Security Top 10:2023, threat intel e documentação |
 | `SOC::05-Resposta a Incidentes` | 15 | ciclos NIST/SANS, contenção, erradicação, recuperação, evidências e playbooks |
-| `SOC::06-N2 Investigação Aprofundada` | 25 | artefatos Windows, memória/rede, movimentação lateral, AD e engenharia de detecção |
+| `SOC::06-N2 Investigação Aprofundada` | 28 | artefatos Windows, memória/rede, movimentação lateral, WinRM, PAM/SSH, integridade de arquivos, AD/GPO e engenharia de detecção |
 | `SOC::07-Cloud para SOC` | 5 | CloudTrail, eventos AWS, GuardDuty e Entra ID no nível básico |
 | `SOC::08-Automação e Consolidação` | 13 | shell/PowerShell/Python para logs e IOCs, mais cenários de entrevista N1 e N2 |
+| `SOC::09-Cenários Investigativos` | 34 | triagem de autenticação e endpoint, correlação/detecção/exfiltração, cloud, N2, escalonamento e cenários web/API |
 
-**Total: 9 decks, 171 cards** (146 de N1 e 25 de N2). Dentro de cada deck o
+**Total: 10 decks, 236 cards** (208 de N1 e 28 de N2). Dentro de cada deck o
 campo `due` segue a ordem da lista; decks com prefixo numérico garantem a ordem
 de estudo na árvore.
 
 As notas começam em `1770000000000` (passo 10) e os decks usam IDs
-`2400000001`–`2400000009`, faixas separadas de 07, 08 e 09. O GUID é derivado
-de `nome_antigo` + índice no deck, como no pacote 07: se o nome visível mudar,
-a reimportação atualiza os cards em vez de duplicá-los; se a ordem dos cards
-dentro de um deck mudar, os GUIDs mudam e a importação deve ser limpa.
+`2400000000`–`2400000009`, faixas separadas de 07, 08 e 09. O GUID é derivado
+de `nome_antigo` + índice no deck, como no pacote 07. O gerador grava o nome
+visível em `nome_antigo`, então mudar o nome do deck ou a ordem dos cards muda
+os GUIDs; nesses casos, a importação deve ser limpa.
+
+**Migração para 236 cards:** o deck `09-Cenários Investigativos` entra no fim da
+árvore e não desloca os cards das etapas 00–08. Nesta versão, os dois cards
+duplicados sobre condução de hunt foram unificados em um só no deck 06: os 3
+cards seguintes (`baseline`, `ciclo de vida da regra` e `purple team`) mudaram de
+GUID. O card sobre ATT&CK v18, a seção de OWASP API Security, a seção
+investigativa de OWASP Web 2025 e os 4 cenários web/API entraram sempre no fim
+do respectivo deck; nenhuma dessas inclusões desloca cards anteriores. Se você
+importou a versão de 179 cards, remova o deck `SOC::06-N2 Investigação
+Aprofundada` antes de reimportar para não duplicar esses 3 cards. Uma versão
+intermediária do deck 09 foi gravada direto no `.apkg` sem os campos de
+agendamento do deck (`lrnToday`, `newToday`, `revToday`, `timeToday`) e o Anki
+recusava a importação com `JsonError`; agora o deck é gerado por `cards_soc.py`
+como os demais.
+
+**Migração para 179 cards:** os 8 cards novos entraram no meio dos decks
+`02-Logs e SIEM`, `03-Frameworks e Detecção`, `04-Triagem e Investigação (N1)` e
+`06-N2 Investigação Aprofundada`. Como o GUID usa o índice dentro do deck, 45
+cards seguintes às inserções mudaram de GUID. Se você já importou a versão de
+171 cards, remova o deck `SOC` antes de importar esta versão; senão o Anki trata
+os cards deslocados como novos.
 
 Para regenerar:
 
