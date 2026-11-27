@@ -32,7 +32,7 @@ from cards_vagas import DECKS as DECKS_VAGAS
 from revisao import ADICOES, CERT_DECKS, ETAPAS, OVERRIDES_CERT, validar_ordem
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOK = ROOT / "gemini-notebook.md"
+NOTEBOOK = ROOT / ".archive" / "gemini-notebook-cloud.md"
 TEMPLATE = ROOT / ".archive" / "cloud-eng" / "foco-01-CLF-C02.apkg"
 CERT_SOURCES = (
     ROOT / ".archive" / "cloud-eng" / "foco-01-CLF-C02.apkg",

@@ -8,7 +8,7 @@ Quatro pacotes Anki independentes na raiz: `07-Cloud-Engineer-Final.apkg` (trilh
 |---|---|
 | `README.md` | visão geral, contagens, importação no Anki, decisões de migração |
 | `MAPEAMENTO.md` | ordem das etapas, origem de cada deck (`nb`/`extra`/`vaga`), contagens |
-| `gemini-notebook.md` | título e tópicos-base de um notebook do pacote 07 |
+| `gemini-notebook.md` | plano de estudos SOC N1/N2, ordenado; índice Cloud antigo em `.archive/gemini-notebook-cloud.md` |
 | `scripts/revisao.py` | mudar `ETAPAS`, acrescentar cards (`ADICOES`), corrigir certificações (`OVERRIDES_CERT`) |
 | `.archive/` | comparar versões antigas ou recuperar o modelo de nota; fora isso, ignorar |
 | `.agents/skills/` | criar ou editar cards no Anki com as skills `anki` e `anki-card-generator` |
@@ -33,7 +33,7 @@ Quatro pacotes Anki independentes na raiz: `07-Cloud-Engineer-Final.apkg` (trilh
 
 **Pacote 07**
 
-1. Localize o dono do card: `cards_fase0/1/2.py` (01–70), `cards_vagas.py` (81–86), `cards_cert.py` com `revisao.py: OVERRIDES_CERT` (certificações) ou `revisao.py: ADICOES` (lacunas). Critério: o número do notebook existe em `revisao.py: ETAPAS` e o título casa com `gemini-notebook.md`.
+1. Localize o dono do card: `cards_fase0/1/2.py` (01–70), `cards_vagas.py` (81–86), `cards_cert.py` com `revisao.py: OVERRIDES_CERT` (certificações) ou `revisao.py: ADICOES` (lacunas). Critério: o número do notebook existe em `revisao.py: ETAPAS` e o título casa com `.archive/gemini-notebook-cloud.md`.
 2. Edite a tupla no módulo de origem. Cartões novos entram ao fim do deck, porque a posição participa do GUID. Critério: `validar()` passa e a frente nova não repete outra frente do pacote.
 3. Rode `python gerar_notebooks.py` e `python verificar_final.py`. Critério: os dois scripts terminam sem erro, as seções 08 e 09 do `MAPEAMENTO.md` seguem intactas e as contagens casam com o `README.md`.
 

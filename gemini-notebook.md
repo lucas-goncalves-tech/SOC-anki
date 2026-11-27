@@ -1,628 +1,313 @@
-### Notebook 01 — Cloud Computing Fundamentals
-- **Objetivo:** Compreender o conceito de computação em nuvem e como ela transforma o provisionamento de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. O que é Cloud Computing e como surgiu.
-  2. Diferenças entre infraestrutura tradicional (On-Premises) e Cloud.
-  3. Características fundamentais da computação em nuvem: on-demand, resource pooling, elasticity e measured service.
-
-### Notebook 02 — Cloud Service Models (IaaS, PaaS and SaaS)
-- **Objetivo:** Entender os diferentes níveis de abstração oferecidos pelos provedores de nuvem.
-- **Estrutura do Conteúdo:**
-  1. IaaS: infraestrutura como serviço e controle do ambiente.
-  2. PaaS: plataformas gerenciadas e abstração de infraestrutura.
-  3. SaaS: aplicações prontas como serviço.
-  4. Comparação das responsabilidades do provedor e do cliente em cada modelo.
-
-### Notebook 03 — Cloud Deployment Models
-- **Objetivo:** Diferenciar os modelos de implantação de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Public Cloud: características e funcionamento.
-  2. Private Cloud: infraestrutura dedicada.
-  3. Hybrid Cloud: integração entre ambientes.
-  4. Multicloud: utilização de múltiplos provedores.
-
-### Notebook 04 — Cloud Economics and Scalability
-- **Objetivo:** Compreender os benefícios econômicos e operacionais da nuvem.
-- **Estrutura do Conteúdo:**
-  1. CapEx versus OpEx.
-  2. Pay-as-you-go e cobrança por consumo.
-  3. Elasticidade versus escalabilidade.
-  4. Vertical Scaling versus Horizontal Scaling.
-  5. Custos de infraestrutura ociosa.
-
-### Notebook 05 — Virtualization and Hypervisors
-- **Objetivo:** Entender como a virtualização permite compartilhar recursos físicos entre máquinas virtuais.
-- **Estrutura do Conteúdo:**
-  1. O que é virtualização.
-  2. Hypervisors Type 1 e Type 2.
-  3. Virtual Machines e isolamento de recursos.
-  4. vCPU, RAM e alocação de recursos.
-  5. Diferenças fundamentais entre VMs e containers.
-
-### Notebook 07 — Linux Fundamentals and Filesystem
-- **Objetivo:** Compreender a estrutura básica de um sistema operacional Linux.
-- **Estrutura do Conteúdo:**
-  1. Kernel, Shell e distribuição Linux.
-  2. Estrutura hierárquica de diretórios.
-  3. Diretórios fundamentais: /etc, /var, /home, /tmp, /usr e /root.
-  4. Paths absolutos e relativos.
-  5. Comandos básicos de navegação e manipulação de arquivos.
-
-### Notebook 08 — Linux Users, Groups and Permissions
-- **Objetivo:** Entender como o Linux controla o acesso a arquivos e recursos.
-- **Estrutura do Conteúdo:**
-  1. Usuários, grupos, UID e GID.
-  2. Permissões Read, Write e Execute.
-  3. chmod, chown e umask.
-  4. sudo e gerenciamento de privilégios.
-  5. SUID, SGID e Sticky Bit.
-
-### Notebook 09 — Linux Processes and Resource Management
-- **Objetivo:** Compreender como o Linux executa e gerencia processos.
-- **Estrutura do Conteúdo:**
-  1. Processos, threads e PID.
-  2. Process States e sinais de processos.
-  3. Comandos ps, top, htop e kill.
-  4. CPU Load, consumo de memória e swap.
-  5. Identificação de processos problemáticos.
-
-### Notebook 10 — Linux Services and Systemd
-- **Objetivo:** Aprender como serviços são iniciados, gerenciados e monitorados no Linux.
-- **Estrutura do Conteúdo:**
-  1. O que são serviços e daemons.
-  2. Funcionamento do systemd.
-  3. systemctl: start, stop, restart, status e enable.
-  4. Units e arquivos de configuração de serviços.
-  5. Inicialização do sistema e dependências entre serviços.
-
-### Notebook 11 — Linux Package Management
-- **Objetivo:** Aprender a instalar, atualizar e remover softwares em servidores Linux.
-- **Estrutura do Conteúdo:**
-  1. Pacotes e repositórios.
-  2. APT e gerenciamento de pacotes em Debian/Ubuntu.
-  3. DNF e gerenciamento de pacotes em distribuições RHEL.
-  4. Atualizações e dependências.
-  5. Instalação e remoção de softwares.
-
-### Notebook 12 — Linux Storage and Filesystem Management
-- **Objetivo:** Compreender como o Linux organiza e administra armazenamento.
-- **Estrutura do Conteúdo:**
-  1. Partições e sistemas de arquivos.
-  2. Mount e umount.
-  3. Comandos df, du, lsblk e fdisk.
-  4. /etc/fstab e montagem persistente.
-  5. Inodes e gerenciamento de espaço em disco.
-
-### Notebook 13 — Linux Remote Administration with SSH
-- **Objetivo:** Aprender a administrar servidores Linux remotamente.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento do SSH.
-  2. Autenticação por senha versus chave pública/privada.
-  3. Geração e gerenciamento de SSH Keys.
-  4. Configuração do SSH Server.
-  5. SCP, SFTP e transferência de arquivos.
-
-### Notebook 14 — Linux Shell Scripting Fundamentals
-- **Objetivo:** Automatizar tarefas administrativas utilizando Bash.
-- **Estrutura do Conteúdo:**
-  1. Shell e Bash Scripting.
-  2. Variáveis, argumentos e variáveis de ambiente.
-  3. Condicionais e estruturas de repetição.
-  4. Funções e exit codes.
-  5. Pipes, redirections e execução de scripts.
-
-### Notebook 15 — Linux Logs and Troubleshooting
-- **Objetivo:** Diagnosticar problemas em sistemas Linux utilizando logs e ferramentas nativas.
-- **Estrutura do Conteúdo:**
-  1. Estrutura de logs em /var/log.
-  2. journalctl e dmesg.
-  3. grep, tail, less e análise de logs.
-  4. Diagnóstico de falhas em serviços.
-  5. Investigação de problemas de CPU, memória e disco.
-
-### Notebook 06 — Git Fundamentals
-- **Objetivo:** Aprender o controle de versão utilizado no desenvolvimento e na administração de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Git, GitHub e repositórios.
-  2. Working Directory, Staging Area e Repository.
-  3. Commits, branches e merges.
-  4. Git Pull, Fetch, Rebase e conflitos.
-  5. Pull Requests e colaboração.
-
-### Notebook 16 — Networking Fundamentals and TCP/IP
-- **Objetivo:** Compreender os fundamentos da comunicação entre dispositivos.
-- **Estrutura do Conteúdo:**
-  1. Modelo OSI e modelo TCP/IP.
-  2. Camadas de comunicação e encapsulamento.
-  3. Endereços MAC e IP.
-  4. TCP versus UDP.
-  5. Portas e sockets.
-
-### Notebook 17 — IPv4, IPv6 and CIDR Addressing
-- **Objetivo:** Compreender endereçamento IP e representação de redes.
-- **Estrutura do Conteúdo:**
-  1. Estrutura dos endereços IPv4.
-  2. Endereços públicos, privados e especiais.
-  3. Introdução ao IPv6.
-  4. Notação CIDR e máscaras de rede.
-  5. Network Address, Broadcast e endereços utilizáveis.
-
-### Notebook 18 — Subnetting and Network Segmentation
-- **Objetivo:** Aprender a dividir redes em sub-redes e dimensionar espaços de endereçamento.
-- **Estrutura do Conteúdo:**
-  1. Conceito de subnetting.
-  2. Cálculo de subnets e quantidade de hosts.
-  3. Divisão de redes utilizando CIDR.
-  4. VLSM e aproveitamento de endereços.
-  5. Exercícios de planejamento de endereçamento.
-
-### Notebook 19 — Routing, Gateways and NAT
-- **Objetivo:** Entender como pacotes encontram caminhos entre redes diferentes.
-- **Estrutura do Conteúdo:**
-  1. Default Gateway.
-  2. Routing Tables e rotas estáticas.
-  3. Funcionamento do roteamento entre redes.
-  4. NAT e PAT.
-  5. Diferença entre comunicação local e comunicação externa.
-
-### Notebook 20 — DNS and Name Resolution
-- **Objetivo:** Compreender como nomes de domínio são convertidos em endereços IP.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento do DNS.
-  2. Resolvers, Root Servers e Authoritative Servers.
-  3. Registros A, AAAA, CNAME, MX, NS e TXT.
-  4. DNS caching e TTL.
-  5. Ferramentas dig, nslookup e host.
-
-### Notebook 21 — HTTP, HTTPS and TLS
-- **Objetivo:** Entender como aplicações web se comunicam e protegem suas conexões.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento do protocolo HTTP.
-  2. Métodos HTTP e códigos de status.
-  3. Diferenças entre HTTP e HTTPS.
-  4. TLS handshake e certificados digitais.
-  5. Certificados, autoridades certificadoras e criptografia em trânsito.
-
-### Notebook 22 — Firewalls and Network Security Fundamentals
-- **Objetivo:** Compreender como o tráfego de rede é filtrado e controlado.
-- **Estrutura do Conteúdo:**
-  1. Conceito e funcionamento de firewalls.
-  2. Stateful versus Stateless Firewall.
-  3. Regras de entrada e saída.
-  4. Portas, protocolos e filtros de tráfego.
-  5. Introdução a ACLs e segmentação de rede.
-
-### Notebook 23 — Network Troubleshooting Tools
-- **Objetivo:** Aprender a investigar falhas de comunicação utilizando ferramentas de diagnóstico.
-- **Estrutura do Conteúdo:**
-  1. ping e traceroute/tracert.
-  2. curl e wget.
-  3. ss e netstat.
-  4. tcpdump e introdução ao Wireshark.
-  5. Metodologia de diagnóstico de conectividade.
-
-### Notebook 24 — AWS Global Infrastructure
-- **Objetivo:** Entender como a infraestrutura global da AWS é organizada.
-- **Estrutura do Conteúdo:**
-  1. AWS Regions.
-  2. Availability Zones.
-  3. Edge Locations.
-  4. Regional Services versus Global Services.
-  5. Critérios para escolher uma região.
-
-### Notebook 25 — AWS Account Management and Billing
-- **Objetivo:** Compreender o gerenciamento de contas e os mecanismos básicos de cobrança da AWS.
-- **Estrutura do Conteúdo:**
-  1. AWS Accounts e Root User.
-  2. AWS Organizations: conceitos fundamentais.
-  3. Billing Dashboard.
-  4. AWS Budgets e alertas de custos.
-  5. Modelos de cobrança e Free Tier.
-
-### Notebook 26 — AWS IAM Fundamentals
-- **Objetivo:** Entender o gerenciamento de identidades e permissões na AWS.
-- **Estrutura do Conteúdo:**
-  1. IAM Users, Groups e Roles.
-  2. IAM Policies e estrutura JSON.
-  3. Identity-based e Resource-based Policies.
-  4. Allow, Deny e Explicit Deny.
-  5. Least Privilege e MFA.
-
-### Notebook 27 — AWS IAM Roles and Temporary Credentials
-- **Objetivo:** Compreender como serviços e aplicações recebem permissões sem utilizar credenciais permanentes.
-- **Estrutura do Conteúdo:**
-  1. Funcionamento das IAM Roles.
-  2. Trust Policies e Permission Policies.
-  3. AWS Security Token Service (STS).
-  4. Temporary Security Credentials.
-  5. IAM Instance Profiles e acesso de aplicações aos serviços AWS.
-
-### Notebook 28 — Amazon VPC Fundamentals
-- **Objetivo:** Entender como redes virtuais são criadas e organizadas na AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é uma VPC.
-  2. CIDR Blocks e planejamento de endereçamento.
-  3. Public e Private Subnets.
-  4. Subnets distribuídas entre Availability Zones.
-  5. Comunicação entre subnets.
-
-### Notebook 29 — AWS VPC Routing and Internet Connectivity
-- **Objetivo:** Compreender como recursos dentro de uma VPC se comunicam com outras redes e com a internet.
-- **Estrutura do Conteúdo:**
-  1. Route Tables e rotas locais.
-  2. Internet Gateway.
-  3. NAT Gateway e NAT Instance.
-  4. Rotas para recursos públicos e privados.
-  5. Fluxo de tráfego de entrada e saída.
-
-### Notebook 30 — AWS VPC Security and Traffic Filtering
-- **Objetivo:** Aprender a controlar o tráfego de rede dentro da infraestrutura AWS.
-- **Estrutura do Conteúdo:**
-  1. Security Groups.
-  2. Network ACLs.
-  3. Diferenças entre Security Groups e NACLs.
-  4. Inbound e Outbound Rules.
-  5. VPC Flow Logs e diagnóstico de tráfego.
-
-### Notebook 31 — AWS VPC Connectivity Services
-- **Objetivo:** Conhecer os mecanismos de conectividade entre redes e serviços AWS.
-- **Estrutura do Conteúdo:**
-  1. VPC Peering.
-  2. VPC Endpoints: Gateway e Interface.
-  3. AWS Site-to-Site VPN.
-  4. Introdução ao AWS Transit Gateway.
-  5. Casos de uso e diferenças entre as soluções.
-
-### Notebook 32 — Amazon EC2 Fundamentals
-- **Objetivo:** Aprender como máquinas virtuais são provisionadas e administradas na AWS.
-- **Estrutura do Conteúdo:**
-  1. EC2 e tipos de instância.
-  2. AMIs e inicialização de instâncias.
-  3. Key Pairs e acesso SSH.
-  4. Instance Lifecycle.
-  5. User Data e Instance Metadata.
-
-### Notebook 33 — Amazon EBS and Instance Storage
-- **Objetivo:** Compreender como o armazenamento em bloco funciona nas instâncias EC2.
-- **Estrutura do Conteúdo:**
-  1. Elastic Block Store.
-  2. EBS Volumes e tipos de volume.
-  3. Snapshots e backups.
-  4. Attach, Detach e expansão de volumes.
-  5. EBS versus Instance Store.
-
-### Notebook 34 — Amazon S3 Fundamentals
-- **Objetivo:** Compreender o funcionamento do armazenamento de objetos na AWS.
-- **Estrutura do Conteúdo:**
-  1. Buckets e Objects.
-  2. Object Keys e estrutura de armazenamento.
-  3. Upload, Download e operações básicas.
-  4. Storage Classes.
-  5. Casos de uso de Object Storage.
-
-### Notebook 35 — Amazon S3 Security and Lifecycle Management
-- **Objetivo:** Aprender a proteger e administrar o ciclo de vida dos objetos armazenados.
-- **Estrutura do Conteúdo:**
-  1. Bucket Policies e IAM Policies.
-  2. Block Public Access.
-  3. Versioning.
-  4. Lifecycle Policies.
-  5. Encryption at Rest e controle de acesso.
-
-### Notebook 36 — Amazon RDS Fundamentals
-- **Objetivo:** Compreender como bancos de dados relacionais gerenciados funcionam na AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é Amazon RDS.
-  2. Engines suportadas: PostgreSQL, MySQL e outras.
-  3. DB Instances e DB Subnet Groups.
-  4. Conectividade e Security Groups.
-  5. Diferenças entre banco gerenciado e banco instalado manualmente em EC2.
-
-### Notebook 37 — Amazon RDS Backup and High Availability
-- **Objetivo:** Entender como a AWS oferece disponibilidade e recuperação para bancos de dados.
-- **Estrutura do Conteúdo:**
-  1. Automated Backups e Snapshots.
-  2. Point-in-Time Recovery.
-  3. Multi-AZ Deployments.
-  4. Read Replicas.
-  5. Diferenças entre alta disponibilidade e escalabilidade de leitura.
-
-### Notebook 38 — AWS Load Balancing
-- **Objetivo:** Compreender como o tráfego é distribuído entre múltiplos servidores.
-- **Estrutura do Conteúdo:**
-  1. Conceito de Load Balancing.
-  2. Application Load Balancer.
-  3. Network Load Balancer.
-  4. Target Groups e Health Checks.
-  5. Distribuição de tráfego e disponibilidade.
-
-### Notebook 39 — AWS Auto Scaling
-- **Objetivo:** Entender como a infraestrutura ajusta automaticamente sua capacidade de processamento.
-- **Estrutura do Conteúdo:**
-  1. Auto Scaling Groups.
-  2. Launch Templates.
-  3. Scaling Policies.
-  4. Dynamic Scaling e Scheduled Scaling.
-  5. Integração entre Auto Scaling e Load Balancers.
-
-### Notebook 40 — Amazon Route 53
-- **Objetivo:** Aprender como o serviço DNS da AWS administra domínios e direciona tráfego.
-- **Estrutura do Conteúdo:**
-  1. Hosted Zones.
-  2. DNS Records.
-  3. Public e Private Hosted Zones.
-  4. Routing Policies.
-  5. Health Checks e DNS Failover.
-
-### Notebook 41 — Amazon CloudFront and Content Delivery
-- **Objetivo:** Compreender como o conteúdo é distribuído globalmente através de uma CDN.
-- **Estrutura do Conteúdo:**
-  1. O que é uma Content Delivery Network.
-  2. Edge Locations e Caching.
-  3. Origins e Origin Access Control.
-  4. Cache Behaviors e TTL.
-  5. Integração entre CloudFront e S3.
-
-### Notebook 42 — AWS Certificate Manager
-- **Objetivo:** Entender como certificados digitais são provisionados e utilizados na AWS.
-- **Estrutura do Conteúdo:**
-  1. Conceitos de certificados SSL/TLS.
-  2. Provisionamento de certificados com ACM.
-  3. Validação por DNS e e-mail.
-  4. Integração com Load Balancers e CloudFront.
-  5. Renovação e gerenciamento de certificados.
-
-### Notebook 43 — AWS Lambda Fundamentals
-- **Objetivo:** Compreender o modelo de execução Serverless da AWS.
-- **Estrutura do Conteúdo:**
-  1. O que é AWS Lambda.
-  2. Functions, Handlers e Runtimes.
-  3. Triggers e Execution Roles.
-  4. Memory, Timeout e concorrência.
-  5. Diferenças entre Lambda e EC2.
-
-### Notebook 44 — AWS Messaging Services: SQS and SNS
-- **Objetivo:** Entender como aplicações se comunicam de forma assíncrona e desacoplada.
-- **Estrutura do Conteúdo:**
-  1. Comunicação síncrona versus assíncrona.
-  2. Amazon SQS e filas de mensagens.
-  3. Amazon SNS e publicação de mensagens.
-  4. Dead Letter Queues.
-  5. Diferenças e casos de uso de SQS e SNS.
-
-### Notebook 45 — Amazon EventBridge and Event-Driven Architecture
-- **Objetivo:** Compreender arquiteturas orientadas a eventos utilizando serviços AWS.
-- **Estrutura do Conteúdo:**
-  1. Conceito de Event-Driven Architecture.
-  2. Events, Event Buses e Rules.
-  3. EventBridge Targets.
-  4. Integração com Lambda e outros serviços.
-  5. Casos de uso de automação orientada a eventos.
-
-### Notebook 46 — Infrastructure as Code Fundamentals
-- **Objetivo:** Compreender o conceito de infraestrutura declarativa e automatizada.
-- **Estrutura do Conteúdo:**
-  1. O que é Infrastructure as Code.
-  2. Infraestrutura manual versus automatizada.
-  3. Declarative versus Imperative.
-  4. Idempotency.
-  5. Benefícios, limitações e gerenciamento de mudanças.
-
-### Notebook 47 — Terraform Fundamentals and HCL
-- **Objetivo:** Aprender a estrutura e a sintaxe da linguagem utilizada pelo Terraform.
-- **Estrutura do Conteúdo:**
-  1. O que é Terraform e como funciona.
-  2. Providers e arquivos de configuração.
-  3. HCL: sintaxe e blocos.
-  4. Variables, Outputs e Locals.
-  5. Resources e Data Sources.
-
-### Notebook 48 — Terraform Workflow and Resource Lifecycle
-- **Objetivo:** Compreender o ciclo de vida de uma infraestrutura gerenciada pelo Terraform.
-- **Estrutura do Conteúdo:**
-  1. terraform init.
-  2. terraform fmt e validate.
-  3. terraform plan.
-  4. terraform apply e destroy.
-  5. Dependency Graph e Resource Lifecycle.
-
-### Notebook 49 — Terraform State Management
-- **Objetivo:** Entender como o Terraform acompanha e controla os recursos provisionados.
-- **Estrutura do Conteúdo:**
-  1. O que é Terraform State.
-  2. Local State versus Remote State.
-  3. State Locking.
-  4. Infrastructure Drift.
-  5. Importação e gerenciamento de recursos existentes.
-
-### Notebook 50 — Terraform Modules and Reusable Infrastructure
-- **Objetivo:** Aprender a organizar configurações reutilizáveis e escaláveis.
-- **Estrutura do Conteúdo:**
-  1. O que são Modules.
-  2. Root Modules e Child Modules.
-  3. Inputs e Outputs.
-  4. Module Composition.
-  5. Versionamento e reutilização de módulos.
-
-### Notebook 51 — Terraform Environments and Best Practices
-- **Objetivo:** Aprender a organizar ambientes e gerenciar mudanças de infraestrutura com segurança.
-- **Estrutura do Conteúdo:**
-  1. Separação entre Development, Staging e Production.
-  2. Terraform Workspaces e suas limitações.
-  3. Estrutura de projetos Terraform.
-  4. Gerenciamento seguro de Secrets.
-  5. Code Review e validação de mudanças.
-
-### Notebook 52 — Docker Fundamentals
-- **Objetivo:** Compreender o funcionamento de containers e imagens Docker.
-- **Estrutura do Conteúdo:**
-  1. O que são containers.
-  2. Docker Engine e arquitetura cliente-servidor.
-  3. Images versus Containers.
-  4. Image Layers e registries.
-  5. Comandos essenciais do Docker.
-
-### Notebook 53 — Dockerfile and Image Building
-- **Objetivo:** Aprender a construir imagens personalizadas para aplicações.
-- **Estrutura do Conteúdo:**
-  1. Estrutura de um Dockerfile.
-  2. FROM, RUN, COPY, ADD e CMD.
-  3. ENTRYPOINT e diferença para CMD.
-  4. Build Context e .dockerignore.
-  5. Image Tagging e otimização de imagens.
-
-### Notebook 54 — Docker Networking
-- **Objetivo:** Entender como containers se comunicam entre si e com redes externas.
-- **Estrutura do Conteúdo:**
-  1. Docker Bridge Network.
-  2. Host e None Network.
-  3. Container-to-Container Communication.
-  4. Port Mapping.
-  5. DNS e resolução de nomes entre containers.
-
-### Notebook 55 — Docker Volumes and Persistence
-- **Objetivo:** Compreender como os dados são persistidos fora do ciclo de vida dos containers.
-- **Estrutura do Conteúdo:**
-  1. Container Filesystem e seu ciclo de vida.
-  2. Docker Volumes.
-  3. Bind Mounts.
-  4. Persistência de dados.
-  5. Diferenças entre volumes e bind mounts.
-
-### Notebook 56 — Docker Compose
-- **Objetivo:** Aprender a administrar aplicações compostas por múltiplos containers.
-- **Estrutura do Conteúdo:**
-  1. O que é Docker Compose.
-  2. Estrutura do compose.yaml.
-  3. Services, Networks e Volumes.
-  4. Environment Variables.
-  5. Inicialização, atualização e encerramento de aplicações.
-
-### Notebook 57 — AWS ECR and ECS Fundamentals
-- **Objetivo:** Compreender como a AWS armazena e executa aplicações containerizadas.
-- **Estrutura do Conteúdo:**
-  1. Amazon ECR e armazenamento de imagens.
-  2. Amazon ECS e gerenciamento de containers.
-  3. Clusters, Tasks e Services.
-  4. Task Definitions.
-  5. ECS EC2 Launch Type versus Fargate.
-
-### Notebook 58 — CI/CD Fundamentals
-- **Objetivo:** Compreender os conceitos e etapas de integração e entrega contínua.
-- **Estrutura do Conteúdo:**
-  1. Continuous Integration.
-  2. Continuous Delivery versus Continuous Deployment.
-  3. Build, Test e Deployment Stages.
-  4. Pipeline Automation.
-  5. Rollback e estratégias básicas de implantação.
-
-### Notebook 59 — GitHub Actions
-- **Objetivo:** Aprender a automatizar tarefas de desenvolvimento e infraestrutura utilizando GitHub Actions.
-- **Estrutura do Conteúdo:**
-  1. Workflows e arquivos YAML.
-  2. Events, Jobs e Steps.
-  3. Runners e Actions.
-  4. Secrets e Environment Variables.
-  5. Integração com testes, Docker e deploy.
-
-### Notebook 60 — Amazon CloudWatch Fundamentals
-- **Objetivo:** Compreender como a AWS monitora recursos e aplicações.
-- **Estrutura do Conteúdo:**
-  1. O que é Amazon CloudWatch.
-  2. Metrics e Dimensions.
-  3. Logs, Log Groups e Log Streams.
-  4. Dashboards.
-  5. CloudWatch Agent.
-
-### Notebook 61 — CloudWatch Alarms and Monitoring
-- **Objetivo:** Aprender a identificar condições anormais e automatizar alertas.
-- **Estrutura do Conteúdo:**
-  1. CloudWatch Alarms.
-  2. Thresholds e Evaluation Periods.
-  3. Alarm States.
-  4. Integração com SNS.
-  5. Monitoramento de CPU, memória, disco e aplicações.
-
-### Notebook 62 — AWS CloudTrail and Auditing
-- **Objetivo:** Entender como as atividades realizadas na conta AWS são registradas.
-- **Estrutura do Conteúdo:**
-  1. O que é CloudTrail.
-  2. Management Events e Data Events.
-  3. Event History.
-  4. Identificação de alterações na infraestrutura.
-  5. Auditoria e investigação de atividades suspeitas.
-
-### Notebook 63 — Cloud Troubleshooting Methodology
-- **Objetivo:** Desenvolver um método estruturado para diagnosticar problemas em ambientes cloud.
-- **Estrutura do Conteúdo:**
-  1. Identificação e classificação de incidentes.
-  2. Coleta de evidências e análise de sintomas.
-  3. Investigação de problemas de conectividade.
-  4. Investigação de falhas em serviços e infraestrutura.
-  5. Isolamento de causas e validação de soluções.
-
-### Notebook 64 — Incident Response and Root Cause Analysis
-- **Objetivo:** Compreender como equipes de infraestrutura respondem a incidentes e evitam recorrências.
-- **Estrutura do Conteúdo:**
-  1. Incident Lifecycle.
-  2. Triage e priorização.
-  3. Mitigação e recuperação de serviços.
-  4. Root Cause Analysis.
-  5. Postmortems e ações preventivas.
-
-### Notebook 65 — High Availability and Fault Tolerance
-- **Objetivo:** Compreender como projetar ambientes capazes de continuar funcionando diante de falhas.
-- **Estrutura do Conteúdo:**
-  1. High Availability.
-  2. Fault Tolerance.
-  3. Redundância e eliminação de Single Points of Failure.
-  4. Multi-AZ e Multi-Region.
-  5. Health Checks e recuperação automática.
-
-### Notebook 66 — Backup and Disaster Recovery
-- **Objetivo:** Aprender estratégias de proteção de dados e recuperação de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. Backup Strategies.
-  2. RTO e RPO.
-  3. Snapshots e recuperação de dados.
-  4. Disaster Recovery Strategies.
-  5. Restore Testing e validação de backups.
-
-### Notebook 67 — AWS Cost Optimization
-- **Objetivo:** Aprender a identificar desperdícios e otimizar custos de infraestrutura.
-- **Estrutura do Conteúdo:**
-  1. AWS Pricing Models.
-  2. On-Demand, Reserved Instances e Savings Plans.
-  3. Rightsizing de instâncias.
-  4. Identificação de recursos ociosos.
-  5. Cost Explorer, Budgets e tagging.
-
-### Notebook 68 — AWS Well-Architected Framework
-- **Objetivo:** Conhecer os princípios utilizados para avaliar e melhorar arquiteturas AWS.
-- **Estrutura do Conteúdo:**
-  1. Operational Excellence.
-  2. Security.
-  3. Reliability.
-  4. Performance Efficiency e Cost Optimization.
-  5. Sustainability e princípios de revisão arquitetural.
-
-### Notebook 69 — Production Readiness and Operational Practices
-- **Objetivo:** Compreender o que é necessário para manter uma aplicação e sua infraestrutura prontas para produção.
-- **Estrutura do Conteúdo:**
-  1. Production Readiness Checklist.
-  2. Runbooks e documentação operacional.
-  3. Change Management.
-  4. Deployment Safety e Rollback.
-  5. Health Checks e procedimentos operacionais.
-
-### Notebook 70 — Cloud Engineering Capstone: Production Infrastructure
-- **Objetivo:** Consolidar os conhecimentos adquiridos construindo uma infraestrutura AWS automatizada e preparada para executar uma aplicação real.
-- **Estrutura do Conteúdo:**
-  1. Levantamento de requisitos e desenho da arquitetura.
-  2. Provisionamento de VPC, subnets, rotas e Security Groups.
-  3. Provisionamento de EC2, Load Balancer e Auto Scaling.
-  4. Implantação de banco RDS e armazenamento S3.
-  5. Automação com Terraform.
-  6. Containerização e pipeline CI/CD.
-  7. Monitoramento, logs e alertas.
-  8. Testes de falha, recuperação e otimização de custos.
+# Plano de estudos — SOC N1 e N2
+
+Reorganizado em 26/11/2026 a partir de levantamento de vagas de SOC N1 e N2 (Brasil e remoto, 2024–2026), discussões em fóruns (r/cybersecurity, r/SecurityCareerAdvice, Hacker News) e fontes oficiais (MITRE ATT&CK v20, NIST SP 800-61r3, NIST CSF 2.0, CompTIA, Microsoft, SigmaHQ).
+
+**Como usar:** a ordem dos notebooks é a ordem de estudo. Os notebooks 01–16 são a base do N1; 17–21 cobrem frameworks e detecção; 22–28 aprofundam o N2; 29–32 fecham com certificação, prática de laboratório e entrevista. O índice antigo, do pacote Cloud, ficou preservado em `.archive/gemini-notebook-cloud.md`.
+
+### Notebook 01 — Networking Fundamentals for SOC
+- **Objetivo:** Entender TCP/IP para interpretar qualquer alerta sem depender de decorar a ferramenta do momento.
+- **Estrutura do Conteúdo:**
+  1. Modelo OSI e TCP/IP, encapsulamento e endereços MAC e IP.
+  2. TCP versus UDP, handshake, flags SYN, ACK, FIN e RST, e portas críticas (22, 53, 80, 443, 88, 389, 445, 3389).
+  3. CIDR, subnetting, default gateway, NAT e VLAN no contexto de investigação.
+  4. DNS, HTTP, TLS, LDAP e Kerberos como protocolos observáveis em log.
+  5. Leitura de pcap no Wireshark: conversas, fluxos e anomalias.
+  6. O que firewall, proxy, WAF e IDS/IPS registram.
+
+### Notebook 02 — DNS, HTTP and TLS for Analysts
+- **Objetivo:** Reconhecer padrões maliciosos em consultas DNS e requisições web.
+- **Estrutura do Conteúdo:**
+  1. Registros A, AAAA, CNAME, MX, NS e TXT com SPF, DKIM e DMARC.
+  2. DGA, fast flux, TTL muito baixo e tunelamento DNS.
+  3. Métodos e códigos de status HTTP no access.log; User-Agent e Referer como pista.
+  4. TLS handshake, emissor e validade do certificado; certificado autoassinado como indicador.
+  5. Consulta de reputação de domínio e URL em VirusTotal e urlscan.
+
+### Notebook 03 — Linux Essentials for SOC
+- **Objetivo:** Investigar hosts Linux com comandos nativos e conhecer a telemetria disponível.
+- **Estrutura do Conteúdo:**
+  1. Shell, navegação, permissões, usuários, sudo e UID/GID.
+  2. Processos, threads, ps, top, árvore de processos e sinais.
+  3. `/var/log/auth.log`, `/var/log/secure`, journalctl e dmesg.
+  4. cron, systemd e persistência em Linux.
+  5. auditd, integridade de arquivos e shell history.
+  6. Comandos de rede: ss, netstat, curl e tcpdump.
+
+### Notebook 04 — Windows Essentials for SOC
+- **Objetivo:** Entender a estrutura do Windows e do Active Directory para saber onde a evidência aparece.
+- **Estrutura do Conteúdo:**
+  1. Usuários, grupos, UAC, privilégios e Registry.
+  2. Árvore de processos: smss, csrss, wininit, services, lsass e svchost.
+  3. Serviços, tarefas agendadas, pasta Startup e chaves Run/RunOnce.
+  4. PowerShell, ExecutionPolicy e logging de script block.
+  5. Noções de AD: domínio, DC, grupos, políticas e Kerberos.
+
+### Notebook 05 — Windows Event IDs and Sysmon
+- **Objetivo:** Ler os eventos que sustentam a triagem e a investigação de endpoint Windows.
+- **Estrutura do Conteúdo:**
+  1. Segurança: 4624 e 4625, Logon Types 2, 3 e 10, substatus 0xC0000064 versus 0xC000006A.
+  2. 4688 e 4689 com linha de comando; 4648, 4672, 4698, 4720, 4732, 7045 e 1102.
+  3. Kerberos no DC: 4768, 4769 e 4776.
+  4. PowerShell 4104 e Task Scheduler 106, 200 e 201.
+  5. Sysmon IDs 1, 3, 7, 8, 10, 11, 13 e 22.
+  6. Correlação temporal entre logon, criação de processo e conexão de rede.
+
+### Notebook 06 — Logs, Timestamps and Normalization
+- **Objetivo:** Tornar logs de fontes diferentes comparáveis e confiáveis na linha do tempo.
+- **Estrutura do Conteúdo:**
+  1. Fontes: endpoint, rede, identidade, aplicação e cloud.
+  2. Syslog, CEF e JSON; facility e severidade.
+  3. Normalização de campos com ECS e ASIM para consultas e regras reutilizáveis.
+  4. NTP, UTC e alinhamento de timestamps entre hosts.
+  5. Retenção, envio centralizado e evento 1102 como tentativa de apagar rastros.
+
+### Notebook 07 — SOC Fundamentals and Analyst Tiers
+- **Objetivo:** Entender a missão do SOC e onde o N1 termina e o N2 começa.
+- **Estrutura do Conteúdo:**
+  1. SOC versus NOC versus CSIRT e o fluxo monitorar, triar, escalar e documentar.
+  2. N1, N2 e N3: responsabilidades, on-call e critérios de escalonamento.
+  3. Evento, alerta, incidente e caso; severidade versus prioridade.
+  4. Tríade CIA aplicada à triagem.
+  5. Turnos 12x36, SLA, KPIs e passagem de turno.
+
+### Notebook 08 — Threat Landscape and Terminology
+- **Objetivo:** Dominar o vocabulário que aparece em alertas, tickets e entrevistas.
+- **Estrutura do Conteúdo:**
+  1. Vulnerabilidade, ameaça, risco, exploit, CVE e CVSS.
+  2. Malware, ransomware, phishing, BEC e engenharia social.
+  3. IOC, IoA e TTP; Pyramid of Pain aplicada ao vocabulário.
+  4. Controles preventivo, detetivo e corretivo; Zero Trust e MFA.
+  5. Boletins de segurança e contexto de risco por ativo.
+
+### Notebook 09 — Alert Triage and Prioritization
+- **Objetivo:** Decidir com evidência o que é ruído, o que é falso positivo e o que merece escalonamento.
+- **Estrutura do Conteúdo:**
+  1. Ler o alerta e a regra que disparou antes de abrir o host.
+  2. Cinco perguntas: o que disparou, qual ativo e usuário, é normal ali, há eventos correlatos, qual o impacto.
+  3. Enriquecimento: inventário, dono do ativo, histórico do usuário e reputação de IP, domínio e hash.
+  4. Classificação em TP, FP, benigno e inconclusivo; na dúvida, escalar.
+  5. Priorização por impacto: ativo crítico, credencial privilegiada e múltiplos hosts.
+  6. Registro no ticket com fato separado de hipótese.
+
+### Notebook 10 — SIEM Navigation and Search
+- **Objetivo:** Consultar, filtrar e correlacionar eventos no SIEM com método.
+- **Estrutura do Conteúdo:**
+  1. Estrutura de busca em SPL e KQL: filtros, campos extraídos, eval, stats e timechart.
+  2. Agregações, lookups e joins entre fontes.
+  3. Dashboards, buscas salvas e alertas.
+  4. Regras de correlação: janela de tempo, threshold e agrupamento por usuário ou host.
+  5. Ferramentas do mercado: Splunk, Microsoft Sentinel, QRadar, Elastic e Wazuh.
+  6. Prática com BOTSv3 e Splunk Free usando telemetria real.
+
+### Notebook 11 — Threat Intelligence and Enrichment
+- **Objetivo:** Transformar indicadores em contexto para a decisão de triagem.
+- **Estrutura do Conteúdo:**
+  1. IOC versus relatório de CTI: feeds, boletins e inteligência interna.
+  2. Enriquecimento de IP, domínio, URL e hash em VirusTotal, AbuseIPDB e urlscan.
+  3. MISP, OpenCTI e STIX/TAXII no nível do analista.
+  4. Pyramid of Pain: por que TTP vale mais que um hash.
+  5. Registro da fonte e da data da inteligência usada no ticket.
+
+### Notebook 12 — Phishing and Email Analysis
+- **Objetivo:** Investigar um e-mail suspeito do cabeçalho ao impacto no endpoint.
+- **Estrutura do Conteúdo:**
+  1. Cabeçalho: Received, From, Return-Path, SPF, DKIM e DMARC.
+  2. URLs e anexos: urlscan, sandbox e hash, sem abrir no host de trabalho.
+  3. BEC e spoofing de executivo versus campanha em massa.
+  4. Busca do mesmo remetente e URL na organização inteira no SIEM.
+  5. Verificação do clique no EDR e correlação com criação de processo.
+  6. Bloqueio do domínio, remoção dos e-mails e comunicação ao usuário.
+
+### Notebook 13 — Endpoint Triage with EDR
+- **Objetivo:** Usar telemetria de endpoint para validar e conter um alerta.
+- **Estrutura do Conteúdo:**
+  1. Process tree, linha de comando, usuário e caminho do executável.
+  2. Isolamento do host: quando isolar e quando apenas monitorar.
+  3. Live response, varredura remota e coleta de artefatos.
+  4. LoLBins, powershell.exe -enc e pais inesperados como winword.exe.
+  5. Políticas de exclusão e impacto no tuning de detecções.
+  6. EDR no mercado: Defender for Endpoint, CrowdStrike Falcon e SentinelOne.
+
+### Notebook 14 — Network Traffic Analysis
+- **Objetivo:** Reconstruir a comunicação suspeita a partir de fluxos e capturas.
+- **Estrutura do Conteúdo:**
+  1. Wireshark: follow streams, filtros de display e leitura de flags.
+  2. Beaconing DNS e HTTP, jitter e periodicidade.
+  3. Suricata e Zeek: alertas e registros de conexão em conn.log, dns.log e http.log.
+  4. Proxy, firewall e WAF como fontes complementares.
+  5. Exfiltração e tunelamento: sinais em volume, porta e payload.
+
+### Notebook 15 — Incident Response Lifecycle
+- **Objetivo:** Seguir um ciclo de resposta consistente do primeiro alerta ao postmortem.
+- **Estrutura do Conteúdo:**
+  1. NIST SP 800-61r3: Detect, Respond, Recover e Improvement.
+  2. Preparação: playbooks, papéis, contatos e acessos.
+  3. Contenção curta e longa, erradicação e recuperação.
+  4. Cadeia de custódia, evidência em UTC e preservação de logs.
+  5. Comunicação com usuários, gestão e áreas afetadas.
+  6. Lições aprendidas e atualização dos playbooks.
+
+### Notebook 16 — SOC Operations and Reporting
+- **Objetivo:** Encerrar o turno com caso documentado e passagem limpa para o próximo analista.
+- **Estrutura do Conteúdo:**
+  1. Abertura da fila, checklist de fontes e casos sem dono.
+  2. Escrita de caso: fato, hipótese, evidência, ação e próximo passo.
+  3. Handoff entre turnos e confirmação de leitura.
+  4. Jira, ServiceNow e Zendesk: prioridade, estado e SLA.
+  5. MTTD, MTTR e volume de alertas como métricas da fila.
+  6. Inglês técnico para leitura de documentação e método STAR para entrevista.
+
+### Notebook 17 — MITRE ATT&CK in Practice
+- **Objetivo:** Usar ATT&CK como linguagem comum para descrever, mapear e cobrir comportamentos.
+- **Estrutura do Conteúdo:**
+  1. Táticas, técnicas e sub-técnicas; v20 com Stealth TA0005 e Defense Impairment TA0112.
+  2. Mapeamento de alertas e casos com IDs Txxxx.
+  3. Navigator para visualizar cobertura e encontrar gaps de telemetria.
+  4. Relação com a Kill Chain: técnicas não são lineares.
+  5. Planejamento de purple team a partir das lacunas.
+
+### Notebook 18 — Frameworks Compared
+- **Objetivo:** Escolher o modelo certo para explicar o ataque e priorizar a defesa.
+- **Estrutura do Conteúdo:**
+  1. Cyber Kill Chain: sete fases, contra-medidas por fase e a limitação linear.
+  2. Diamond Model: Adversary, Infrastructure, Capability, Victim e activity threads.
+  3. Pyramid of Pain: hash, IP, domínio, artefato, ferramenta e TTP.
+  4. NIST CSF 2.0: GV, ID, PR, DE, RS e RC, com foco em DE e RS para o SOC.
+  5. Quando usar cada modelo num relatório ou postmortem.
+
+### Notebook 19 — Detection Engineering with Sigma
+- **Objetivo:** Escrever e manter regras de detecção que sobrevivam ao contato com a fila real.
+- **Estrutura do Conteúdo:**
+  1. Estrutura Sigma YAML: logsource, detection, condition e level.
+  2. Conversão para SPL, KQL e XML com pySigma.
+  3. Mapeamento ATT&CK e tags na regra.
+  4. Tuning de falsos positivos com exceções documentadas.
+  5. Versionamento, revisão por pares e testes com dados sintéticos.
+  6. Regras gerenciadas do fornecedor versus regras próprias.
+
+### Notebook 20 — Detection Validation and Purple Team
+- **Objetivo:** Provar que a detecção dispara e medir o que ficou sem cobertura.
+- **Estrutura do Conteúdo:**
+  1. Atomic Red Team e Caldera para simular técnicas.
+  2. BOTSv3 e datasets públicos para validar consultas sem gerar incidente.
+  3. Testes controlados em laboratório com hosts isolados.
+  4. Medição de cobertura por tática e lacunas de log.
+  5. Documentação do resultado, ajuste da regra e repetição do teste.
+
+### Notebook 21 — Vulnerabilities and Exposure
+- **Objetivo:** Entender a relação entre vulnerabilidade, ativo e risco na rotina do SOC.
+- **Estrutura do Conteúdo:**
+  1. CVE, CVSS e priorização por explorabilidade e exposição.
+  2. Scanning e inventário: o que o SOC consome do time de vulnerability management.
+  3. Explorações comuns em SMB, RDP e aplicações web expostas.
+  4. Correlação entre alerta e ativo vulnerável durante o enriquecimento.
+  5. Escalonamento para o time de patches com evidência.
+
+### Notebook 22 — Windows Persistence and Privilege
+- **Objetivo:** Encontrar mecanismos de persistência e elevação usados depois do acesso inicial.
+- **Estrutura do Conteúdo:**
+  1. Run e RunOnce, Startup, serviços com 7045 e tarefas com 4698.
+  2. WMI event subscriptions e DLL hijack ou sideload.
+  3. Autoruns e Sysinternals para inventariar pontos de inicialização.
+  4. Evento 4672, privilégios especiais e UAC bypass.
+  5. Fileless e uso de LoLBins.
+  6. Remoção da persistência e verificação de que não voltou.
+
+### Notebook 23 — Identity Attacks and Active Directory
+- **Objetivo:** Investigar ataques a identidade e diretório, a principal via de movimento lateral.
+- **Estrutura do Conteúdo:**
+  1. Kerberos: AS-REQ, AS-REP, TGS e eventos 4768, 4769 e 4776.
+  2. Kerberoasting, pass-the-hash e pass-the-ticket.
+  3. Golden Ticket com hash krbtgt e rotação dupla; Silver Ticket com hash de serviço.
+  4. DCSync e replicação indevida de diretório.
+  5. PAM, JIT, LAPS e Conditional Access como controles.
+  6. Correlação entre logon atípico e mudança de privilégio.
+
+### Notebook 24 — Lateral Movement
+- **Objetivo:** Reconhecer a movimentação entre hosts antes da contenção.
+- **Estrutura do Conteúdo:**
+  1. PsExec e SMB, WinRM nas portas 5985 e 5986, RDP e WMI.
+  2. Eventos 4624 tipo 3, 4648, 7045 e conexões nas portas 445 e 5985.
+  3. Administração legítima versus padrão anômalo por host e horário.
+  4. Sysmon 1, 3 e 10 na reconstrução da cadeia.
+  5. Regras Sigma e consultas SPL e KQL para detectar o padrão.
+  6. Escalonamento e contenção do host de origem.
+
+### Notebook 25 — Memory and Host Forensics
+- **Objetivo:** Recuperar evidência que não existe mais em log quando o atacante agiu no host.
+- **Estrutura do Conteúdo:**
+  1. Volatility 3: processos ocultos, árvore, código injetado e sockets.
+  2. KAPE e Velociraptor para coleta rápida e remota.
+  3. MFT, USN Journal, Prefetch, ShimCache, Amcache e SRUM.
+  4. Registry hives e artefatos de navegador.
+  5. Cadeia de custódia e hash da imagem antes da análise.
+  6. Limite entre N2 e N3: quando pedir forense profunda.
+
+### Notebook 26 — Threat Hunting Methodology
+- **Objetivo:** Procurar atividade que não gerou alerta, a principal diferença prática do N2.
+- **Estrutura do Conteúdo:**
+  1. Hipótese a partir de CTI, ATT&CK e anomalias do ambiente.
+  2. Baseline do que é normal para aquele host e usuário.
+  3. Busca em SIEM e EDR por comportamento, não apenas por IOC.
+  4. Iteração: ampliar, refutar ou confirmar a hipótese com evidência.
+  5. Resultado documentado: achado, regra nova ou gap de telemetria.
+
+### Notebook 27 — Cloud SOC (M365 and AWS)
+- **Objetivo:** Investigar identidade e cargas em nuvem com os logs que o analista realmente tem.
+- **Estrutura do Conteúdo:**
+  1. Entra ID sign-in logs, risco de usuário e Conditional Access.
+  2. Unified Audit Log e logs de Exchange e SharePoint no M365.
+  3. CloudTrail, GuardDuty, VPC Flow Logs e AWS Config.
+  4. Correlação entre identidade e atividade de cloud.
+  5. Casos típicos: token roubado, access key exposta e privilege escalation.
+  6. Quando escalar para o time de cloud security engineering.
+
+### Notebook 28 — Automation for Analysts
+- **Objetivo:** Reduzir trabalho repetitivo de triagem com scripts e playbooks simples.
+- **Estrutura do Conteúdo:**
+  1. Python para parsear logs, normalizar campos e enriquecer IOCs.
+  2. PowerShell para consultar eventos e inventariar hosts.
+  3. Bash para tratar arquivos e texto em hosts Linux.
+  4. Integração com APIs de threat intel e de ticketing.
+  5. SOAR e playbooks: o que automatizar e o que exige julgamento humano.
+  6. Cuidado com segredos, logs da automação e auditabilidade.
+
+### Notebook 29 — Certification Strategy
+- **Objetivo:** Escolher certificação sem confundir filtro de RH com competência prática.
+- **Estrutura do Conteúdo:**
+  1. Network+ e Security+ SY0-701 como base, com foco em Security Operations.
+  2. CySA+ CS0-004: SecOps, vulnerability management, IR e reporting.
+  3. SC-200 para ambientes Microsoft; BTL1, SAL1 e SAL2 como prova prática.
+  4. Mudanças em 2026: AZ-500 e MS-102 aposentados e transição de versões da CompTIA.
+  5. CEH e PNPT: o que entregam e por que não substituem prática de SOC.
+  6. Regra prática: a certificação abre a entrevista; log e relatório decidem.
+
+### Notebook 30 — Home Lab and Practice
+- **Objetivo:** Montar um ambiente de treino barato para praticar toda semana.
+- **Estrutura do Conteúdo:**
+  1. Wazuh e OpenSearch como SIEM open-source leve.
+  2. Splunk Free e BOTSv3 para SPL com dados reais.
+  3. Elastic Security para KQL e detecções; Security Onion para Zeek, Suricata e pcap.
+  4. TryHackMe SOC L1 e L2, e CyberDefenders para investigações guiadas.
+  5. Cadência: um caso por semana com write-up em português.
+  6. Limitações do laboratório: o que só aparece em produção.
+
+### Notebook 31 — Interview Practice N1
+- **Objetivo:** Responder perguntas técnicas de triagem com método e evidência.
+- **Estrutura do Conteúdo:**
+  1. Como triar um alerta: cinco passos e critérios de escalonamento.
+  2. 4624, 4625 e 4688, Logon Types e substatus em cenários de brute force.
+  3. Phishing: cabeçalho, SPF, DKIM, DMARC e busca na organização inteira.
+  4. Leitura de linha de log: o que você vê e o que faz em seguida.
+  5. Impossible travel e login de país incomum.
+  6. Método STAR para situações de erro, conflito e pressão de SLA.
+
+### Notebook 32 — Interview Practice N2 and Capstone
+- **Objetivo:** Demonstrar profundidade N2 com correlação, decisão e comunicação.
+- **Estrutura do Conteúdo:**
+  1. Correlação de endpoint, rede, identidade e cloud num único caso.
+  2. Quando isolar o host e quando apenas monitorar: tradeoffs.
+  3. Tuning de detecção com evidência de falso positivo.
+  4. Explicar Golden Ticket, DCSync e persistência em linguagem simples.
+  5. Mentoria do N1 e escrita de relatório para executivo.
+  6. Capstone: investigar um caso fim a fim e entregar timeline, IOC, ATT&CK e ações.
